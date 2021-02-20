@@ -1,0 +1,9 @@
+#sticky-sidebar {
+    position: fixed;
+    max-width: 20%;
+}
+@media (min-width: 768px) {
+    .h-md-100 {
+        height: 100vh;
+    }
+}

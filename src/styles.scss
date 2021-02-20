@@ -1,0 +1,58 @@
+/* You can add global styles to this file, and also import other style files */
+
+/* Importing Bootstrap SCSS file. */
+@import "~bootstrap/scss/bootstrap";
+@font-face {
+    font-family: Helvetica;
+    src: url(assets/fonts/Helvetica.otf) format("opentype");
+}
+@font-face {
+    font-family: HelveticaBold;
+    src: url(assets/fonts/Helvetica-Bold.otf) format("opentype");
+}
+@font-face {
+    font-family: HelveticaBQLight;
+    src: url(assets/fonts/HelveticaBQ-Light.otf) format("opentype");
+}
+@font-face {
+    font-family: GillSansStd;
+    src: url(assets/fonts3/GillSansStd.otf) format("opentype");
+}
+
+body {
+    font-family: Poppins !important;
+    background-color: #f2f5f9 !important;
+}
+.navbar-expand-md {
+    outline: none;
+}
+.mat-menu-item:hover {
+    background-color: #fff !important;
+}
+
+@media (min-width: 1200px) {
+    .container {
+        max-width: 1162px !important;
+    }
+}
+
+html,
+body {
+    height: 100%;
+}
+.page-link {
+    margin-right: 10px;
+    background-color: #eaeaea !important;
+    color: #fff !important;
+
+    padding: 6px 20px !important;
+    border-radius: 10px !important;
+    font-size: 17px !important;
+}
+.page-link.active {
+    background-color: #3ca063 !important;
+    color: #fff !important;
+}
+.padding-all {
+    padding: 25px;
+}

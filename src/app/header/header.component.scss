@@ -1,0 +1,22 @@
+.navbar {
+    background: #07555c;
+    padding: 1.5rem 2.6rem;
+}
+#example-search-input {
+    height: 46px;
+    border-radius: 7px 0 0 7px;
+}
+.nav-link {
+    color: #ebebeb;
+    font-family: Poppins !important;
+}
+.mat-menu-panel {
+    min-width: 177px !important;
+}
+
+@media (min-width: 768px) {
+    .navbar-expand-md .navbar-nav .nav-link {
+        padding-right: 0.5rem;
+        padding-left: 2.5rem;
+    }
+}
