@@ -41,6 +41,7 @@ import { NetworkComponent } from './network/network.component';
     MatMenuModule,
     NgbModule,
     FormsModule,
+    ReactiveFormsModule,
     MatInputModule,
     MatSelectModule,
     MatFormFieldModule,
