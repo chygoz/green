@@ -1,0 +1,235 @@
+.header1overlay {
+    position: absolute;
+    z-index: 99;
+    color: #fff;
+    font-size: 75px;
+    font-family: GraphikBold;
+    padding-left: 101px;
+    top: 50%;
+}
+.header1 {
+    font-size: 30px;
+}
+.para {
+    color: #c5d82c;
+    font-size: 18px;
+    line-height: 3px;
+}
+.default-padding {
+    padding-top: 49px;
+    padding-bottom: 166px;
+}
+.header1 {
+    color: #fff;
+}
+.header2 {
+    color: #fff;
+    font-size: 22px;
+    padding-top: 13px;
+}
+.card-overlay-thumb {
+    position: absolute;
+    /*top: 0;*/
+    right: 0;
+    left: 0;
+    bottom: 129px;
+    /* padding: 1.25rem; */
+    border-radius: calc(0.25rem - 1px);
+}
+.card-1 {
+    background-color: #c5d82c;
+    border: #c5d82c;
+    border-radius: 14px;
+    width: 319px;
+    padding-top: 36px;
+    padding-bottom: 56px;
+    padding-left: 33px;
+    box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
+}
+.card-4 {
+    background-color: #fff;
+    border: #fff;
+    border-radius: 14px;
+    width: 280px;
+    padding-top: 36px;
+    padding-bottom: 56px;
+    padding-left: 33px;
+    box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
+}
+.card-1-footer {
+    position: absolute;
+    top: 148px;
+    bottom: 0;
+    border-radius: calc(0.25rem - 1px);
+    text-align: center;
+    left: 81px;
+}
+.card-4-footer {
+    position: absolute;
+    top: 148px;
+    bottom: 0;
+    border-radius: calc(0.25rem - 1px);
+    text-align: center;
+    left: 38px;
+}
+.card-1-button {
+    padding: 13px 36px 14px 28px;
+    font-size: 13px;
+    background-color: #3ca063;
+}
+
+.card-2 {
+    background-color: #000000;
+    border: #000000;
+    border-radius: 14px;
+    width: 220px;
+    padding-top: 36px;
+    padding-bottom: 56px;
+    padding-left: 33px;
+    box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
+}
+.card-3 {
+    background-color: #fff;
+    border: #fff;
+    border-radius: 14px;
+    width: 220px;
+    padding-top: 36px;
+    padding-bottom: 56px;
+    padding-left: 33px;
+    box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
+}
+
+.card-text {
+    color: #3ca063;
+    font-weight: 600;
+    font-size: 13px;
+}
+.card {
+    background: none !important;
+    border: none;
+}
+.card-footer {
+    background: none;
+    border: none;
+}
+.card-1-margin {
+    margin-right: 64px;
+}
+.car-sub {
+    color: #b9b9b9;
+    font-size: 12px;
+    line-height: 0px;
+}
+
+.col-sm-4i {
+    flex: 0 0 33.333333%;
+    max-width: 29%;
+    padding-right: 20px;
+}
+.col-sm-3i {
+    max-width: 20.333333%;
+    padding-right: 20px;
+}
+.default-padding-1 {
+    padding-top: 150px;
+    padding-bottom: 150px;
+}
+.default-padding-95 {
+    padding-top: 95px;
+}
+.default-padding-50 {
+    padding-top: 50px;
+}
+
+.card-white {
+    background-color: #fff !important;
+    padding: 17px;
+    border-radius: 17px;
+    box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
+}
+
+.header1-dart {
+    font-family: Poppins !important;
+    color: #3ca063;
+}
+.header1-black {
+    font-family: Poppins !important;
+    color: #3ca063;
+}
+.table {
+    font-family: Poppins !important;
+}
+
+.button-green {
+    border-radius: 17px;
+    font-size: 11px;
+    padding: 4px 18px;
+    color: #3ca063;
+    background-color: #b0e2c4;
+    border: #b0e2c4;
+    font-weight: bold;
+    outline: none;
+}
+.button-orange {
+    border-radius: 17px;
+    font-size: 11px;
+    padding: 4px 25px;
+    color: #fd9405 !important;
+    background-color: #fff !important;
+    border: 1px solid #fd9405 !important;
+    font-weight: bold;
+    outline: none;
+}
+
+.button-red {
+    border-radius: 17px;
+    font-size: 11px;
+    padding: 4px 18px;
+    color: #fff;
+    background-color: #ff3636;
+    border: #ff3636;
+    font-weight: bold;
+    outline: none;
+    outline-color: none;
+}
+.btn:focus,
+.btn:active {
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+.profileoverlay {
+    position: absolute;
+    //top: 0;
+    left: 0;
+    right: 0;
+    bottom: 130px;
+}
+.editoverlay {
+    position: absolute;
+    //top: 0;
+    //left: 0;
+    right: 40px;
+    bottom: 120px;
+    z-index: 999;
+}
+.name-title {
+    position: relative;
+    color: #fff;
+    font-size: 25px;
+    top: 30px;
+    padding: 0;
+}
+.list-group-item {
+    background-color: #f2f5f9 !important;
+    border: #f2f5f9 !important;
+}
+.btn-primary {
+    background-color: #3ca063;
+    border: #3ca063;
+}
+
+.btn-secondary {
+    background-color: #2cd8cb;
+    border: #2cd8cb;
+}

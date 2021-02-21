@@ -2,6 +2,66 @@
     position: fixed;
     max-width: 20%;
 }
+.header1 {
+    font-family: Poppins !important;
+    font-size: 29px;
+    font-weight: 700;
+}
+.para1 {
+    font-size: 16px;
+    line-height: 15px;
+}
+.default-padding {
+    padding-top: 30px;
+}
+
+.Upgradecardborder {
+    border: 2px solid #3ca063;
+}
+.Upgradecardborderdark {
+    border: 2px solid #9d9d9d;
+    border-radius: 4px;
+    box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
+}
+.u-title-sm {
+    color: #9d9d9d;
+    font-size: 17px;
+    padding-left: 15px;
+}
+.u-title-lg {
+    color: #07555c;
+    font-size: 14px;
+    font-weight: bold;
+}
+.upgrade1 {
+    padding: 14px;
+    text-align: left;
+}
+.upgrade2 {
+    padding: 15px 14px;
+}
+.upgrade3 {
+    text-align: left;
+    padding: 15px 14px;
+    font-weight: bold;
+}
+.default-padding {
+    padding-top: 50px;
+}
+
+.card-1-button {
+    padding: 13px 36px 14px 28px;
+    font-size: 13px;
+    background-color: #3ca063;
+}
+.optradio {
+    width: 18px;
+    height: 16px;
+}
+.carddropdown {
+    border-bottom: 1px solid #414141;
+    padding-bottom: 10px;
+}
 @media (min-width: 768px) {
     .h-md-100 {
         height: 100vh;

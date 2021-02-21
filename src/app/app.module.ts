@@ -20,6 +20,8 @@ import { MatTabsModule } from '@angular/material/tabs'
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { UpgradeCardComponent } from './upgrade-card/upgrade-card.component';
 import { RegisterComponent } from './register/register.component';
+import { YourAccountComponent } from './your-account/your-account.component';
+import { NetworkComponent } from './network/network.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +31,9 @@ import { RegisterComponent } from './register/register.component';
     FooterComponent,
     DashboardComponent,
     UpgradeCardComponent,
-    RegisterComponent
+    RegisterComponent,
+    YourAccountComponent,
+    NetworkComponent
   ],
   imports: [
     BrowserModule,
