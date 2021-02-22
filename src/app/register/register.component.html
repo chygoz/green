@@ -44,7 +44,7 @@
                     <p class="para1">Enter your details to get started our journey together.</p>
 
                     <div class="default-padding">
-                        <form [formGroup]="registerForm">
+                        <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
                             <div class="form-row m-0">
                                 <div class="form-group col-md-6">
                                     <label for="inputEmail4">First Name</label>
@@ -80,7 +80,7 @@
                                         placeholder="Password">
                                 </div> -->
                             </div>
-                            <button type="button" [disabled]="registerForm.invalid" class="btn btn-primary btn-lg btn-block">Continue</button>
+                            <button type="submit" [disabled]="registerForm.invalid" class="btn btn-primary btn-lg btn-block">Continue</button>
                         </form>
                     </div>
                     
