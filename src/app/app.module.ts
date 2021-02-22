@@ -22,6 +22,7 @@ import { UpgradeCardComponent } from './upgrade-card/upgrade-card.component';
 import { RegisterComponent } from './register/register.component';
 import { YourAccountComponent } from './your-account/your-account.component';
 import { NetworkComponent } from './network/network.component';
+import { LoginComponent } from './login/login.component';
 
 @NgModule({
   declarations: [
@@ -33,7 +34,8 @@ import { NetworkComponent } from './network/network.component';
     UpgradeCardComponent,
     RegisterComponent,
     YourAccountComponent,
-    NetworkComponent
+    NetworkComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
