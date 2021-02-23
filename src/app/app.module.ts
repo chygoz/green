@@ -23,6 +23,10 @@ import { RegisterComponent } from './register/register.component';
 import { YourAccountComponent } from './your-account/your-account.component';
 import { NetworkComponent } from './network/network.component';
 import { LoginComponent } from './login/login.component';
+import { LayouthomeComponent } from './layouthome/layouthome.component';
+import { LandingHeaderComponent } from './landing-header/landing-header.component';
+import { LandingFooterComponent } from './landing-footer/landing-footer.component';
+import { HomeComponent } from './home/home.component';
 
 @NgModule({
   declarations: [
@@ -35,7 +39,11 @@ import { LoginComponent } from './login/login.component';
     RegisterComponent,
     YourAccountComponent,
     NetworkComponent,
-    LoginComponent
+    LoginComponent,
+    LayouthomeComponent,
+    LandingHeaderComponent,
+    LandingFooterComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
