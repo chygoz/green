@@ -28,6 +28,7 @@ import { LandingHeaderComponent } from './landing-header/landing-header.componen
 import { LandingFooterComponent } from './landing-footer/landing-footer.component';
 import { HomeComponent } from './home/home.component';
 import { NetworktestingComponent } from './networktesting/networktesting.component';
+import { AuthGuardService } from './auth-guard.service';
 
 @NgModule({
   declarations: [
@@ -64,7 +65,7 @@ import { NetworktestingComponent } from './networktesting/networktesting.compone
     HttpClientModule
   ],
   exports: [MatDialogModule, MatButtonModule],
-  providers: [],
+  providers: [AuthGuardService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

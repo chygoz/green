@@ -9,6 +9,7 @@ import { YourAccountComponent } from './your-account/your-account.component';
 import { HomeComponent } from './home/home.component';
 import { LayoutComponent } from './layout/layout.component';
 import { LayouthomeComponent } from './layouthome/layouthome.component';
+import { AuthGuardService as AuthGuard } from './auth-guard.service';
 const routes: Routes = [
   { path: 'register', component: RegisterComponent },
   { path: 'login', component: LoginComponent },
@@ -19,27 +20,28 @@ const routes: Routes = [
     ]
   },
   {
-    path: '', component: LayoutComponent,
+    path: 'dashboard', component: LayoutComponent,
     children: [
-      { path: 'dashboard', component: DashboardComponent }
+      { path: '', component: DashboardComponent }
     ]
   },
   {
-    path: '', component: LayoutComponent,
+    path: 'your-account', component: LayoutComponent,
     children: [
-      { path: 'your-account', component: YourAccountComponent }
+      { path: '', component: YourAccountComponent }
     ]
   },
   {
-    path: '', component: LayoutComponent,
+    path: 'network', component: LayoutComponent,
+    canActivate: [AuthGuard],
     children: [
-      { path: 'network', component: NetworkComponent }
+      { path: '', component: NetworkComponent }
     ]
   },
   {
-    path: '', component: LayoutComponent,
+    path: 'networktesting', component: LayoutComponent,
     children: [
-      { path: 'networktesting', component: NetworktestingComponent }
+      { path: '', component: NetworktestingComponent }
     ]
   }
 ];
