@@ -80,6 +80,9 @@
                                         placeholder="Password">
                                 </div> -->
                             </div>
+                            <div class="errorSec">
+                                {{errorMsg}}
+                            </div>
                             <button type="submit" [disabled]="registerForm.invalid" class="btn btn-primary btn-lg btn-block">Continue</button>
                         </form>
                     </div>
