@@ -27,6 +27,7 @@ import { LayouthomeComponent } from './layouthome/layouthome.component';
 import { LandingHeaderComponent } from './landing-header/landing-header.component';
 import { LandingFooterComponent } from './landing-footer/landing-footer.component';
 import { HomeComponent } from './home/home.component';
+import { NetworktestingComponent } from './networktesting/networktesting.component';
 
 @NgModule({
   declarations: [
@@ -43,7 +44,8 @@ import { HomeComponent } from './home/home.component';
     LayouthomeComponent,
     LandingHeaderComponent,
     LandingFooterComponent,
-    HomeComponent
+    HomeComponent,
+    NetworktestingComponent
   ],
   imports: [
     BrowserModule,

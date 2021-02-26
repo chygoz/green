@@ -4,6 +4,7 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { RegisterComponent } from './register/register.component';
 import { LoginComponent } from './login/login.component';
 import { NetworkComponent } from './network/network.component';
+import { NetworktestingComponent } from './networktesting/networktesting.component';
 import { YourAccountComponent } from './your-account/your-account.component';
 import { HomeComponent } from './home/home.component';
 import { LayoutComponent } from './layout/layout.component';
@@ -33,6 +34,12 @@ const routes: Routes = [
     path: '', component: LayoutComponent,
     children: [
       { path: 'network', component: NetworkComponent }
+    ]
+  },
+  {
+    path: '', component: LayoutComponent,
+    children: [
+      { path: 'networktesting', component: NetworktestingComponent }
     ]
   }
 ];
