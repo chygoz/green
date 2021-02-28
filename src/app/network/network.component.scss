@@ -62,11 +62,37 @@
 /////////////// tree code /////////////////
 /* Person */
 .person {
-    border: 1px solid black;
-    padding: 10px;
-    min-width: 150px;
+    //border: 1px solid black;
+    // padding: 10px;
+    width: 144px;
     background-color: #ffffff;
     display: inline-block;
+}
+.right-footer {
+    background-color: #c5d82c;
+}
+.left-footer {
+    background-color: #3ca063;
+}
+.header5 {
+    font-size: 14px;
+    font-weight: bold;
+    padding: 0;
+    margin: 0;
+}
+.para5 {
+    font-size: 11px;
+}
+.useroverly {
+    position: absolute;
+    top: -28px;
+    left: 47px;
+}
+.cardpadding {
+    padding-left: 0em;
+    padding-right: 0em;
+    padding-bottom: 7px;
+    padding-top: 14px;
 }
 
 .person.female {
@@ -126,10 +152,19 @@
     text-align: center;
     list-style-type: none;
     position: relative;
-    padding: 20px 5px 0 5px;
+    padding: 44px 5px 0 5px;
     transition: all 0.5s;
     -webkit-transition: all 0.5s;
     -moz-transition: all 0.5s;
+}
+.footericons {
+    position: relative;
+}
+.lefticon {
+    float: left;
+}
+.righticon {
+    float: right;
 }
 
 /*We will use ::before and ::after to draw the connectors*/
@@ -238,9 +273,9 @@ right connector from last child*/
 .tree li .parent .person:hover + ul li .child,
 .tree li .child:hover + .parent .person + ul li .parent .person,
 .tree li .parent .person:hover + ul li .parent .person {
-    background: #c8e4f8;
+    // background: #c8e4f8;
     color: #000;
-    border: 1px solid #94a0b4;
+    //   border: 1px solid #94a0b4;
 }
 /*Connector styles on hover*/
 .tree li .child:hover + .parent::before,
@@ -252,5 +287,5 @@ right connector from last child*/
 .tree li .parent .person:hover + ul::before,
 .tree li .child:hover + .parent .person + ul ul::before,
 .tree li .parent .person:hover + ul ul::before {
-    border-color: #94a0b4;
+    //   border-color: #94a0b4;
 }
