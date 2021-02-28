@@ -29,6 +29,8 @@ import { LandingFooterComponent } from './landing-footer/landing-footer.componen
 import { HomeComponent } from './home/home.component';
 import { NetworktestingComponent } from './networktesting/networktesting.component';
 import { AuthGuardService } from './auth-guard.service';
+import { WithdrawRequestComponent } from './withdraw-request/withdraw-request.component';
+import { ShareReferralComponent } from './share-referral/share-referral.component';
 
 @NgModule({
   declarations: [
@@ -46,7 +48,9 @@ import { AuthGuardService } from './auth-guard.service';
     LandingHeaderComponent,
     LandingFooterComponent,
     HomeComponent,
-    NetworktestingComponent
+    NetworktestingComponent,
+    WithdrawRequestComponent,
+    ShareReferralComponent
   ],
   imports: [
     BrowserModule,

@@ -3,6 +3,7 @@ import { Location } from '@angular/common';
 import { MatDialog, MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
 import { Router } from '@angular/router';
 import { UpgradeCardComponent } from '../upgrade-card/upgrade-card.component';
+import { WithdrawRequestComponent } from '../withdraw-request/withdraw-request.component';
 @Component({
   selector: 'app-dashboard',
   templateUrl: './dashboard.component.html',
@@ -24,6 +25,17 @@ export class DashboardComponent implements OnInit {
 
 
     let dialogRef = this.dialog.open(UpgradeCardComponent,
+      {
+        panelClass: 'my-full-screen-dialog', width: '800px',
+        position: { top: '100px' },
+      });
+
+    dialogRef.afterClosed().subscribe(() => {
+    })
+
+  }
+  withdrawDialog() {
+    let dialogRef = this.dialog.open(WithdrawRequestComponent,
       {
         panelClass: 'my-full-screen-dialog', width: '800px',
         position: { top: '100px' },
