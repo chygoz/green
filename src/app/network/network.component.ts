@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { apiService } from '../api.service';
 
 @Component({
   selector: 'app-network',
@@ -7,9 +8,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NetworkComponent implements OnInit {
 
-  constructor() { }
+  constructor(private service: apiService) { }
 
   ngOnInit(): void {
+    this.service.getUserNetwork({}).subscribe((data) => {
+      console.log(data);
+    })
   }
 
 }
