@@ -9,7 +9,7 @@ import { CookieService } from '../services/cookie.service';
 })
 export class NetworkComponent implements OnInit {
   connections: Number = 0;
-  userData = '';
+  userData;
 
   constructor(private service: apiService, private cookieService: CookieService) { 
     let ud = this.cookieService.getCookie('currentUser');
