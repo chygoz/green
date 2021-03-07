@@ -92,3 +92,21 @@ input::placeholder {
     padding-left: 48px;
     padding-right: 48px;
 }
+
+label {
+    font-size: 14px;
+    font-weight: 500;
+}
+input::placeholder {
+    font-size: 12px;
+}
+.btn-primary {
+    background-color: #3ca063;
+    border: 1px solid #3ca063;
+    padding: 10px 0;
+    font-size: 14px;
+    font-weight: 300;
+}
+.align-items-center {
+    background-color: #fff;
+}
