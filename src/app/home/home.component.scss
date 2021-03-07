@@ -29,6 +29,8 @@
 .header2-white {
     color: #07555c;
     font-size: 30px;
+    text-align: center;
+    font-weight: 700;
 }
 
 .header2-dart:after {
@@ -72,6 +74,11 @@
 
     //border-top-left-radius: 166% 32%;
     //  border-top-right-radius: 142% 34%;
+}
+.headerbg1 {
+    background-color: #cfe3d7;
+    border-top-left-radius: 118% 50%;
+    border-top-right-radius: 118% 58%;
 }
 .header3 {
     font-family: Poppins !important;
@@ -137,6 +144,25 @@
 .pricemargin {
     margin-top: 70px;
     margin-bottom: 89px !important;
+}
+
+.card-horizontal {
+    display: flex;
+    flex: 1 1 auto;
+}
+.card-text-testi {
+    font-size: 20px;
+    color: #414141;
+    text-align: center;
+    line-height: 30px;
+}
+
+.list-group-item {
+    background-color: none;
+}
+.list-unstyled {
+    color: #fff;
+    line-height: 38px;
 }
 @media (min-width: 1200px) {
     .container-md {

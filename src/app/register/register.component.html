@@ -14,7 +14,7 @@
     <!-- Second Half -->
 
     <div class="col-md-6 p-0 bg-white h-md-100 loginarea">
-        <div class="d-md-flex align-items-center p-4 justify-content-center">
+        <div class="d-md-flex align-items-center  default-padding-reg justify-content-center">
             <div class="container">
                 <nav class="navbar navbar-expand-md">
                     <div class="d-flex flex-grow-1">
@@ -27,7 +27,7 @@
                     <div class="navbar-collapse collapse flex-shrink-1 flex-grow-0" id="navbar7">
                         <ul class="navbar-nav">
                             <li class="nav-item">
-                                <a class="nav-link" [routerLink]="['/']">Go to Home</a>
+                                <a class="nav-link" [routerLink]="['/']" style="color:#1dbf5d">Go to Home</a>
                             </li>
 
                         </ul>
@@ -37,40 +37,42 @@
             </div>
 
         </div>
+
+<div class="padding-default">
         <div class="container">
             <mat-tab-group animationDuration="0ms">
                 <mat-tab label="">
-                    <h1 class="header1">Register</h1>
+                    <h1 class="header1 pt-4">Register</h1>
                     <p class="para1">Enter your details to get started our journey together.</p>
 
                     <div class="default-padding">
                         <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
                             <div class="form-row m-0">
-                                <div class="form-group col-md-6">
+                                <div class="form-group col-md-4">
                                     <label for="inputEmail4">First Name</label>
                                     <input type="text" class="form-control" id="inputEmail4" formControlName="firstName" placeholder="First Name">
                                 </div>
-                                <div class="form-group col-md-6">
+                                <div class="form-group col-md-4">
                                     <label for="inputEmail4">Last Name</label>
                                     <input type="text" class="form-control" id="inputEmail4" formControlName="lastName" placeholder="Last Name">
                                 </div>
                             </div>
                             <div class="form-row m-0">
-                                <div class="form-group col-md-6">
+                                <div class="form-group col-md-4">
                                     <label for="inputEmail4">Phone</label>
                                     <input type="text" class="form-control" id="inputEmail4" formControlName="mobile" placeholder="Phone">
                                 </div>
-                                <div class="form-group col-md-6">
+                                <div class="form-group col-md-4">
                                     <label for="inputEmail4">Email</label>
                                     <input type="email" class="form-control" id="inputEmail4" formControlName="email" placeholder="Email">
                                 </div>
                             </div>
                             <div class="form-row m-0">
-                                <div class="form-group col-md-6">
+                                <div class="form-group col-md-4">
                                     <label for="inputPassword4">Password</label>
                                     <input type="password" class="form-control" id="inputPassword4" formControlName="password" placeholder="Password">
                                 </div>
-                                <div class="form-group col-md-6">
+                                <div class="form-group col-md-4">
                                     <label for="inputPassword4">Referral ID</label>
                                     <input type="text" class="form-control" id="inputPassword4" formControlName="referralId" placeholder="referral">
                                 </div>
@@ -83,7 +85,9 @@
                             <div class="errorSec">
                                 {{errorMsg}}
                             </div>
-                            <button type="submit" [disabled]="registerForm.invalid" class="btn btn-primary btn-lg btn-block">Continue</button>
+
+                            <button type="submit" [disabled]="registerForm.invalid" 
+                            class="btn btn-primary btn-lg btn-block">Continue</button>
                         </form>
                     </div>
                     
@@ -199,6 +203,7 @@
                     <button type="button" class="btn btn-primary btn-lg btn-block mt-4">Complete Registration</button>
                 </mat-tab>
             </mat-tab-group>
+        </div>
         </div>
     </div>
 

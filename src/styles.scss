@@ -19,6 +19,9 @@
     src: url(assets/fonts3/GillSansStd.otf) format("opentype");
 }
 
+@import "~ngx-owl-carousel-o/lib/styles/scss/owl.carousel";
+@import "~ngx-owl-carousel-o/lib/styles/scss/owl.theme.default";
+
 body {
     font-family: Poppins !important;
     background-color: #f2f5f9 !important;
@@ -26,8 +29,14 @@ body {
 h1,
 h2,
 h3,
-p {
+p,
+.mat-typography h1,
+.mat-typography h2 {
     font-family: Poppins !important;
+}
+.mat-typography h1,
+.mat-typography h2 {
+    font: Poppins !important;
 }
 .navbar-expand-md {
     outline: none;

@@ -2,3 +2,36 @@
     text-align: center;
     color: red;
 }
+.align-items-center {
+    align-items: start !important;
+}
+.padding-default {
+    padding-left: 50px;
+}
+.default-padding {
+    padding-top: 30px;
+}
+.header1 {
+    font-size: 32px;
+    font-weight: bold;
+}
+.para1 {
+    font-size: 13px;
+}
+label {
+    font-size: 14px;
+    font-weight: 500;
+}
+input::placeholder {
+    font-size: 12px;
+}
+.btn-primary {
+    background-color: #3ca063;
+    border: 1px solid #3ca063;
+    padding: 10px 0;
+    font-size: 14px;
+    font-weight: 300;
+}
+.align-items-center {
+    background-color: #fff;
+}

@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
+import { CarouselModule } from 'ngx-owl-carousel-o';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
@@ -66,7 +66,8 @@ import { ShareReferralComponent } from './share-referral/share-referral.componen
     BrowserAnimationsModule,
     MatDialogModule,
     MatButtonModule,
-    HttpClientModule
+    HttpClientModule,
+    CarouselModule
   ],
   exports: [MatDialogModule, MatButtonModule],
   providers: [AuthGuardService],
