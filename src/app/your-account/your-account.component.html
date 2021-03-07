@@ -2,7 +2,7 @@
     <div class="default-padding">
      <div class="container">
         <div class="col-12 px-0">
-        <h1 class="header1">Hi, Michelle</h1>
+        <h1 class="header1">Hi, {{userData?.firstName}}</h1>
         <p class="para">welcome to your back office</p>
         </div>
     </div> 
@@ -19,7 +19,7 @@
                 </div>
             </div>
             <div class="col-4 p-0">
-                <div class="name-title">Michelle Joseph</div>
+                <div class="name-title">{{userData?.firstName}} {{userData?.lastName}}</div>
             </div>
         </div>
     </div>
@@ -40,8 +40,7 @@
                 <ul class="list-group list-group-horizontal">
                     <li class="list-group-item"> Referral ID</li>
                     <li class="list-group-item">
-                          <input _ngcontent-jsr-c156="" type="search" 
-                            value="" id="example-search-input"
+                          <input  type="text" disabled [value]="userData?.referral" id="example-search-input"
                             class="form-control py-2 border-right-0 border">
                     </li>
                        <li class="list-group-item">
@@ -63,21 +62,21 @@
                     <div class="form-row m-0">
                         <div class="form-group col-md-6">
                             <label for="inputEmail4">First Name</label>
-                            <input type="email" class="form-control" id="inputEmail4" placeholder="Email">
+                            <input type="email" class="form-control" id="inputEmail4" placeholder="First Name" [value]="userData?.firstName">
                         </div>
                         <div class="form-group col-md-6">
                             <label for="inputEmail4">Last Name</label>
-                            <input type="email" class="form-control" id="inputEmail4" placeholder="Email">
+                            <input type="email" class="form-control" id="inputEmail4" placeholder="Last Name" [value]="userData?.lastName">
                         </div>
                     </div>
                      <div class="form-row m-0">
                         <div class="form-group col-md-6">
                             <label for="inputEmail4">Phone</label>
-                            <input type="email" class="form-control" id="inputEmail4" placeholder="Email">
+                            <input type="email" class="form-control" id="inputEmail4" placeholder="Phone" [value]="userData?.mobile">
                         </div>
                         <div class="form-group col-md-6">
                             <label for="inputEmail4">Email</label>
-                            <input type="email" class="form-control" id="inputEmail4" placeholder="Email">
+                            <input type="email" class="form-control" id="inputEmail4" placeholder="Email" [value]="userData?.email">
                         </div>
                     </div>
                 <div class="form-row m-0">

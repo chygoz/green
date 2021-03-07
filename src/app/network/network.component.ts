@@ -14,12 +14,10 @@ export class NetworkComponent implements OnInit {
   constructor(private service: apiService, private cookieService: CookieService) { 
     let ud = this.cookieService.getCookie('currentUser');
     this.userData = JSON.parse(ud);
-    console.log(ud);
   }
 
   ngOnInit(): void {
     this.service.getUserNetwork({}).subscribe((resp) => {
-      console.log(resp);
       if(resp.status && resp.data.length > 0){
         this.connections = resp.data.length
       }else {
