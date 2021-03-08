@@ -1,6 +1,6 @@
 .navbar {
     background: #07555c;
-    padding: 1.5rem 2.6rem;
+    padding: 1.5rem 5.6rem;
 }
 #example-search-input {
     height: 46px;
@@ -18,5 +18,90 @@
     .navbar-expand-md .navbar-nav .nav-link {
         padding-right: 0.5rem;
         padding-left: 2.5rem;
+    }
+}
+
+@media only screen and (max-device-width: 767px) {
+}
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+    .d-flex {
+        display: block !important;
+    }
+    .navbar {
+        background: #07555c;
+        padding: 1.5rem 1.6rem;
+    }
+    .navbar-brand {
+        width: 100%;
+        text-align: center;
+        padding-bottom: 25px;
+    }
+    .col-5 {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+    .nav-link .profileimage {
+        width: 80px;
+    }
+    .navbar-nav {
+        width: 100%;
+        text-align: center;
+    }
+}
+@media only screen and (min-device-width: 481px) and (max-device-width: 768px) {
+    .d-flex {
+        display: block !important;
+    }
+    .navbar {
+        background: #07555c;
+        padding: 1.5rem 1.6rem;
+    }
+    .navbar-brand {
+        width: 100%;
+        text-align: center;
+        padding-bottom: 25px;
+    }
+    .col-5 {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+    .nav-link .profileimage {
+        width: 80px;
+    }
+    .navbar-nav {
+        width: 100%;
+        text-align: center;
+    }
+}
+@media only screen and (min-device-width: 769px) and (max-device-width: 1024px) {
+    .d-flex {
+        display: flex !important;
+    }
+    .navbar {
+        background: #07555c;
+        padding: 1.5rem 1.6rem;
+    }
+    .navbar-brand {
+        width: 100%;
+        text-align: center;
+        padding-bottom: 25px;
+    }
+    .col-5 {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+    .nav-link .profileimage {
+        width: 80px;
+    }
+    .navbar-nav {
+        width: 100%;
+        text-align: center;
+    }
+}
+@media only screen and (min-device-width: 1025px) and (max-device-width: 1200px) {
+    .col-5 {
+        flex: 0 0 75%;
+        max-width: 75%;
     }
 }

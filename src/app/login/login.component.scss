@@ -35,3 +35,64 @@ input::placeholder {
 .align-items-center {
     background-color: #fff;
 }
+
+@media only screen and (max-device-width: 767px) {
+}
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+    .padding-default {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    .p-5 {
+        padding: 1rem !important;
+    }
+
+    .collapse:not(.show) {
+        display: block;
+    }
+}
+@media only screen and (min-device-width: 481px) and (max-device-width: 768px) {
+    .padding-default {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    .p-5 {
+        padding: 1rem !important;
+    }
+
+    .collapse:not(.show) {
+        display: block;
+    }
+    .navbar-expand-md .navbar-collapse {
+        display: block;
+    }
+}
+@media only screen and (min-device-width: 769px) and (max-device-width: 1024px) {
+    .padding-default {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    .p-5 {
+        padding: 1rem !important;
+    }
+    .form-row .col-md-6 {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+    form .col-md-6 {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+    .p-5 {
+        padding: 1rem !important;
+    }
+
+    .collapse:not(.show) {
+        display: block;
+    }
+}
+@media only screen and (min-device-width: 1025px) and (max-device-width: 1200px) {
+}

@@ -31,6 +31,7 @@ import { NetworktestingComponent } from './networktesting/networktesting.compone
 import { AuthGuardService } from './auth-guard.service';
 import { WithdrawRequestComponent } from './withdraw-request/withdraw-request.component';
 import { ShareReferralComponent } from './share-referral/share-referral.component';
+import { ForgotPasswordComponent } from './forgot-password/forgot-password.component';
 
 @NgModule({
   declarations: [
@@ -50,7 +51,8 @@ import { ShareReferralComponent } from './share-referral/share-referral.componen
     HomeComponent,
     NetworktestingComponent,
     WithdrawRequestComponent,
-    ShareReferralComponent
+    ShareReferralComponent,
+    ForgotPasswordComponent
   ],
   imports: [
     BrowserModule,

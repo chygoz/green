@@ -1,3 +1,9 @@
+@media (min-width: 1200px) {
+    .container {
+        max-width: 1447px !important;
+    }
+}
+
 .header1 {
     color: #fff;
     font-size: 30px;
@@ -288,4 +294,67 @@ right connector from last child*/
 .tree li .child:hover + .parent .person + ul ul::before,
 .tree li .parent .person:hover + ul ul::before {
     //   border-color: #94a0b4;
+}
+
+.card-columns {
+    column-count: 1;
+}
+@media only screen and (max-device-width: 767px) {
+}
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+    .default-padding {
+        padding-top: 8px;
+        padding-bottom: 33px;
+    }
+
+    .col-2 {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+
+    .desktopview {
+        display: none;
+    }
+    .mobileview {
+        display: block;
+    }
+    .col-6 {
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+    .col-6i {
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+
+    .card-columns {
+        column-count: 3;
+    }
+
+    .card-1-button {
+        padding: 10px 25px;
+    }
+    .btn-primary-white {
+        background-color: #fff;
+        border: #fff;
+        color: #a5a5a5;
+        padding: 12px 37px;
+        font-size: 12px;
+    }
+    .btn-primary-white.active {
+        background-color: #3ca063;
+        border: #3ca063;
+        color: #fff;
+    }
+    .col-10 {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+}
+@media only screen and (min-device-width: 481px) and (max-device-width: 768px) {
+}
+@media only screen and (min-device-width: 769px) and (max-device-width: 1024px) {
+}
+@media only screen and (min-device-width: 1025px) and (max-device-width: 1200px) {
 }
