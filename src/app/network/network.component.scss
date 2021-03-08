@@ -92,13 +92,15 @@
 .useroverly {
     position: absolute;
     top: -28px;
-    left: 47px;
+    left: 0px;
 }
 .cardpadding {
     padding-left: 0em;
     padding-right: 0em;
     padding-bottom: 7px;
     padding-top: 14px;
+    position: relative;
+    margin: 0 auto;
 }
 
 .person.female {
@@ -296,6 +298,12 @@ right connector from last child*/
     //   border-color: #94a0b4;
 }
 
+.mobileview {
+    display: none;
+}
+.desktopview {
+    display: block;
+}
 .card-columns {
     column-count: 1;
 }
@@ -351,10 +359,121 @@ right connector from last child*/
         flex: 0 0 100%;
         max-width: 100%;
     }
+    .useroverly {
+        position: absolute;
+        top: -28px;
+        left: 80px;
+    }
 }
 @media only screen and (min-device-width: 481px) and (max-device-width: 768px) {
+    .default-padding {
+        padding-top: 8px;
+        padding-bottom: 33px;
+    }
+
+    .col-2 {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+
+    .desktopview {
+        display: none;
+    }
+    .mobileview {
+        display: block;
+    }
+    .col-6 {
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+    .col-6i {
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+
+    .card-columns {
+        column-count: 3;
+    }
+
+    .card-1-button {
+        padding: 10px 25px;
+    }
+    .btn-primary-white {
+        background-color: #fff;
+        border: #fff;
+        color: #a5a5a5;
+        padding: 13px 60px;
+        font-size: 14px;
+    }
+    .btn-primary-white.active {
+        background-color: #3ca063;
+        border: #3ca063;
+        color: #fff;
+    }
+    .col-10 {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+    .useroverly {
+        position: absolute;
+        top: -30px;
+        left: 0;
+    }
 }
 @media only screen and (min-device-width: 769px) and (max-device-width: 1024px) {
+    .default-padding {
+        padding-top: 8px;
+        padding-bottom: 33px;
+    }
+
+    .col-2 {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+
+    .desktopview {
+        display: none;
+    }
+    .mobileview {
+        display: block;
+    }
+    .col-6 {
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+    .col-6i {
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+
+    .card-columns {
+        column-count: 3;
+    }
+
+    .card-1-button {
+        padding: 10px 25px;
+    }
+    .btn-primary-white {
+        background-color: #fff;
+        border: #fff;
+        color: #a5a5a5;
+        padding: 13px 60px;
+        font-size: 14px;
+    }
+    .btn-primary-white.active {
+        background-color: #3ca063;
+        border: #3ca063;
+        color: #fff;
+    }
+    .col-10 {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+    .useroverly {
+        position: absolute;
+        top: -30px;
+        left: 0;
+    }
 }
 @media only screen and (min-device-width: 1025px) and (max-device-width: 1200px) {
 }

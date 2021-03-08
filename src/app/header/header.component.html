@@ -45,8 +45,8 @@
                   <img src="assets/images/down-arrow.svg" alt="" width="15">
                 </a>
                
-                <mat-menu #menu="matMenu" [overlapTrigger]="false">
-                    <span (mouseleave)="menuTrigger.closeMenu()">
+                <mat-menu #menu="matMenu" [overlapTrigger]="true" >
+                    <span >
                     <button routerLink="/your-account" mat-menu-item style="border-bottom:1px solid #a1a1a1;">
                         <span>My Account</span>
                     </button>

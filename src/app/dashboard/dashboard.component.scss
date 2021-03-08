@@ -32,7 +32,7 @@
     /*top: 0;*/
     right: 0;
     left: 0;
-    bottom: 298px;
+    bottom: 315px;
     /* padding: 1.25rem; */
     border-radius: calc(0.25rem - 1px);
 }
@@ -188,6 +188,11 @@
     box-shadow: none !important;
 }
 
+.table-responsive {
+    max-height: 300px;
+    display: revert;
+}
+
 @media only screen and (max-device-width: 767px) {
 }
 
@@ -293,6 +298,7 @@
 
 .table-responsive {
     max-height: 300px;
+    display: revert;
 }
 @media only screen and (min-device-width: 481px) and (max-device-width: 768px) {
     .card-overlay-thumb {
