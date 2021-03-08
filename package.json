@@ -26,6 +26,7 @@
     "angular-socialshare": "^2.3.11",
     "bootstrap": "^4.4.0",
     "ngx-owl-carousel-o": "^5.0.0",
+    "ngx-sharebuttons": "^8.0.5",
     "rxjs": "~6.5.4",
     "tslib": "^1.10.0",
     "zone.js": "~0.10.2"
