@@ -34,8 +34,8 @@ import { WithdrawRequestComponent } from './withdraw-request/withdraw-request.co
 import { ShareReferralComponent } from './share-referral/share-referral.component';
 import { ForgotPasswordComponent } from './forgot-password/forgot-password.component';
 
-import { ShareButtonsModule } from 'ngx-sharebuttons/buttons';
-import { ShareIconsModule } from 'ngx-sharebuttons/icons';
+//import { ShareButtonsModule } from 'ngx-sharebuttons/buttons';
+//import { ShareIconsModule } from 'ngx-sharebuttons/icons';
 
 @NgModule({
   declarations: [
@@ -75,8 +75,8 @@ import { ShareIconsModule } from 'ngx-sharebuttons/icons';
     MatExpansionModule,
     HttpClientModule,
     CarouselModule,
-    ShareButtonsModule,
-    ShareIconsModule
+    // ShareButtonsModule,
+    // ShareIconsModule
 
   ],
   exports: [MatDialogModule, MatButtonModule],
