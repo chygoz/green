@@ -33,9 +33,9 @@ import { AuthGuardService } from './auth-guard.service';
 import { WithdrawRequestComponent } from './withdraw-request/withdraw-request.component';
 import { ShareReferralComponent } from './share-referral/share-referral.component';
 import { ForgotPasswordComponent } from './forgot-password/forgot-password.component';
-
+import { ShareButtonsModule } from 'ngx-sharebuttons/buttons';
 //import { ShareButtonsModule } from 'ngx-sharebuttons/buttons';
-//import { ShareIconsModule } from 'ngx-sharebuttons/icons';
+import { ShareIconsModule } from 'ngx-sharebuttons/icons';
 
 @NgModule({
   declarations: [
@@ -75,6 +75,8 @@ import { ForgotPasswordComponent } from './forgot-password/forgot-password.compo
     MatExpansionModule,
     HttpClientModule,
     CarouselModule,
+    ShareButtonsModule,
+    ShareIconsModule
     // ShareButtonsModule,
     // ShareIconsModule
 
