@@ -10,6 +10,7 @@ import { CookieService } from '../services/cookie.service';
 export class NetworkComponent implements OnInit {
   connections: Number = 0;
   userData;
+  networks = [];
 
   constructor(private service: apiService, private cookieService: CookieService) { 
     let ud = this.cookieService.getCookie('currentUser');
@@ -17,9 +18,12 @@ export class NetworkComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.service.getUserNetwork({}).subscribe((resp) => {
+    this.service.getUserNetwork({userId: this.userData._id}).subscribe((resp) => {
       if(resp.status && resp.data.length > 0){
         this.connections = resp.data.length
+        this.networks = resp.data;
+        this.networks = this.networks.sort((a,b) => 
+          (a.leftLeg == true)? 1: -1)
       }else {
 
       }
