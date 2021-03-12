@@ -478,3 +478,18 @@ right connector from last child*/
 }
 @media only screen and (min-device-width: 1025px) and (max-device-width: 1200px) {
 }
+
+.dot {
+    height: 25px;
+    width: 25px;
+    background-color: #fff;
+    border-radius: 50%;
+    display: inline-block;
+    color: #000;
+    font-size: 15px;
+}
+
+.btn-primary:not(:disabled):not(.disabled):active {
+    background-color: #3ca063;
+    border-color: #3ca063;
+}
