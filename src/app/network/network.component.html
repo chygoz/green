@@ -76,24 +76,32 @@
                                                             </div>
                                                             <div class="footericons row pt-1">
                                                                 <div class="col-6">
-                                                                    <img src="assets/images/arrow.svg" (click)="getSelectedNetwork(userData)"
+                                                                    <img *ngIf="(networks | legside: 'left')" src="assets/images/arrow.svg"
                                                                     alt="" class="img-fluid lefticon" width="30" >
+                                                                    <img *ngIf="!(networks | legside: 'left')" src="assets/images/plus.svg" [matMenuTriggerFor]="menuLeft" 
+                                                                    alt="" class="img-fluid righticon" width="30" >
                                                                 </div>
                                                                 <div class="col-6">
-                                                                <img src="assets/images/plus.svg" [matMenuTriggerFor]="menu1" 
+                                                                    <img *ngIf="(networks | legside: 'right')" src="assets/images/arrow.svg"
+                                                                    alt="" class="img-fluid lefticon" width="30" >
+                                                                    <img *ngIf="!(networks | legside: 'right')" src="assets/images/plus.svg" [matMenuTriggerFor]="menuRight" 
                                                                     alt="" class="img-fluid righticon" width="30" >
                                                                 </div>
 
                                                             </div>
-                                                            <mat-menu #menu1="matMenu">
+                                                            <mat-menu #menuLeft="matMenu">
+                                                                <div *ngFor="let pn of pendingNetworks">
+                                                                <button  mat-menu-item (click)="addLeg(userData, pn, 'left')">
+                                                                    <img src="assets/images/plus1.svg"  class="img-fluid" width="15" > 
+                                                                    <span> add {{pn.firstName}} {{pn.lastName}} to left</span>
+                                                                </button>
+                                                                </div>
+                                                            </mat-menu>
+                                                            <mat-menu #menuRight="matMenu">
                                                                 <div *ngFor="let pn of pendingNetworks">
                                                                 <button  mat-menu-item (click)="addLeg(userData, pn, 'right')">
                                                                     <img src="assets/images/plus1.svg"  class="img-fluid" width="15" > 
                                                                     <span> add {{pn.firstName}} {{pn.lastName}} to right</span>
-                                                                </button>
-                                                                <button  mat-menu-item (click)="addLeg(userData, pn, 'left')">
-                                                                    <img src="assets/images/plus1.svg"  class="img-fluid" width="15" > 
-                                                                    <span> add {{pn.firstName}} {{pn.lastName}} to left</span>
                                                                 </button>
                                                                 </div>
                                                             </mat-menu>

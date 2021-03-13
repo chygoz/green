@@ -37,6 +37,7 @@ import { ShareButtonsModule } from 'ngx-sharebuttons/buttons';
 //import { ShareButtonsModule } from 'ngx-sharebuttons/buttons';
 import { ShareIconsModule } from 'ngx-sharebuttons/icons';
 import { ToastrModule } from 'ngx-toastr';
+import { LegsidePipe } from './legside.pipe';
 
 
 @NgModule({
@@ -58,7 +59,8 @@ import { ToastrModule } from 'ngx-toastr';
     NetworktestingComponent,
     WithdrawRequestComponent,
     ShareReferralComponent,
-    ForgotPasswordComponent
+    ForgotPasswordComponent,
+    LegsidePipe
   ],
   imports: [
     BrowserModule,
