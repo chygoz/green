@@ -11,6 +11,9 @@ export class NetworkComponent implements OnInit {
   connections: Number = 0;
   userData;
   networks = [];
+  pendingNetworks = [];
+  params;
+  pendingParams;
 
   constructor(private service: apiService, private cookieService: CookieService) { 
     let ud = this.cookieService.getCookie('currentUser');
@@ -18,7 +21,13 @@ export class NetworkComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.service.getUserNetwork({userId: this.userData._id}).subscribe((resp) => {
+    this.params = {userId: this.userData._id};
+    this.getUserNetwork(this.params);
+    this.getPendingNetwork(this.params);
+  }
+
+  getUserNetwork(params) {
+    this.service.getUserNetwork(params).subscribe((resp) => {
       if(resp.status && resp.data.length > 0){
         this.connections = resp.data.length
         this.networks = resp.data;
@@ -28,6 +37,41 @@ export class NetworkComponent implements OnInit {
 
       }
     })
+  }
+
+  getPendingNetwork(params){
+    this.service.getPendingNetwork(params).subscribe((resp) => {
+      if(resp.status && resp.data.length > 0){
+        this.connections = resp.data.length
+        this.pendingNetworks = resp.data;
+      }else {
+
+      }
+    })
+  }
+
+  addLeg(network, pn, leg) {
+    console.log(network);
+    let params = {
+      cnId: network._id,
+      pnId: pn._id,
+      leg: leg
+    }
+    this.service.addleg(params).subscribe((resp) => {
+      if(resp.status) {
+        this.service.showSuccess(resp.msg);
+        this.getUserNetwork(this.params);
+        this.getPendingNetwork(this.params);
+
+      }else {
+        this.service.showError(resp.msg);
+      }
+    })
+  }
+
+  getSelectedNetwork(user){
+    this.params = {userId: user._id};
+    this.getUserNetwork(this.params);
   }
 
 }

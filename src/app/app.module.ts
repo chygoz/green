@@ -36,6 +36,7 @@ import { ForgotPasswordComponent } from './forgot-password/forgot-password.compo
 import { ShareButtonsModule } from 'ngx-sharebuttons/buttons';
 //import { ShareButtonsModule } from 'ngx-sharebuttons/buttons';
 import { ShareIconsModule } from 'ngx-sharebuttons/icons';
+import { ToastrModule } from 'ngx-toastr';
 
 
 @NgModule({
@@ -77,7 +78,8 @@ import { ShareIconsModule } from 'ngx-sharebuttons/icons';
     HttpClientModule,
     CarouselModule,
     ShareButtonsModule,
-    ShareIconsModule
+    ShareIconsModule,
+    ToastrModule.forRoot(),
     // ShareButtonsModule,
     // ShareIconsModule
 
