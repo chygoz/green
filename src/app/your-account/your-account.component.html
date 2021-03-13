@@ -1,5 +1,5 @@
 <div class="container-fluid" style="background-color: #07555c;">
-    <div class="default-padding">
+    <div class="default-padding-header">
      <div class="container">
         <div class="col-12 px-0">
         <h1 class="header1">Hi, {{userData?.firstName}}</h1>
@@ -12,11 +12,15 @@
 <div class="profileoverlay">
     <div class="container">
         <div class="row">
-            <div class="col-2">
-                <img src="assets/images/pic.png" alt="" width="150">
-                <div class="editoverlay">
-                    <img src="assets/images/edit.png" alt="" width="30">
+            <div class="col-2 profileimage">
+                <img src="assets/images/pic.png" alt="" width="150" class="profilepic">
+                 <div class="editoverlay">
+                    <button class="file-upload-button">
+                        <input type="file" />
+                        <img src="assets/images/edit.png" alt="" width="35">
+                    </button>
                 </div>
+
             </div>
             <div class="col-4 p-0">
                 <div class="name-title">{{userData?.firstName}} {{userData?.lastName}}</div>
@@ -141,6 +145,7 @@
                 </div>
                
          </div>
+            <button type="button" class="btn btn-primary mr-2">Save Changes</button>
     </div>
     </div>
 </div>

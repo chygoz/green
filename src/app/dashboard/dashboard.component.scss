@@ -32,7 +32,7 @@
     /*top: 0;*/
     right: 0;
     left: 0;
-    bottom: 253px;
+    bottom: 316px;
     /* padding: 1.25rem; */
     border-radius: calc(0.25rem - 1px);
 }
@@ -192,6 +192,9 @@
 .table-responsive {
     max-height: 300px;
     display: revert;
+}
+.page-item:focus {
+    outline: none !important;
 }
 
 @media only screen and (max-device-width: 767px) {

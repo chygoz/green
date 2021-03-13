@@ -14,6 +14,7 @@ import { AuthGuardService as AuthGuard } from './auth-guard.service';
 const routes: Routes = [
   { path: 'register', component: RegisterComponent },
   { path: 'login', component: LoginComponent },
+  { path: 'forgot-password', component: ForgotPasswordComponent },
   {
     path: '', component: LayouthomeComponent,
     children: [
@@ -43,13 +44,6 @@ const routes: Routes = [
     path: 'networktesting', component: LayoutComponent,
     children: [
       { path: '', component: NetworktestingComponent }
-    ]
-  }
-  ,
-  {
-    path: 'forgot-password', component: LayoutComponent,
-    children: [
-      { path: '', component: ForgotPasswordComponent }
     ]
   }
 ];

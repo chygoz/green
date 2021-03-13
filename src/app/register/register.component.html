@@ -20,7 +20,7 @@
                     <div class="d-flex flex-grow-1">
 
                         <a href="/" class="navbar-brand">
-                            <img src="assets/images/logo-lite.png" alt="" width="100">
+                            <img src="assets/images/logo-lite.png" alt="" width="140">
                         </a>
 
                     </div>
@@ -42,7 +42,7 @@
         <div class="container">
             <mat-tab-group animationDuration="0ms">
                 <mat-tab label="step 1" >
-                    <h1 class="header1 pt-4">Register</h1>
+                    <h1 class="header1 pt-5">Register</h1>
                     <p class="para1">Enter your details to get started our journey together.</p>
 
                     <div class="default-padding">
@@ -50,31 +50,33 @@
                             <div class="form-row m-0">
                                 <div class="form-group col-md-4">
                                     <label for="inputEmail4">First Name</label>
-                                    <input type="text" class="form-control" formControlName="firstName" placeholder="First Name">
+                                    <input type="text" class="form-control" formControlName="firstName"
+                                     placeholder="">
                                 </div>
                                 <div class="form-group col-md-4">
                                     <label for="inputEmail4">Last Name</label>
-                                    <input type="text" class="form-control" formControlName="lastName" placeholder="Last Name">
+                                    <input type="text" class="form-control" formControlName="lastName"
+                                     placeholder="">
                                 </div>
                             </div>
                             <div class="form-row m-0">
                                 <div class="form-group col-md-4">
                                     <label for="inputEmail4">Phone</label>
-                                    <input type="text" class="form-control" formControlName="mobile" placeholder="Phone">
+                                    <input type="text" class="form-control" formControlName="mobile" placeholder="">
                                 </div>
                                 <div class="form-group col-md-4">
                                     <label for="inputEmail4">Email</label>
-                                    <input type="email" class="form-control" formControlName="email" placeholder="Email">
+                                    <input type="email" class="form-control" formControlName="email" placeholder="">
                                 </div>
                             </div>
                             <div class="form-row m-0">
                                 <div class="form-group col-md-4">
                                     <label for="inputPassword4">Password</label>
-                                    <input type="password" class="form-control" formControlName="password" placeholder="Password">
+                                    <input type="password" class="form-control" formControlName="password" placeholder="">
                                 </div>
                                 <div class="form-group col-md-4">
                                     <label for="inputPassword4">Referral ID</label>
-                                    <input type="text" class="form-control" formControlName="referralId" placeholder="referral">
+                                    <input type="text" class="form-control" formControlName="referralId" placeholder="">
                                 </div>
                                 <!-- <div class="form-group col-md-6">
                                     <label for="inputPassword4">Confirm Password</label>
@@ -85,7 +87,7 @@
                             <div class="errorSec">
                                 {{errorMsg}}
                             </div>
- <div class="form-group col-md-8 p-0">
+ <div class="form-group col-md-8 p-0 pt-4">
                             <button type="submit" [disabled]="registerForm.invalid" 
                             class="btn btn-primary btn-lg btn-block">Continue</button>
 </div>
@@ -94,7 +96,7 @@
                     
                 </mat-tab>
                 <mat-tab label="step 2">
-                    <h1 class="header1 pt-4">Choose your card</h1>
+                    <h1 class="header1 pt-5">Choose your card</h1>
                     <p class="para1">Choose the card that suits your needs</p>
 
 

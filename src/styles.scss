@@ -77,3 +77,25 @@ body {
 .mat-tab-header {
     border-bottom: 1px solid #fff !important;
 }
+
+.btn-primary:hover,
+.btn-primary:active,
+.btn-primary:focus,
+.btn-primary:not([disabled]):not(.disabled):active {
+    background-color: #07555c !important;
+    color: #fff !important;
+}
+
+.btn-primary:focus {
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+input:focus,
+input.form-control:focus {
+    outline: none !important;
+    outline-width: 0 !important;
+    box-shadow: none;
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+}

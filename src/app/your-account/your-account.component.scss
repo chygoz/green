@@ -19,6 +19,11 @@
     padding-top: 49px;
     padding-bottom: 166px;
 }
+
+.default-padding-header {
+    padding-top: 49px;
+    padding-bottom: 166px;
+}
 .header1 {
     color: #fff;
 }
@@ -157,7 +162,9 @@
 }
 .header1-black {
     font-family: Poppins !important;
-    color: #696b6a;
+    color: #000;
+    font-size: 30px;
+    font-weight: 600;
 }
 .table {
     font-family: Poppins !important;
@@ -212,8 +219,8 @@
     position: absolute;
     //top: 0;
     //left: 0;
-    right: 40px;
-    bottom: 120px;
+    right: 19px;
+    bottom: 96px;
     z-index: 999;
 }
 .name-title {
@@ -235,4 +242,220 @@
 .btn-secondary {
     background-color: #2cd8cb;
     border: #2cd8cb;
+}
+
+.file-upload-button {
+    background: none;
+    border: none;
+    border-radius: 50%;
+    height: 3rem;
+    overflow: hidden;
+    position: relative;
+    width: 3rem;
+
+    &::after {
+        color: #fff;
+        font-size: 1.5rem;
+        text-align: center;
+    }
+
+    input[type="file"] {
+        font-size: 100px;
+        left: 0;
+        opacity: 0;
+        position: absolute;
+        top: 0;
+    }
+}
+
+.file-info {
+    color: #999;
+    font-family: Lato;
+    margin-left: 0.5rem;
+}
+.list-group-item {
+    font-size: 18px;
+}
+.para1 {
+    font-size: 18px;
+    color: #3ca063;
+    font-weight: 500;
+}
+
+@media only screen and (max-device-width: 767px) {
+}
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+    .default-padding-header {
+        padding-top: 0px;
+        padding-bottom: 223px;
+    }
+    .default-padding {
+        padding-top: 0px;
+        padding-bottom: 50px;
+    }
+    .col-2 {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+    .col-4 {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+    .col-6 {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+    .profileimage {
+        text-align: center;
+    }
+    .profilepic {
+        width: 100px;
+    }
+    .file-upload-button img {
+        width: 30px;
+    }
+    .editoverlay {
+        position: absolute;
+        right: 92px;
+        bottom: 58px;
+        z-index: 999;
+    }
+    .header1 {
+        font-size: 20px;
+    }
+    .para {
+        color: #c5d82c;
+        font-size: 16px;
+        line-height: 3px;
+    }
+    .para1 {
+        font-size: 18px;
+        color: #3ca063;
+    }
+
+    .name-title {
+        text-align: center;
+        position: relative;
+        color: #fff;
+        font-size: 19px;
+        top: 30px;
+        padding: 0;
+    }
+    .list-group-horizontal {
+        flex-direction: column;
+    }
+    .default-padding-95 {
+        padding-top: 33px;
+    }
+}
+@media only screen and (min-device-width: 481px) and (max-device-width: 768px) {
+    .default-padding {
+        padding-top: 0px;
+        padding-bottom: 223px;
+    }
+    .col-2 {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+    .col-4 {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+    .col-6 {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+    .profileimage {
+        text-align: center;
+    }
+    .profilepic {
+        width: 100px;
+    }
+    .file-upload-button img {
+        width: 30px;
+    }
+    .editoverlay {
+        position: absolute;
+        right: 112px;
+        bottom: 58px;
+        z-index: 999;
+    }
+    .header1 {
+        font-size: 20px;
+    }
+    .para {
+        color: #c5d82c;
+        font-size: 16px;
+        line-height: 3px;
+    }
+    .name-title {
+        text-align: center;
+        position: relative;
+        color: #fff;
+        font-size: 19px;
+        top: 30px;
+        padding: 0;
+    }
+    .list-group-horizontal {
+        flex-direction: column;
+    }
+    .default-padding-header {
+        padding-top: 6px;
+        padding-bottom: 166px;
+    }
+}
+@media only screen and (min-device-width: 769px) and (max-device-width: 1024px) {
+    .default-padding {
+        padding-top: 0px;
+        padding-bottom: 223px;
+    }
+    .col-2 {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+    .col-4 {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+    .col-6 {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+    .profileimage {
+        text-align: center;
+    }
+    .profilepic {
+        width: 100px;
+    }
+    .file-upload-button img {
+        width: 30px;
+    }
+    .editoverlay {
+        position: absolute;
+        right: 112px;
+        bottom: 58px;
+        z-index: 999;
+    }
+    .header1 {
+        font-size: 20px;
+    }
+    .para {
+        color: #c5d82c;
+        font-size: 16px;
+        line-height: 3px;
+    }
+    .name-title {
+        text-align: center;
+        position: relative;
+        color: #fff;
+        font-size: 19px;
+        top: 30px;
+        padding: 0;
+    }
+    .list-group-horizontal {
+        flex-direction: column;
+    }
+}
+@media only screen and (min-device-width: 1025px) and (max-device-width: 1200px) {
 }
