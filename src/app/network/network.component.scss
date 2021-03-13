@@ -171,9 +171,11 @@
 }
 .lefticon {
     float: left;
+    cursor: pointer;
 }
 .righticon {
     float: right;
+    cursor: pointer;
 }
 
 /*We will use ::before and ::after to draw the connectors*/

@@ -50,14 +50,7 @@
                     
                     <div class="card">
                         <div class="card-body card-network">
-                        <div class="col-12 text-center">
-                            <div class="btn btn-primary">
-                                <span class="dot">{{pendingNetworks?.length}}</span>
-                                Pending Referrals 
-                            </div>
-                        </div>
-                        
-                            <div class="tree mt-5">
+                            <div class="tree">
                                 <ul>
                                     <li>
                                         <div class="family">
@@ -72,36 +65,14 @@
                                                                 <div class="para5">Business Card</div>
                                                             </div>
                                                             <div class="card-footer text-muted p-2 left-footer">
+                                                                
                                                             </div>
                                                             </div>
-                                                            <div class="footericons row pt-1">
-                                                                <div class="col-6">
-                                                                    <img src="assets/images/arrow.svg" (click)="getSelectedNetwork(userData)"
-                                                                    alt="" class="img-fluid lefticon" width="30" >
-                                                                </div>
-                                                                <div class="col-6">
-                                                                <img src="assets/images/plus.svg" [matMenuTriggerFor]="menu1" 
-                                                                    alt="" class="img-fluid righticon" width="30" >
-                                                                </div>
-
-                                                            </div>
-                                                            <mat-menu #menu1="matMenu">
-                                                                <div *ngFor="let pn of pendingNetworks">
-                                                                <button  mat-menu-item (click)="addLeg(userData, pn, 'right')">
-                                                                    <img src="assets/images/plus1.svg"  class="img-fluid" width="15" > 
-                                                                    <span> add {{pn.firstName}} {{pn.lastName}} to right</span>
-                                                                </button>
-                                                                <button  mat-menu-item (click)="addLeg(userData, pn, 'left')">
-                                                                    <img src="assets/images/plus1.svg"  class="img-fluid" width="15" > 
-                                                                    <span> add {{pn.firstName}} {{pn.lastName}} to left</span>
-                                                                </button>
-                                                                </div>
-                                                            </mat-menu>
 
                                                     </div>
                                                 </div>
                                                 <ul>
-                                                   <li *ngFor="let network of networks">
+                                                   <li>
                                                     <div class="family" style="width: 172px">
                                                         <div class="person child male">
                                                           <div class="">
@@ -109,7 +80,7 @@
                                                             <div class="card-body cardpadding">
                                                                 <img src="assets/images/user.svg" alt="" 
                                                                      class="img-fluid useroverly" width="50" >
-                                                                <h5 class="header5 pt-3">{{network?.firstName}} {{network?.lastName}}</h5>
+                                                                <h5 class="header5 pt-3">Michelle1</h5>
                                                                 <div class="para5">Business Card</div>
                                                             </div>
                                                             <div class="card-footer text-muted p-2 right-footer">
@@ -117,11 +88,11 @@
                                                             </div>
                                                             <div class="footericons row pt-1">
                                                                 <div class="col-6">
-                                                                    <img src="assets/images/arrow.svg" (click)="getSelectedNetwork(network)"
+                                                                    <img src="assets/images/arrow.svg" 
                                                                     alt="" class="img-fluid lefticon" width="30" >
                                                                 </div>
                                                                 <div class="col-6">
-                                                                <img src="assets/images/plus.svg" [matMenuTriggerFor]="menu" 
+                                                                <img src="assets/images/plus.svg" 
                                                                     alt="" class="img-fluid righticon" width="30" >
                                                                 </div>
 
@@ -129,21 +100,100 @@
                                                         </div>
                                                         </div>
                                                     </div>
-                                                    <mat-menu #menu="matMenu">
-                                                        <div *ngFor="let pn of pendingNetworks">
-                                                        <button  mat-menu-item (click)="addLeg(network, pn, 'right')">
-                                                            <img src="assets/images/plus1.svg"  class="img-fluid" width="15" > 
-                                                            <span> add {{pn.firstName}} {{pn.lastName}} to right</span>
-                                                        </button>
-                                                        <button  mat-menu-item (click)="addLeg(network, pn, 'left')">
-                                                            <img src="assets/images/plus1.svg"  class="img-fluid" width="15" > 
-                                                            <span> add {{pn.firstName}} {{pn.lastName}} to left</span>
-                                                        </button>
-                                                        </div>
-                                                    </mat-menu>
                                                     </li>
-                                                    
-                                                </ul>               
+                                                    <li>
+                                                        <div class="family" style="width: 344px">
+                                                            
+                                                                <div class="person child male">
+                                                                        <div class="">
+                                                        <div class="card text-center">
+                                                            <div class="card-body cardpadding">
+                                                                <img src="assets/images/user.svg" alt="" 
+                                                                     class="img-fluid useroverly" width="50" >
+                                                                <h5 class="header5 pt-3">Miriam</h5>
+                                                                <div class="para5">Business Card</div>
+                                                        </div>
+                                                            <div class="card-footer text-muted p-2 right-footer">
+                                                            </div>
+                                                        </div>
+                                                            <div class="footericons row pt-1">
+                                                                <div class="col-6">
+                                                                    <img src="assets/images/arrow.svg" 
+                                                                    alt="" class="img-fluid lefticon" width="30" >
+                                                                </div>
+                                                                <div class="col-6">
+                                                                <img src="assets/images/plus.svg" 
+                                                                    alt="" class="img-fluid righticon" width="30" >
+                                                                </div>
+
+                                                            </div>
+
+                                                                        </div>
+                                                                </div>
+                                                                <ul>
+                                                                    <li>
+                                                                    <div class="person child male">
+                                                                        <div class="">
+                                                  <div class="card text-center">
+                                                            <div class="card-body cardpadding">
+                                                                <img src="assets/images/user.svg" alt="" 
+                                                                     class="img-fluid useroverly" width="50" >
+                                                                <h5 class="header5 pt-3">Miriam1</h5>
+                                                                <div class="para5">Business Card</div>
+                                                        </div>
+                                                            <div class="card-footer text-muted p-2 right-footer">
+                                                            </div>
+                                                        </div>
+                                                            <div class="footericons row pt-1">
+                                                                <div class="col-6">
+                                                                    <img src="assets/images/arrow.svg" 
+                                                                    alt="" class="img-fluid lefticon" width="30" >
+                                                                </div>
+                                                                <div class="col-6">
+                                                                <img src="assets/images/plus.svg" 
+                                                                    alt="" class="img-fluid righticon" width="30" >
+                                                                </div>
+
+                                                            </div>
+                                                                            
+                                                                        </div>
+                                                                    </div>
+                                                                    </li>
+                                                                    <li>
+                                                                    <div class="person child female">
+                                                                        <div class="">
+                                                <div class="card text-center">
+                                                            <div class="card-body cardpadding">
+                                                                <img src="assets/images/user.svg" alt="" 
+                                                                     class="img-fluid useroverly" width="50" >
+                                                                <h5 class="header5 pt-3">Miriam2</h5>
+                                                                <div class="para5">Business Card</div>
+                                                        </div>
+                                                            <div class="card-footer text-muted p-2 right-footer">
+                                                            </div>
+                                                        </div>
+                                                            <div class="footericons row pt-1">
+                                                                <div class="col-6">
+                                                                    <img src="assets/images/arrow.svg" 
+                                                                    alt="" class="img-fluid lefticon" width="30" >
+                                                                </div>
+                                                                <div class="col-6">
+                                                                <img src="assets/images/plus.svg" 
+                                                                    alt="" class="img-fluid righticon" width="30" >
+                                                                </div>
+
+                                                            </div>
+
+                                                                        </div>
+                                                                    </div>
+                                                                    </li>
+                                                                </ul>
+                                                            
+                                                        </div>
+                                                    </li>
+                                                     
+                                                </ul>
+                                             
                                         </div>
                                       
                                     </li>
@@ -151,16 +201,16 @@
                             </div>
                         </div>
 
-                          <!-- <div class="row mb-5">
+                          <div class="row mb-5">
                             <div class="col-6 px-0"></div>
-                            <div class="col-4 px-0">
+                            <div class="col-6 px-0">
                                 <div class="card">
                                         <div class="card-body">
                                             <div class="para1">
                                                 <a href="">
                                                     <img src="assets/images/plus1.svg" 
                                                                             alt="" class="img-fluid" width="15" >
-                                                    Add Gloria
+                                                    Add as a <strong>Left Volume</strong> to Gloria
                                                 </a>
                                             </div>
                                         </div>
@@ -169,15 +219,22 @@
                                              <a href="">
                                             <img src="assets/images/plus1.svg" 
                                                                     alt="" class="img-fluid" width="15" >
-                                            Add chygoz
+                                            Add as a <strong>right Volume</strong> to Gloria
                                         </a>
                                         </div>
                                     </div>
                                     </div>
                             </div>
-                        </div> -->
+                        </div>
+
+
                     </div>
+
                 </div>
+
+            
+
+               
                 </div>
             </div>
 
@@ -190,16 +247,9 @@
                          <div class="col-6"><button type="button"  class="btn btn-primary-white mt-4">Right Leg</button></div>
                     </div>
                     <div class="row">
-                       
                          <div class="col-12 pt-4">
                                 <div class="card">
                                     <div class="card-body">
-                                         <div class="col-12 mb-5 text-center">
-                                        <div class="btn btn-primary">
-                                            <span class="dot">15</span>
-                                            Pending Referrals 
-                                        </div>
-                                    </div>
                                    <div class="col-12 pt-4">
                                         <div class="card text-center">
                                             <div class="card-body cardpadding">
