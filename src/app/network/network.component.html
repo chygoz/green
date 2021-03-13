@@ -76,15 +76,15 @@
                                                             </div>
                                                             <div class="footericons row pt-1">
                                                                 <div class="col-6">
-                                                                    <img *ngIf="(networks | legside: 'left')" src="assets/images/arrow.svg"
+                                                                    <img *ngIf="(networks | legside: 'left': userData._id)" src="assets/images/arrow.svg"
                                                                     alt="" class="img-fluid lefticon" width="30" >
-                                                                    <img *ngIf="!(networks | legside: 'left')" src="assets/images/plus.svg" [matMenuTriggerFor]="menuLeft" 
+                                                                    <img *ngIf="!(networks | legside: 'left': userData._id)" src="assets/images/plus.svg" [matMenuTriggerFor]="menuLeft" 
                                                                     alt="" class="img-fluid righticon" width="30" >
                                                                 </div>
                                                                 <div class="col-6">
-                                                                    <img *ngIf="(networks | legside: 'right')" src="assets/images/arrow.svg"
+                                                                    <img *ngIf="(networks | legside: 'right': userData._id)" src="assets/images/arrow.svg"
                                                                     alt="" class="img-fluid lefticon" width="30" >
-                                                                    <img *ngIf="!(networks | legside: 'right')" src="assets/images/plus.svg" [matMenuTriggerFor]="menuRight" 
+                                                                    <img *ngIf="!(networks | legside: 'right': userData._id)" src="assets/images/plus.svg" [matMenuTriggerFor]="menuRight" 
                                                                     alt="" class="img-fluid righticon" width="30" >
                                                                 </div>
 
@@ -125,11 +125,15 @@
                                                             </div>
                                                             <div class="footericons row pt-1">
                                                                 <div class="col-6">
-                                                                    <img src="assets/images/arrow.svg" (click)="getSelectedNetwork(network)"
+                                                                    <img *ngIf="(networks | legside: 'left': network._id)" src="assets/images/arrow.svg"
                                                                     alt="" class="img-fluid lefticon" width="30" >
+                                                                    <img *ngIf="!(networks | legside: 'left': network._id)" src="assets/images/plus.svg" [matMenuTriggerFor]="menu1Left" 
+                                                                    alt="" class="img-fluid righticon" width="30" >
                                                                 </div>
                                                                 <div class="col-6">
-                                                                <img src="assets/images/plus.svg" [matMenuTriggerFor]="menu" 
+                                                                    <img *ngIf="(networks | legside: 'right': network._id)" src="assets/images/arrow.svg"
+                                                                    alt="" class="img-fluid lefticon" width="30" >
+                                                                    <img *ngIf="!(networks | legside: 'right': network._id)" src="assets/images/plus.svg" [matMenuTriggerFor]="menu1Right" 
                                                                     alt="" class="img-fluid righticon" width="30" >
                                                                 </div>
 
@@ -137,15 +141,19 @@
                                                         </div>
                                                         </div>
                                                     </div>
-                                                    <mat-menu #menu="matMenu">
+                                                    <mat-menu #menu1Left="matMenu">
+                                                        <div *ngFor="let pn of pendingNetworks">
+                                                        <button  mat-menu-item (click)="addLeg(network, pn, 'left')">
+                                                            <img src="assets/images/plus1.svg"  class="img-fluid" width="15" > 
+                                                            <span> add {{pn.firstName}} {{pn.lastName}} to left</span>
+                                                        </button>
+                                                        </div>
+                                                    </mat-menu>
+                                                    <mat-menu #menu1Right="matMenu">
                                                         <div *ngFor="let pn of pendingNetworks">
                                                         <button  mat-menu-item (click)="addLeg(network, pn, 'right')">
                                                             <img src="assets/images/plus1.svg"  class="img-fluid" width="15" > 
                                                             <span> add {{pn.firstName}} {{pn.lastName}} to right</span>
-                                                        </button>
-                                                        <button  mat-menu-item (click)="addLeg(network, pn, 'left')">
-                                                            <img src="assets/images/plus1.svg"  class="img-fluid" width="15" > 
-                                                            <span> add {{pn.firstName}} {{pn.lastName}} to left</span>
                                                         </button>
                                                         </div>
                                                     </mat-menu>

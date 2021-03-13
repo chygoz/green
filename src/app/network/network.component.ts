@@ -32,7 +32,7 @@ export class NetworkComponent implements OnInit {
         this.connections = resp.data.length
         this.networks = resp.data;
         this.networks = this.networks.sort((a,b) => 
-          (a.leftLeg == true)? 1: -1)
+          (a.leftLeg == true)? -1: 1)
       }else {
 
       }
