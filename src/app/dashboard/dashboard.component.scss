@@ -618,3 +618,42 @@
         display: block;
     }
 }
+
+@media only screen and (min-device-width: 1201px) and (max-device-width: 1599px) {
+    .card-overlay-thumb {
+        position: absolute;
+        right: 0;
+        left: 0;
+        bottom: 224px;
+        border-radius: calc(0.25rem - 1px);
+    }
+}
+
+@media only screen and (min-device-width: 1600px) and (max-device-width: 1700px) {
+    .card-overlay-thumb {
+        position: absolute;
+        right: 0;
+        left: 0;
+        bottom: 305px;
+        border-radius: calc(0.25rem - 1px);
+    }
+}
+
+@media only screen and (min-device-width: 1701px) and (max-device-width: 1800px) {
+    .card-overlay-thumb {
+        position: absolute;
+        right: 0;
+        left: 0;
+        bottom: 335px;
+        border-radius: calc(0.25rem - 1px);
+    }
+}
+@media only screen and (min-device-width: 1801px) and (max-device-width: 2000px) {
+    .card-overlay-thumb {
+        position: absolute;
+        right: 0;
+        left: 0;
+        bottom: 380px;
+        border-radius: calc(0.25rem - 1px);
+    }
+}

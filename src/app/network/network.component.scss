@@ -36,7 +36,7 @@
 .para-num {
     color: #414141;
 
-    font-size: 28px;
+    font-size: 24px;
     padding-bottom: 10px;
 }
 .para-small {
@@ -44,7 +44,7 @@
     font-size: 12px;
 }
 .card-1-button {
-    padding: 13px 34px;
+    padding: 8px 25px;
 }
 
 .btn-primary {
@@ -479,19 +479,26 @@ right connector from last child*/
     }
 }
 @media only screen and (min-device-width: 1025px) and (max-device-width: 1200px) {
-}
+    .col-2 {
+        flex: 0 0 25%;
+        max-width: 25%;
+    }
+    .col-10 {
+        flex: 0 0 75%;
+        max-width: 75%;
+    }
+    .dot {
+        height: 25px;
+        width: 25px;
+        background-color: #fff;
+        border-radius: 50%;
+        display: inline-block;
+        color: #000;
+        font-size: 15px;
+    }
 
-.dot {
-    height: 25px;
-    width: 25px;
-    background-color: #fff;
-    border-radius: 50%;
-    display: inline-block;
-    color: #000;
-    font-size: 15px;
-}
-
-.btn-primary:not(:disabled):not(.disabled):active {
-    background-color: #3ca063;
-    border-color: #3ca063;
+    .btn-primary:not(:disabled):not(.disabled):active {
+        background-color: #3ca063;
+        border-color: #3ca063;
+    }
 }

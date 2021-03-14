@@ -279,9 +279,25 @@
     font-size: 18px;
 }
 .para1 {
-    font-size: 18px;
+    font-size: 14px;
     color: #3ca063;
     font-weight: 500;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+.btn {
+    font-size: 12px;
+}
+label {
+    font-size: 14px;
+    font-weight: 500;
+}
+input {
+    font-size: 12px;
+}
+
+input::placeholder {
+    font-size: 14px;
 }
 
 @media only screen and (max-device-width: 767px) {
@@ -337,7 +353,7 @@
         line-height: 3px;
     }
     .para1 {
-        font-size: 18px;
+        font-size: 14px;
         color: #3ca063;
     }
 

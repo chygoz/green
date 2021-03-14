@@ -101,12 +101,13 @@
     font-family: Poppins !important;
     color: #fff;
     font-size: 16px;
+    font-weight: 300;
 }
 .pricing-card-title {
     color: #fff;
     font-size: 31px;
     font-weight: 300;
-    line-height: 46px;
+    line-height: 36px;
 }
 .header2-light {
     font-family: Poppins !important;
@@ -129,7 +130,7 @@
     padding: 40px 20px;
 }
 .price-card-padding-2 {
-    padding: 103px 20px;
+    padding: 67px 20px;
 }
 .cardalign {
     width: 85%;
@@ -137,6 +138,9 @@
 }
 .listtop {
     padding-top: 60px;
+}
+.listtop1 {
+    padding-top: 18px;
 }
 .buttontop {
     margin-top: 50px;
@@ -162,7 +166,7 @@
 }
 .list-unstyled {
     color: #fff;
-    line-height: 38px;
+    line-height: 22px;
 }
 
 .btn-primary:focus {
