@@ -11,13 +11,17 @@ export class NetworkComponent implements OnInit {
   connections: Number = 0;
   userData;
   networks = [];
+  allNetworks = [];
   pendingNetworks = [];
+  mainNetwork:any = [];
   params;
   pendingParams;
 
   constructor(private service: apiService, private cookieService: CookieService) { 
     let ud = this.cookieService.getCookie('currentUser');
     this.userData = JSON.parse(ud);
+    this.mainNetwork = this.userData;
+    console.log(this.mainNetwork)
   }
 
   ngOnInit(): void {
@@ -30,7 +34,9 @@ export class NetworkComponent implements OnInit {
     this.service.getUserNetwork(params).subscribe((resp) => {
       if(resp.status && resp.data.length > 0){
         this.connections = resp.data.length
+        this.allNetworks = resp.data
         this.networks = resp.data;
+        this.networks = this.networks.filter(nw => nw.show_below == params.userId);
         this.networks = this.networks.sort((a,b) => 
           (a.leftLeg == true)? -1: 1)
       }else {
