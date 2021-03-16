@@ -29,9 +29,11 @@
     "@ng-bootstrap/ng-bootstrap": "^6.2.0",
     "angular-socialshare": "^2.3.11",
     "bootstrap": "^4.4.0",
+    "ngx-clipboard": "^14.0.1",
     "ngx-owl-carousel-o": "^5.0.0",
     "ngx-sharebuttons": "^8.0.5",
     "ngx-toastr": "^13.2.1",
+    "readable-stream": "^3.6.0",
     "rxjs": "~6.5.4",
     "tslib": "^1.10.0",
     "zone.js": "~0.10.2"

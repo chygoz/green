@@ -100,3 +100,20 @@ input.form-control:focus {
     -moz-box-shadow: none;
     -webkit-box-shadow: none;
 }
+a,
+a:hover,
+a:focus,
+a:active {
+    text-decoration: none;
+    color: inherit;
+}
+
+*,
+*:focus,
+*:hover {
+    outline: none;
+}
+
+.inputError {
+    color: red;
+}

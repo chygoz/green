@@ -39,6 +39,9 @@ import { ShareIconsModule } from 'ngx-sharebuttons/icons';
 import { ToastrModule } from 'ngx-toastr';
 import { LegsidePipe } from './legside.pipe';
 
+import { ClipboardModule } from 'ngx-clipboard';
+import { ChangePasswordComponent } from './change-password/change-password.component';
+
 
 @NgModule({
   declarations: [
@@ -60,7 +63,8 @@ import { LegsidePipe } from './legside.pipe';
     WithdrawRequestComponent,
     ShareReferralComponent,
     ForgotPasswordComponent,
-    LegsidePipe
+    LegsidePipe,
+    ChangePasswordComponent
   ],
   imports: [
     BrowserModule,
@@ -82,12 +86,14 @@ import { LegsidePipe } from './legside.pipe';
     ShareButtonsModule,
     ShareIconsModule,
     ToastrModule.forRoot(),
+    ClipboardModule
     // ShareButtonsModule,
     // ShareIconsModule
 
   ],
-  exports: [MatDialogModule, MatButtonModule],
-  providers: [AuthGuardService],
+  exports: [MatButtonModule],
+  providers: [AuthGuardService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule {

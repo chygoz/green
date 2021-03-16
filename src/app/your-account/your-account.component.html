@@ -13,7 +13,7 @@
     <div class="container">
         <div class="row">
             <div class="col-2 profileimage">
-                <img src="assets/images/pic.png" alt="" width="150" class="profilepic">
+                <img src="assets/images/user.svg" alt="" width="150" class="profilepic">
             </div>
             <div class="col-2 text-center">
                  <button class="file-upload-button">
@@ -47,8 +47,10 @@
                             class="form-control py-2 border-right-0 border">
                     </li>
                        <li class="list-group-item">
-                           <button type="button" class="btn btn-primary mr-2">Copy</button>
-<button type="button"  (click)="shareDialog()" class="btn btn-secondary">Share   <img src="assets/images/share.svg" alt="" width="20"></button>
+                           <button type="button" (click)="copyDynamicText()"
+                            class="btn btn-primary mr-2">{{copystatus}}</button>
+<button type="button"  (click)="shareDialog()" class="btn btn-secondary">Share 
+      <img src="assets/images/share.svg" alt="" width="20"></button>
                        </li>
                 </ul>
             </div>
@@ -62,79 +64,124 @@
          <div class="col-6">
         <h1 class="header1-black">Profile Details</h1>
             <div class="default-padding">
+                <form [formGroup]="profileForm" (ngSubmit)="onSubmit()">
                     <div class="form-row m-0">
                         <div class="form-group col-md-6">
                             <label for="inputEmail4">First Name</label>
-                            <input type="email" class="form-control" id="inputEmail4" placeholder="First Name" [value]="userData?.firstName">
+                            <input type="email" class="form-control" id="inputEmail4" 
+                            formControlName="firstName"
+                            placeholder="First Name" [value]="userData?.firstName">
+                             <div class="inputError" *ngIf="f.firstName.errors?.required && formSubmit">
+                                        firstName Required!
+                                    </div>
                         </div>
                         <div class="form-group col-md-6">
                             <label for="inputEmail4">Last Name</label>
-                            <input type="email" class="form-control" id="inputEmail4" placeholder="Last Name" [value]="userData?.lastName">
+                            <input type="text" class="form-control" id="inputEmail4" 
+                            formControlName="lastName"
+                            placeholder="Last Name" [value]="userData?.lastName">
+                              <div class="inputError" *ngIf="f.lastName.errors?.required && formSubmit">
+                                        lastName Required!
+                                    </div>
                         </div>
                     </div>
                      <div class="form-row m-0">
                         <div class="form-group col-md-6">
                             <label for="inputEmail4">Phone</label>
-                            <input type="email" class="form-control" id="inputEmail4" placeholder="Phone" [value]="userData?.mobile">
+                            <input type="text" class="form-control" id="inputEmail4" 
+                              formControlName="mobile"
+                            placeholder="Phone" [value]="userData?.mobile">
+                             <div class="inputError" *ngIf="f.mobile.errors?.required && formSubmit">
+                                        mobile Required!
+                                    </div>
                         </div>
                         <div class="form-group col-md-6">
                             <label for="inputEmail4">Email</label>
-                            <input type="email" class="form-control" id="inputEmail4" placeholder="Email" [value]="userData?.email">
+                            <input type="email" class="form-control" id="inputEmail4" 
+                            readonly
+                            placeholder="Email" [value]="userData?.email">
                         </div>
                     </div>
-                <div class="form-row m-0">
-                        <div class="form-group col-md-6">
-                            <label for="inputPassword4">Password</label>
-                            <input type="password" class="form-control" id="inputPassword4" placeholder="Password">
-                        </div>
-                        <div class="form-group col-md-6">
-                            <label for="inputPassword4">Confirm Password</label>
-                            <input type="password" class="form-control" id="inputPassword4" placeholder="Password">
-                        </div>
-                </div>
+                
                  <div class=" mt-5">
-                   <button type="button" class="btn btn-primary mr-2 mr-5">Save Changes</button>
-                    <button type="button" class="btn btn-default"><span style="color:#3ca063">Change Password </span></button>
+                   <button type="submit" class="btn btn-primary mr-2 mr-5">Save Changes</button>
+                    <button type="button" class="btn btn-default"  (click)="changepasswordshareDialog()">
+                        <span style="color:#3ca063">Change Password </span></button>
                     </div>
-               
+                </form>
            </div>
 
          </div>
          <div class="col-6">
              <h1 class="header1-black">Personal Details</h1>
             <p class="para1">Bank Details</p>
+
+              <form [formGroup]="personalDetailsForm" (ngSubmit)="onpersonalDetailsSubmit()">
              <div class="form-row m-0">
                 <div class="form-group col-md-6">
                     <label for="inputEmail4">Account Name</label>
-                    <input type="text" class="form-control" id="inputEmail4" placeholder="">
+                    <input type="text" class="form-control" 
+                    formControlName="accountName"
+                    [value]="userData?.accountName"
+                    id="inputEmail4" placeholder="">
+                     <div class="inputError" *ngIf="g.accountName.errors?.required && form1Submit">
+                                        Account Name Required!
+                                    </div>
                 </div>
                 <div class="form-group col-md-6">
                     <label for="inputEmail4">Account Number</label>
-                    <input type="text" class="form-control" id="inputEmail4" placeholder="">
+                    <input type="text" class="form-control"
+                     formControlName="accountNumber"
+                    [value]="userData?.accountNumber"
+                    id="inputEmail4" placeholder="">
+                    <div class="inputError" *ngIf="g.accountNumber.errors?.required && form1Submit">
+                                        Account Number Required!
+                                    </div>
                 </div>
             </div>
              <div class="form-row m-0">
                 <div class="form-group col-md-6">
                     <label for="inputEmail4">Bank</label>
-                    <select class="form-control" id="inputEmail4" placeholder="">
+                    <select class="form-control" 
+                      formControlName="bankName"
+                    [value]="userData?.bankName"
+                    id="inputEmail4" placeholder="">
                         <option value="">Select</option>
+                        <option value="Bank 1">Bank 1</option>
+                        <option value="Bank 2">Bank 2</option>
                         </select>
+<div class="inputError" *ngIf="g.bankName.errors?.required && form1Submit">
+                                        Bank Name Required!
+                                    </div>
                 </div>
                 <div class="form-group col-md-6">
-                    <label for="inputEmail4">IFSC Number</label>
-                    <input type="text" class="form-control" id="inputEmail4" placeholder="">
+                    <label for="inputEmail4">IFSC Code</label>
+                    <input type="text" class="form-control"
+                     formControlName="ifscCode"
+                    [value]="userData?.ifscCode"
+                    id="inputEmail4" placeholder="">
+                    <div class="inputError" *ngIf="g.ifscCode.errors?.required && form1Submit">
+                                        IFSC Code Required!
+                                    </div>
                 </div>
             </div>
               <p class="para1">Mobile Money Details</p>
               <div class="form-row m-0">
                    <div class="form-group col-md-6">
                     <label for="inputEmail4">Phone Number</label>
-                    <input type="text" class="form-control" id="inputEmail4" placeholder="">
+                    <input type="text" class="form-control"
+                     formControlName="mobilemoneyphone"
+                    [value]="userData?.mobilemoneyphone"
+                    id="inputEmail4" placeholder="">
+                   
                 </div>
                 <div class="form-group col-md-6">
                     <label for="inputEmail4">Orange Money</label>
-                    <select class="form-control" id="inputEmail4" placeholder="">
+                    <select class="form-control" id="inputEmail4"
+                     formControlName="orangemoney">
                         <option value="">Select</option>
+                        <option value="one">one</option>
+                        <option value="two">two</option>
                         </select>
                 </div>
             </div>
@@ -142,13 +189,17 @@
                 <div class="form-row m-0">
                    <div class="form-group col-md-12">
                     <label for="inputEmail4">Wallet Address</label>
-                    <input type="text" class="form-control" id="inputEmail4" placeholder="">
+                    <input type="text" class="form-control"
+                      formControlName="wallet_address"
+                    [value]="userData?.wallet_address"
+                    id="inputEmail4" placeholder="">
                 </div>
                
          </div>
            <div class=" mt-5 mb-5">
-            <button type="button" class="btn btn-primary mr-2">Save Changes</button>
+            <button type="submit" class="btn btn-primary mr-2">Save Changes</button>
             </div>
+            </form>
     </div>
     </div>
 </div>
