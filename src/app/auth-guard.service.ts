@@ -1,11 +1,12 @@
 import { Injectable } from '@angular/core';
 import { Router, CanActivate } from '@angular/router';
+import { CookieService } from './services/cookie.service';
 //import { AuthService } from './auth.service';
 @Injectable()
 export class AuthGuardService implements CanActivate {
-  constructor(public router: Router) {}
+  constructor(public router: Router, private cookieService: CookieService) {}
   canActivate(): boolean {
-    if (!localStorage.getItem('token')) {
+    if (!this.cookieService.getCookie('token')) {
       this.router.navigate(['login']);
       return false;
     }
