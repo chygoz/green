@@ -22,11 +22,13 @@ export class LoginComponent implements OnInit {
     })
   }
 
-  onSubmit(){
+  onSubmit() {
     this.service.login(this.loginForm.value).subscribe((resp) => {
-      if(!resp.status) {
+
+      if (!resp.status) {
         this.errorMsg = resp.msg;
-      }else {
+      } else {
+        console.log((JSON.stringify(resp.data)));
         //localStorage.setItem("token", resp.token);
         this.cookieService.setCookie('currentUser', JSON.stringify(resp.data), 1);
         this.cookieService.setCookie('token', resp.token, 1);

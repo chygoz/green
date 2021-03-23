@@ -23,6 +23,9 @@ export class apiService {
   updateProfile(params): Observable<any> {
     return this.http.post(config.api_url + 'user/updateprofile', params);
   }
+  updateProfilePic(params): Observable<any> {
+    return this.http.post(config.api_url + 'user/updateprofilepic', params);
+  }
   updatePersonalDetails(params): Observable<any> {
     return this.http.post(config.api_url + 'user/updatepersonaldetails', params);
   }
