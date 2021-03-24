@@ -46,9 +46,14 @@
                 <div class="default-padding">
                     <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
                         <div class="form-row m-0">
+                            <div class="errorSec">
+                                {{errorMsg}}
+                            </div>
+                        </div>
+                        <div class="form-row m-0">
                             <div class="form-group col-md-7">
                                 <label>Email</label>
-                                <input type="text" class="form-control" formControlName="email" placeholder="Email or UserID">
+                                <input type="text" class="form-control" formControlName="email" placeholder="Email">
                             </div>
                             </div>
                              <div class="form-row m-0">
@@ -56,11 +61,11 @@
                                 <label for="inputEmail4">Password</label>
                                 <input type="password" class="form-control" formControlName="password"
                                     placeholder="Password">
+                                   
                             </div>
+                            
                         </div>
-                        <div class="errorSec">
-                            {{errorMsg}}
-                        </div>
+                       
                          <div class="col-md-7 p-0 pt-4">
                                 <button type="submit" [disabled]="loginForm.invalid"
                             class="btn btn-primary btn-lg btn-block">Sign In</button>
