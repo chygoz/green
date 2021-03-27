@@ -77,6 +77,7 @@ export class NetworkComponent implements OnInit {
 
   getSelectedNetwork(user){
     this.params = {userId: user._id};
+    this.mainNetwork = user;
     this.getUserNetwork(this.params);
   }
 
