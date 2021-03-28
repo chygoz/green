@@ -13,7 +13,7 @@ export class LandingHeaderComponent implements OnInit {
   loginStatus = false;
   constructor(private router: Router,
     private cookieService: CookieService, private service: apiService) {
-    this.userData = this.cookieService.getCookie('currentUser');
+    this.userData = localStorage.getItem('currentUser');
     this.userData = JSON.parse(this.userData);
 
   }

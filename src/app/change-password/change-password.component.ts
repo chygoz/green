@@ -16,7 +16,7 @@ export class ChangePasswordComponent implements OnInit {
     private cookieService: CookieService,
     private service: apiService, public dialog: MatDialog) {
 
-    let ud = this.cookieService.getCookie('currentUser');
+    let ud = localStorage.getItem('currentUser');
     this.userData = JSON.parse(ud);
   }
 

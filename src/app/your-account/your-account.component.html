@@ -13,7 +13,7 @@
     <div class="container">
         <div class="row">
             <div class="col-2 profileimage" >
-                <div *ngIf="isImageSaved; else elseTemplate" >
+                <div *ngIf="cardImageBase64; else elseTemplate" >
                 <img [src]="cardImageBase64" alt="" width="150" class="profilepic" style="border-radius: 50%">
                 </div>
                <ng-template #elseTemplate>

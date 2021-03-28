@@ -16,7 +16,7 @@ export class HeaderComponent implements OnInit {
   }
 
   logout(){
-    this.cookieService.deleteCookie('currentUser');
+    localStorage.clear();
     this.cookieService.deleteCookie('token');
     this.router.navigate(['/login']);
   }

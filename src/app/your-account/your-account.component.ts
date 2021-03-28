@@ -35,9 +35,8 @@ export class YourAccountComponent implements OnInit {
     private _clipboardService: ClipboardService
   ) {
 
-    let ud = this.cookieService.getCookie('currentUser');
+    let ud = localStorage.getItem('currentUser');
     this.userData = JSON.parse(ud);
-    console.log(this.userData);
     this.referral = this.userData.referral;
     this.cardImageBase64 = this.userData.profilepic;
   }
@@ -102,7 +101,7 @@ export class YourAccountComponent implements OnInit {
 
     this.service.updateProfile(this.profileForm.value).subscribe((resp) => {
       if (resp.status) {
-        this.cookieService.setCookie('currentUser', JSON.stringify(resp.data), 1);
+        localStorage.setItem('currentUser', JSON.stringify(resp.data));
         this.service.showSuccess(resp.msg);
       } else {
         this.service.showError(resp.msg);
@@ -118,7 +117,7 @@ export class YourAccountComponent implements OnInit {
 
     this.service.updatePersonalDetails(this.personalDetailsForm.value).subscribe((resp) => {
       if (resp.status) {
-        this.cookieService.setCookie('currentUser', JSON.stringify(resp.data), 1);
+        localStorage.setItem('currentUser', JSON.stringify(resp.data));
         this.service.showSuccess(resp.msg);
       } else {
         this.service.showError(resp.msg);
@@ -180,7 +179,7 @@ export class YourAccountComponent implements OnInit {
 
             this.service.updateProfilePic(this.profilepicdata).subscribe((resp) => {
               if (resp.status) {
-                this.cookieService.setCookie('currentUser', JSON.stringify(resp.data), 1);
+                localStorage.setItem('currentUser', JSON.stringify(resp.data));
                 this.service.showSuccess(resp.msg);
               } else {
                 this.service.showError(resp.msg);

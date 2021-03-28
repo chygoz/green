@@ -25,7 +25,7 @@ export class NetworkComponent implements OnInit {
   pendingParams;
 
   constructor(private service: apiService, private cookieService: CookieService) {
-    let ud = this.cookieService.getCookie('currentUser');
+    let ud = localStorage.getItem('currentUser');
     this.userData = JSON.parse(ud);
     this.mainNetwork = this.userData;
 

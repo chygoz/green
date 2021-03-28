@@ -31,13 +31,12 @@ export class DashboardComponent implements OnInit {
 
   ) {
 
-    let ud = this.cookieService.getCookie('currentUser');
-    this.userData = JSON.parse(ud);
-
   }
 
   ngOnInit(): void {
-
+    let ud = localStorage.getItem('currentUser');
+    this.userData = JSON.parse(ud);
+    console.log(this.userData);
     this.params = { userId: this.userData._id };
     this.getSettingsData();
     this.getWithdrawAmountAll(this.params);

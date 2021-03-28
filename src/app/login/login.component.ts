@@ -28,9 +28,7 @@ export class LoginComponent implements OnInit {
       if (!resp.status) {
         this.errorMsg = resp.msg;
       } else {
-        console.log((JSON.stringify(resp.data)));
-        //localStorage.setItem("token", resp.token);
-        this.cookieService.setCookie('currentUser', JSON.stringify(resp.data), 1);
+        localStorage.setItem('currentUser', JSON.stringify(resp.data))
         this.cookieService.setCookie('token', resp.token, 1);
         this.router.navigate(['/dashboard']);
 

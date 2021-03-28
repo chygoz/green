@@ -29,7 +29,7 @@ export class WithdrawRequestComponent implements OnInit {
     public dialogRef: MatDialogRef<WithdrawRequestComponent>,
     private cookieService: CookieService, private fb:
       FormBuilder,) {
-    let ud = this.cookieService.getCookie('currentUser');
+    let ud = localStorage.getItem('currentUser');
     this.userData = JSON.parse(ud);
   }
   formSubmit: boolean = false;
