@@ -3,8 +3,8 @@
     <div class="default-padding">
      <div class="container">
         <div class="col-12 px-0">
-        <h1 class="header1">Hi, Michelle</h1>
-        <p class="para">welcome to your back office</p>
+        <h1 class="header1">Hi, {{userData?.firstName}}</h1>
+        <p class="para">welcome to Dashboard</p>
         </div>
     </div> 
     <div class="card-overlay-thumb">
@@ -27,7 +27,7 @@
                      <div class="card">
                         <div class="card-body card-2">
                             <p class="card-text">Total</p>
-                            <h1 class="header2 text-left">4,050</h1>
+                            <h1 class="header2 text-left">{{leftVolumePoints+rightVolumePoints}}</h1>
                             <div class="car-sub">Accumulated  Points</div>
                         </div>
                     </div>
@@ -36,7 +36,8 @@
                      <div class="card">
                      <div class="card-body card-3">
                            <p class="card-text">Current</p>
-                        <h1 class="header2 text-left" style="color: #6c6c6c;">2,409</h1>
+                        <h1 class="header2 text-left" style="color: #6c6c6c;">
+                            {{(leftVolumePoints+rightVolumePoints) - withdrawpoints}}</h1>
                          <div class="car-sub">Available  Points</div>
                         </div>
                     </div>
@@ -45,7 +46,7 @@
                        <div class="card">
                         <div class="card-body card-4">
                             <p class="card-text">Wallet</p>
-                            <h1 class="header2 text-left" style="color: #6c6c6c;">285.00 <span>USD</span></h1>
+                            <h1 class="header2 text-left" style="color: #6c6c6c;">{{(((leftVolumePoints+rightVolumePoints) - withdrawpoints) * pointsprice)}} <span>XAF</span></h1>
                              <div class="car-sub">Available  Balance</div>
                             <div class="card-4-footer">
                             <button type="button"
@@ -76,37 +77,39 @@
                 <th scope="col">TRANSACTION ID</th>
                 <th scope="col">Description</th>
                 <th scope="col">DATE</th>
+                <th scope="col">W.POINTS</th>
                 <th scope="col">AMOUNT</th>
                 <th scope="col">STATUS</th>
                 </tr>
             </thead>
             <tbody>
+                <tr *ngFor="let transaction of userwithdrawlist | paginate: { itemsPerPage: 2,currentPage: q }">
+                    <td scope="row">MNF32388423239929330</td>
+                    <td>{{transaction?.description}}</td>
+                    <td>{{transaction?.created_at}}</td>
+                     <td>{{transaction?.redeemedpoints}}</td>
+                    <td>{{transaction?.redeemedpoints * pointsprice}}</td>
+                    <td>XAF</td>
+                    <td>
+                        <button type="button" *ngIf="transaction.status == 'completed'"
+                        class="btn btn-sm button-green">Completed</button>
+                            <button type="button" *ngIf="transaction.status == 'pending'"
+                        class="btn btn-sm button-orange">Pending</button>
+                          <button type="button" *ngIf="transaction.status == 'cancelled'"
+                        class="btn btn-sm button-red">Pending</button>
+                    </td>
+                </tr>
+              
                 <tr>
                     <td scope="row">MNF32388423239929330</td>
-                    <td>Withdraw Request</td>
-                    <td>01 Feb. 2021</td>
-                    <td>2,394</td>
-                    <td>USD</td>
-                    <td><button type="button" 
-                        class="btn btn-primary btn-sm button-green">Completed</button></td>
-                </tr>
-                 <tr>
-                    <td scope="row">MNF32388423239929330</td>
-                    <td>Withdraw Request</td>
-                    <td>01 Feb. 2021</td>
-                    <td>2,394</td>
-                    <td>USD</td>
-                    <td><button type="button" 
-                        class="btn btn-primary btn-sm button-orange">Pending</button></td>
-                </tr>
-                 <tr>
-                    <td scope="row">MNF32388423239929330</td>
-                    <td>Withdraw Request</td>
-                    <td>01 Feb. 2021</td>
-                    <td>2,394</td>
-                    <td>USD</td>
+                    <td>Register</td>
+                    <td>{{userData?.created_at}}</td>
+                    <td>-</td>
+                    <td>0.00</td>
+                    <td>XAF</td>
                     <td>
-                        <span class="btn btn-primary btn-sm button-red">Cancelled</span>
+                        <button type="button" 
+                        class="btn btn-sm button-green">Completed</button>
                     </td>
                 </tr>
               
@@ -116,15 +119,15 @@
 </div>
 
              <div class="col-12 px-0">
-                <nav aria-label="..." >
-                        <ul class="pagination pagination-lg">
-                            <li class="page-item disabled">
-                            <a class="page-link active" href="javascript:void(0)" tabindex="-1">1</a>
-                            </li>
-                            <li class="page-item"><a class="page-link" href="javascript:void(0)">2</a></li>
-                            <li class="page-item"><a class="page-link" href="javascript:void(0)">3</a></li>
-                        </ul>
-                </nav>
+                    <pagination-controls class="pagination pagination-lg"
+                    (pageChange)="q = $event"
+                     responsive="false"
+                      previousLabel=""
+                      nextLabel=""
+                    ></pagination-controls>
+
+
+                
                 </div>
      
 

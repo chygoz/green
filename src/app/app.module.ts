@@ -38,6 +38,7 @@ import { ShareButtonsModule } from 'ngx-sharebuttons/buttons';
 import { ShareIconsModule } from 'ngx-sharebuttons/icons';
 import { ToastrModule } from 'ngx-toastr';
 import { LegsidePipe } from './legside.pipe';
+import { NgxPaginationModule } from 'ngx-pagination';
 
 import { ClipboardModule } from 'ngx-clipboard';
 import { ChangePasswordComponent } from './change-password/change-password.component';
@@ -86,7 +87,8 @@ import { ChangePasswordComponent } from './change-password/change-password.compo
     ShareButtonsModule,
     ShareIconsModule,
     ToastrModule.forRoot(),
-    ClipboardModule
+    ClipboardModule,
+    NgxPaginationModule
     // ShareButtonsModule,
     // ShareIconsModule
 

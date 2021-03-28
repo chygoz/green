@@ -300,6 +300,19 @@ input::placeholder {
     font-size: 14px;
 }
 
+.btn-primary {
+    background-color: #3ca063;
+    border: #3ca063;
+    padding: 11px 19px;
+    font-size: 14px !important;
+}
+.btn-secondary {
+    padding: 12px 20px;
+    font-size: 14px;
+}
+.form-control {
+    font-size: 14px !important;
+}
 @media only screen and (max-device-width: 767px) {
 }
 

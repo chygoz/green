@@ -46,6 +46,34 @@ export class apiService {
     headers = headers.append('Content-Type', 'application/json');
     return this.http.post(config.api_url + 'user/getUserNetwork', params, { headers });
   }
+  getVolumePoints(params): Observable<any> {
+    let token = this.cookieService.getCookie('token');
+    let headers = new HttpHeaders();
+    headers = headers.append('token', token);
+    headers = headers.append('Content-Type', 'application/json');
+    return this.http.post(config.api_url + 'user/getVolumePoints', params);
+  }
+  getWithdrawAmount(params): Observable<any> {
+    let token = this.cookieService.getCookie('token');
+    let headers = new HttpHeaders();
+    headers = headers.append('token', token);
+    headers = headers.append('Content-Type', 'application/json');
+    return this.http.post(config.api_url + 'user/getWithdrawAmount', params);
+  }
+  getWithdrawAmountAll(params): Observable<any> {
+    let token = this.cookieService.getCookie('token');
+    let headers = new HttpHeaders();
+    headers = headers.append('token', token);
+    headers = headers.append('Content-Type', 'application/json');
+    return this.http.post(config.api_url + 'user/getWithdrawAmountAll', params);
+  }
+  getSettingsData(params): Observable<any> {
+    let token = this.cookieService.getCookie('token');
+    let headers = new HttpHeaders();
+    headers = headers.append('token', token);
+    headers = headers.append('Content-Type', 'application/json');
+    return this.http.post(config.api_url + 'user/getSettingsData', params);
+  }
 
   getPendingNetwork(params): Observable<any> {
     let token = this.cookieService.getCookie('token');
@@ -61,6 +89,15 @@ export class apiService {
     headers = headers.append('token', token);
     headers = headers.append('Content-Type', 'application/json');
     return this.http.post(config.api_url + 'user/addLeg', params, { headers });
+  }
+
+  insertWithdrawRequest(params): Observable<any> {
+    let token = this.cookieService.getCookie('token');
+    let headers = new HttpHeaders();
+    headers = headers.append('token', token);
+    headers = headers.append('Content-Type', 'application/json');
+
+    return this.http.post(config.api_url + 'user/insertWithdrawRequest', params, { headers });
   }
 
   showSuccess(msg) {

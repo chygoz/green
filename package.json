@@ -31,6 +31,7 @@
     "bootstrap": "^4.4.0",
     "ngx-clipboard": "^14.0.1",
     "ngx-owl-carousel-o": "^5.0.0",
+    "ngx-pagination": "^5.0.0",
     "ngx-sharebuttons": "^8.0.5",
     "ngx-toastr": "^13.2.1",
     "readable-stream": "^3.6.0",

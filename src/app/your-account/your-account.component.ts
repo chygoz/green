@@ -129,7 +129,7 @@ export class YourAccountComponent implements OnInit {
 
 
   copyDynamicText() {
-    this._clipboardService.copyFromContent(this.referral);
+    this._clipboardService.copyFromContent("http://localhost:4200/register/" + this.referral);
     this.copystatus = "Copied!"
   }
 

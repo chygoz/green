@@ -20,28 +20,31 @@
                  <div class="para-small">Connections</div>
                 </li>
                 <li class="list-group-item col-12">
-                    <div class="para-num">700</div> 
+                    <div class="para-num">{{leftVolumePoints}}</div> 
                 
                     <div class="para-small">Left Volume Points</div>
                 </li>
                 <li class="list-group-item col-12">
-                    <div class="para-num">400 <br /> <div class="para-small">Right Volume Points</div></div> 
+                    <div class="para-num">{{rightVolumePoints}} <br /> <div class="para-small">Right Volume Points</div></div> 
                 
                 </li>
                 </ul>
                  <ul class="list-unstyled card-columns">
                 <li class="list-group-item col-12">
-                    <div class="para-num">900</div> 
+                    <div class="para-num">{{leftVolumePoints + rightVolumePoints}}</div> 
                 
                     <div class="para-small">Total Volume Points</div>
                 </li>
                 <li class="list-group-item col-12">
-                    <div class="para-num">$400  <div class="para-small">Pay Volume Accumulated</div></div> 
+                    <div class="para-num">XAF {{leftVolumeamount + rightVolumeamount }}  
+                        <div class="para-small">Pay Volume Accumulated</div></div> 
                 </li>
                 <li class="list-group-item col-12"></li>
             </ul>
              
-            <button type="button"  class="btn btn-primary card-1-button mt-4">Goto Accounts</button>
+            <button type="button"  class="btn btn-primary card-1-button">Goto Accounts</button>
+            <br /><br />
+
             </div>
             <div class="col-10 px-0">
                 <div class="row desktopview">
@@ -201,19 +204,20 @@
                <div class="row mobileview">
                 <div class="col-12">
                     <div class="row">
-                         <div class="col-6">
-                             <button type="button"  class="btn btn-primary-white active  mt-4">Left Leg</button>
-                         </div>
-                         <div class="col-6"><button type="button"  class="btn btn-primary-white mt-4">Right Leg</button></div>
+                        <div class="col-6">
+                            <button type="button"  class="btn btn-primary-white active  mt-4">Left Leg</button>
+                        </div>
+                        <div class="col-6">
+                             <button type="button"  class="btn btn-primary-white mt-4">Right Leg</button>
+                        </div>
                     </div>
                     <div class="row">
-                       
-                         <div class="col-12 pt-4">
+                       <div class="col-12 pt-4">
                                 <div class="card">
                                     <div class="card-body">
                                          <div class="col-12 mb-5 text-center">
                                         <div class="btn btn-primary">
-                                            <span class="dot">15</span>
+                                            <span class="dot">{{pendingNetworks?.length}}</span>
                                             Pending Referrals 
                                         </div>
                                     </div>
@@ -222,7 +226,7 @@
                                             <div class="card-body cardpadding">
                                                 <img src="assets/images/user.svg" alt="" 
                                                         class="img-fluid useroverly" width="50" >
-                                                <h5 class="header5 pt-3">Michelle1</h5>
+                                               <h5 class="header5 pt-3">{{mainNetwork?.firstName}} {{mainNetwork?.lastName}}</h5>
                                                 <div class="para5">Business Card</div>
                                             </div>
                                             <div class="card-footer text-muted p-2 right-footer">

@@ -117,3 +117,25 @@ a:active {
 .inputError {
     color: red;
 }
+
+.ngx-pagination li {
+    padding: 7px 6px !important;
+    background: #dbdbdb !important;
+    color: #fefefe;
+    cursor: default;
+    font-size: 16px !important;
+    border-radius: 5px !important;
+    margin-right: 8px !important;
+}
+.ngx-pagination .current {
+    padding: 9px 18px !important;
+    background: #3ca063 !important;
+    color: #fefefe;
+    cursor: default;
+    font-size: 16px !important;
+    border-radius: 5px !important;
+}
+.pagination-next,
+.pagination-previous {
+    display: none !important;
+}

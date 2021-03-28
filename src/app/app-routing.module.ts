@@ -13,6 +13,7 @@ import { LayouthomeComponent } from './layouthome/layouthome.component';
 import { AuthGuardService as AuthGuard } from './auth-guard.service';
 const routes: Routes = [
   { path: 'register', component: RegisterComponent },
+  { path: 'register/:id', component: RegisterComponent },
   { path: 'login', component: LoginComponent },
   { path: 'forgot-password', component: ForgotPasswordComponent },
   {

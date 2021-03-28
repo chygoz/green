@@ -3,7 +3,7 @@
      <div class="container">
         <div class="col-12 px-0">
         <h1 class="header1">Hi, {{userData?.firstName}}</h1>
-        <p class="para">welcome to your back office</p>
+        <p class="para">welcome to your account</p>
         </div>
     </div> 
     
@@ -28,7 +28,7 @@
                     </button>
             </div>
             <div class="col-4 p-0">
-                <div class="name-title">{{userData?.firstName}} {{userData?.lastName}}</div>
+              
             </div>
         </div>
         <div class="row">
@@ -54,7 +54,7 @@
                 <ul class="list-group list-group-horizontal">
                     <li class="list-group-item"> Referral ID</li>
                     <li class="list-group-item">
-                          <input  type="text" disabled [value]="userData?.referral" id="example-search-input"
+                          <input  type="text" [value]="userData?.referral" id="example-search-input"
                             class="form-control py-2 border-right-0 border">
                     </li>
                        <li class="list-group-item">
@@ -187,12 +187,13 @@
                    
                 </div>
                 <div class="form-group col-md-6">
-                    <label for="inputEmail4">Orange Money</label>
+                    <label for="inputEmail4">Platform</label>
                     <select class="form-control" id="inputEmail4"
                      formControlName="orangemoney">
                         <option value="">Select</option>
-                        <option value="one">one</option>
-                        <option value="two">two</option>
+                        <option value="Mobile Money">Mobile Money</option>
+                        <option value="MTN Mobile">MTN Mobile</option>
+                        <option value="ORANGE Money">ORANGE Money</option>
                         </select>
                 </div>
             </div>

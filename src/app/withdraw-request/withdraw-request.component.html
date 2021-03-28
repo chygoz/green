@@ -1,4 +1,6 @@
+<form [formGroup]="userPointsminForm" (ngSubmit)="SubmitForm()">
 <div class="padding-all">
+     
 <div class="container">
     <div class="row">
         <div class="col-12">
@@ -9,16 +11,24 @@
                   
                     <th scope="col">Point Aquired</th>
                     <th scope="col">Min Points Needed</th>
-                    <th scope="col">Amount being redeemed</th>
+                    <th scope="col">Points being redeemed</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
                    
-                    <td>500</td>
-                    <td>400</td>
+                    <td>{{(leftVolumePoints+rightVolumePoints) - withdrawpoints}}</td>
+                    <td>{{points_to_min}}</td>
                     <td>
-                        <input type="text" class="form-control col-6" value="$ 400" />
+                        <input type="text" class="form-control col-6"
+                        formControlName="redeemedpoints"
+                        value="" />
+                         <div class="inputError" *ngIf="h.redeemedpoints.errors?.required && formSubmit">
+                                        Required!
+                                    </div>
+                                      <div class="inputError" *ngIf="h.redeemedpoints.errors?.minLength">
+                                        min Points Required!
+                                    </div>
                         </td>
                     </tr>
                     <tr>
@@ -30,27 +40,35 @@
     <div class="row">
         <div class="col-12">
             <div class="custom-control custom-radio custom-control-inline">
-                <input type="radio" id="customRadioInline1" name="customRadioInline1" class="custom-control-input">
+                <input type="radio" id="customRadioInline1" name="transfertype" checked
+                value="Bank Transfer"
+                 formControlName="transfertype" class="custom-control-input">
                 <label class="custom-control-label" for="customRadioInline1">Bank Transfer</label>
             </div>
             <div class="custom-control custom-radio custom-control-inline">
-                <input type="radio" id="customRadioInline2" name="customRadioInline1" class="custom-control-input">
+                <input type="radio" id="customRadioInline2" name="transfertype" 
+                value="Mobile Money"
+                 formControlName="transfertype" class="custom-control-input">
                 <label class="custom-control-label" for="customRadioInline2">Mobile Money</label>
             </div>
             <div class="custom-control custom-radio custom-control-inline">
-                <input type="radio" id="customRadioInline2" name="customRadioInline1" class="custom-control-input">
+                <input type="radio" id="customRadioInline2" name="transfertype" 
+                value="Cryptocurrency"
+                 formControlName="transfertype" class="custom-control-input">
                 <label class="custom-control-label" for="customRadioInline2">Cryptocurrency</label>
             </div>
         </div>
     </div>
 </div>
+
 </div>
 <div class="default-padding">
     <div class="container text-right">
-                <button type="button" class="btn btn-primary
+                <button type="submit" name="submit" class="btn btn-primary
                                 card-1-button mr-5">Request</button>
                 <button mat-button mat-dialog-close class="btn btn-default
                                 ">Cancel</button>
     </div>
 </div>
+</form>
 

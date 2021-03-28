@@ -32,7 +32,7 @@ export class LoginComponent implements OnInit {
         //localStorage.setItem("token", resp.token);
         this.cookieService.setCookie('currentUser', JSON.stringify(resp.data), 1);
         this.cookieService.setCookie('token', resp.token, 1);
-        this.router.navigate(['/network']);
+        this.router.navigate(['/dashboard']);
 
       }
     })

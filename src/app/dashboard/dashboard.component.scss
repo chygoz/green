@@ -151,7 +151,8 @@
     font-family: Poppins !important;
 }
 
-.button-green {
+.button-green,
+.button-green:hover {
     border-radius: 17px;
     font-size: 11px;
     padding: 4px 18px;
@@ -161,7 +162,8 @@
     font-weight: bold;
     outline: none;
 }
-.button-orange {
+.button-orange,
+.button-orange:hover {
     border-radius: 17px;
     font-size: 11px;
     padding: 4px 25px;
@@ -172,7 +174,8 @@
     outline: none;
 }
 
-.button-red {
+.button-red,
+.button-red:hover {
     border-radius: 17px;
     font-size: 11px;
     padding: 4px 18px;
