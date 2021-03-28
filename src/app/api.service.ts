@@ -40,35 +40,35 @@ export class apiService {
 
 
   getUserNetwork(params): Observable<any> {
-    let token = this.cookieService.getCookie('token');
+    let token = localStorage.getItem('token');
     let headers = new HttpHeaders();
     headers = headers.append('token', token);
     headers = headers.append('Content-Type', 'application/json');
     return this.http.post(config.api_url + 'user/getUserNetwork', params, { headers });
   }
   getVolumePoints(params): Observable<any> {
-    let token = this.cookieService.getCookie('token');
+    let token = localStorage.getItem('token');
     let headers = new HttpHeaders();
     headers = headers.append('token', token);
     headers = headers.append('Content-Type', 'application/json');
     return this.http.post(config.api_url + 'user/getVolumePoints', params);
   }
   getWithdrawAmount(params): Observable<any> {
-    let token = this.cookieService.getCookie('token');
+    let token = localStorage.getItem('token');
     let headers = new HttpHeaders();
     headers = headers.append('token', token);
     headers = headers.append('Content-Type', 'application/json');
     return this.http.post(config.api_url + 'user/getWithdrawAmount', params);
   }
   getWithdrawAmountAll(params): Observable<any> {
-    let token = this.cookieService.getCookie('token');
+    let token = localStorage.getItem('token');
     let headers = new HttpHeaders();
     headers = headers.append('token', token);
     headers = headers.append('Content-Type', 'application/json');
     return this.http.post(config.api_url + 'user/getWithdrawAmountAll', params);
   }
   getSettingsData(params): Observable<any> {
-    let token = this.cookieService.getCookie('token');
+    let token = localStorage.getItem('token');
     let headers = new HttpHeaders();
     headers = headers.append('token', token);
     headers = headers.append('Content-Type', 'application/json');
@@ -76,7 +76,7 @@ export class apiService {
   }
 
   getPendingNetwork(params): Observable<any> {
-    let token = this.cookieService.getCookie('token');
+    let token = localStorage.getItem('token');
     let headers = new HttpHeaders();
     headers = headers.append('token', token);
     headers = headers.append('Content-Type', 'application/json');
@@ -84,7 +84,7 @@ export class apiService {
   }
 
   addleg(params): Observable<any> {
-    let token = this.cookieService.getCookie('token');
+    let token = localStorage.getItem('token');
     let headers = new HttpHeaders();
     headers = headers.append('token', token);
     headers = headers.append('Content-Type', 'application/json');
@@ -92,7 +92,7 @@ export class apiService {
   }
 
   insertWithdrawRequest(params): Observable<any> {
-    let token = this.cookieService.getCookie('token');
+    let token = localStorage.getItem('token');
     let headers = new HttpHeaders();
     headers = headers.append('token', token);
     headers = headers.append('Content-Type', 'application/json');

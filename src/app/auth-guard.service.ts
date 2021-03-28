@@ -6,10 +6,12 @@ import { CookieService } from './services/cookie.service';
 export class AuthGuardService implements CanActivate {
   constructor(public router: Router, private cookieService: CookieService) {}
   canActivate(): boolean {
-    if (!this.cookieService.getCookie('token')) {
+    if (!localStorage.getItem('token')) {
+      console.log("false");
       this.router.navigate(['login']);
       return false;
     }
+    console.log("true");
     return true;
   }
 }

@@ -29,7 +29,7 @@ export class LoginComponent implements OnInit {
         this.errorMsg = resp.msg;
       } else {
         localStorage.setItem('currentUser', JSON.stringify(resp.data))
-        this.cookieService.setCookie('token', resp.token, 1);
+        localStorage.setItem('token', resp.token);
         this.router.navigate(['/dashboard']);
 
       }
