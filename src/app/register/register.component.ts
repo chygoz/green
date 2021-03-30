@@ -1,3 +1,4 @@
+import { ReadPropExpr } from '@angular/compiler';
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router, ActivatedRoute } from '@angular/router';
@@ -12,12 +13,15 @@ export class RegisterComponent implements OnInit {
   registerForm: FormGroup;
   public emailregex = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
   errorMsg = '';
+  plans = [];
+  selectedPlanId;
+  token;
   constructor(public fb: FormBuilder, private service: apiService, private router: Router, private route: ActivatedRoute) {
-
-
-  }
+    this.token = localStorage.getItem('token');
+}
   code: number;
   ngOnInit(): void {
+    this.getPlans();
     this.route.params.subscribe(params => {
       this.code = params["id"];
     });
@@ -42,6 +46,33 @@ export class RegisterComponent implements OnInit {
         this.router.navigate(['/login']);
       }
     })
+  }
+
+  getPlans() {
+    this.service.getPlans({}).subscribe((resp) => {
+      if (resp.status) {
+        this.plans = resp.data;
+      }
+    })
+  }
+
+  onPlanSelected(plan) {
+    this.selectedPlanId = plan;
+  }
+
+  submitPayment() {
+    if (this.selectedPlanId) {
+      let params = {
+        planId: this.selectedPlanId
+      }
+      this.service.paymentRequest(params).subscribe((resp) => {
+        if(resp.status){
+          this.service.showSuccess(resp.msg);
+        }else {
+          this.service.showError(resp.msg);
+        }
+      })
+    }
   }
 
 }

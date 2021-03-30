@@ -20,6 +20,18 @@ export class apiService {
     return this.http.post(config.api_url + 'user/register', params);
   }
 
+  getPlans(params): Observable<any> {
+    return this.http.post(config.api_url + 'user/getPlans', params);
+  }
+
+  paymentRequest(params): Observable<any> {
+    let token = localStorage.getItem('token');
+    let headers = new HttpHeaders();
+    headers = headers.append('token', token);
+    headers = headers.append('Content-Type', 'application/json');
+    return this.http.post(config.api_url + 'user/paymentRequest', params, {headers});
+  }
+
   updateProfile(params): Observable<any> {
     return this.http.post(config.api_url + 'user/updateprofile', params);
   }

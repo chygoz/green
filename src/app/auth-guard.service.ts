@@ -7,11 +7,19 @@ export class AuthGuardService implements CanActivate {
   constructor(public router: Router, private cookieService: CookieService) {}
   canActivate(): boolean {
     if (!localStorage.getItem('token')) {
-      console.log("false");
       this.router.navigate(['login']);
       return false;
     }
-    console.log("true");
-    return true;
+    else {
+      let userData = JSON.parse(localStorage.getItem('currentUser'));
+      if(userData && userData.planId) {
+        return true;
+      }else {
+        this.router.navigate(['register']);
+        return false;
+      }
+      
+    }
+    
   }
 }

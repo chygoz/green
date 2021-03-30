@@ -40,8 +40,8 @@
 
 <div class="padding-default">
         <div class="container">
-            <mat-tab-group animationDuration="0ms">
-                <mat-tab label="step 1" >
+            <mat-tab-group animationDuration="0ms" [selectedIndex]="(token?'1':'0')">
+                <mat-tab label="step 1" [disabled]='(token?true:false)' >
                     <h1 class="header1 pt-5">Register</h1>
                     <p class="para1">Enter your details to get started our journey together.</p>
 
@@ -99,35 +99,34 @@
                     <h1 class="header1 pt-5">Choose your card</h1>
                     <p class="para1">Choose the card that suits your needs</p>
 
-
                     <div class="default-padding">
-                        <div class="container">
+                        <div class="container pt-4" *ngFor="let plan of plans">
                             <div class="card">
                                 <div class="card-body Upgradecardborder p-0">
                                     <div class="row m-0 p-0">
                                         <div class="col-4 px-0">
                                             <div class="upgrade1">
                                                 <label class="radio-inline m-0">
-                                                    <input type="radio" class="optradio" name="optradio" size="15">
-                                                    <span class="u-title-sm">Local card</span>
+                                                    <input type="radio" class="optradio" name="optradio" size="15" [value]="plan?._id" (change)="onPlanSelected($event.target.value)">
+                                                    <span class="u-title-sm">{{plan?.cardtype}}</span>
                                                 </label>
                                             </div>
                                         </div>
                                         <div class="col-6 px-0">
                                             <div class="upgrade2">
-                                                Shop in any of our authorized outlet
+                                                {{plan?.description}}
                                             </div>
                                         </div>
                                         <div class="col-2 px-0">
                                             <div class="upgrade3">
-                                                1,800 XAF
+                                                {{plan?.amount}} {{plan?.currency}}
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="container pt-4">
+                        <!-- <div class="container pt-4">
                             <div class="card">
                                 <div class="card-body Upgradecardborder p-0">
                                     <div class="row m-0 p-0">
@@ -178,9 +177,9 @@
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                        </div> -->
 
-                        <button type="button" class="btn btn-primary btn-lg btn-block mt-4">Proceed to Payment</button>
+                        <button type="button" class="btn btn-primary btn-lg btn-block mt-4" [disabled]="!selectedPlanId" (click)="submitPayment()">Proceed to Payment</button>
                     </div>
 
                 </mat-tab>
