@@ -29,7 +29,7 @@ export class apiService {
     let headers = new HttpHeaders();
     headers = headers.append('token', token);
     headers = headers.append('Content-Type', 'application/json');
-    return this.http.post(config.api_url + 'user/paymentRequest', params, {headers});
+    return this.http.post(config.api_url + 'user/paymentRequest', params, { headers });
   }
 
   updateProfile(params): Observable<any> {
@@ -103,6 +103,7 @@ export class apiService {
     return this.http.post(config.api_url + 'user/addLeg', params, { headers });
   }
 
+
   insertWithdrawRequest(params): Observable<any> {
     let token = localStorage.getItem('token');
     let headers = new HttpHeaders();
@@ -111,7 +112,14 @@ export class apiService {
 
     return this.http.post(config.api_url + 'user/insertWithdrawRequest', params, { headers });
   }
+  withdrawreqAdd(params): Observable<any> {
+    return this.http.post(config.api_url + 'user/withdrawreqAdd', params);
+  }
+  getUserAccountDetails(params): Observable<any> {
 
+
+    return this.http.post(config.api_url + 'user/getUserAccountDetails', params);
+  }
   showSuccess(msg) {
     this.toastr.success(msg, '', {
       timeOut: 3000

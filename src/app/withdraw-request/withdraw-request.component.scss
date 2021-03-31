@@ -34,3 +34,49 @@
     font-size: 13px;
     background-color: #3ca063;
 }
+
+.cancelbutton {
+    float: right;
+    position: relative;
+    right: -16px;
+    top: -19px;
+}
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+    .header1 {
+        font-size: 18px;
+    }
+    .cancelbutton {
+        float: right;
+        position: relative;
+        right: -11px;
+        top: -13px;
+    }
+    .padding-all {
+        padding: 0px;
+    }
+    .container {
+        padding: 0;
+        margin: 0;
+    }
+    .row {
+        padding: 0;
+        margin: 0;
+    }
+    .col-12 {
+        padding: 0;
+        margin: 0;
+    }
+    .table-responsive {
+        padding-bottom: 10px;
+    }
+    .table-responsive th {
+        font-size: 10px;
+        line-height: 10px;
+    }
+}
+@media only screen and (min-device-width: 481px) and (max-device-width: 768px) {
+}
+@media only screen and (min-device-width: 769px) and (max-device-width: 1024px) {
+}
+@media only screen and (min-device-width: 1025px) and (max-device-width: 1200px) {
+}

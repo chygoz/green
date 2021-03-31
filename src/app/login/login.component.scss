@@ -1,3 +1,8 @@
+body {
+    font-family: Poppins !important;
+    background-color: #fff !important;
+}
+
 .errorSec {
     text-align: center;
     color: red;
@@ -40,6 +45,15 @@ input::placeholder {
 }
 
 @media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+    .col-12 {
+        padding: 0;
+    }
+    .margin-bottom {
+        padding-bottom: 27px !important;
+    }
+    .loginscreen {
+        display: none;
+    }
     .padding-default {
         padding-left: 10px;
         padding-right: 10px;
@@ -54,6 +68,12 @@ input::placeholder {
     }
 }
 @media only screen and (min-device-width: 481px) and (max-device-width: 768px) {
+    .margin-bottom {
+        padding-bottom: 27px !important;
+    }
+    .loginscreen {
+        display: none;
+    }
     .padding-default {
         padding-left: 10px;
         padding-right: 10px;
@@ -71,6 +91,9 @@ input::placeholder {
     }
 }
 @media only screen and (min-device-width: 769px) and (max-device-width: 1024px) {
+    .margin-bottom {
+        padding-bottom: 27px !important;
+    }
     .padding-default {
         padding-left: 10px;
         padding-right: 10px;

@@ -1,11 +1,12 @@
+   <div  style="float: right;" class="cancelbutton" mat-dialog-close><img src="assets/images/cancel.svg" width="20" /></div>
 <form [formGroup]="userPointsminForm" (ngSubmit)="SubmitForm()">
 <div class="padding-all">
-     
+  
 <div class="container">
     <div class="row">
         <div class="col-12">
             <h1 class="header1">Withdraw Request</h1>
-                    <table class="table">
+                    <table class="table table-responsive">
                 <thead>
                     <tr>
                   
@@ -51,11 +52,12 @@
                  formControlName="transfertype" class="custom-control-input">
                 <label class="custom-control-label" for="customRadioInline2">Mobile Money</label>
             </div>
+            
             <div class="custom-control custom-radio custom-control-inline">
-                <input type="radio" id="customRadioInline2" name="transfertype" 
+                <input type="radio" id="customRadioInline3" name="transfertype" 
                 value="Cryptocurrency"
                  formControlName="transfertype" class="custom-control-input">
-                <label class="custom-control-label" for="customRadioInline2">Cryptocurrency</label>
+                <label class="custom-control-label" for="customRadioInline3">Cryptocurrency</label>
             </div>
         </div>
     </div>

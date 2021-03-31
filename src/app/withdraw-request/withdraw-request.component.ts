@@ -64,8 +64,7 @@ export class WithdrawRequestComponent implements OnInit {
   SubmitForm() {
     this.formSubmit = true;
 
-    if (Number(this.userPointsminForm.value.redeemedpoints) < this.points_to_min) {
-
+    if (this.userPointsminForm.value.redeemedpoints < this.points_to_min) {
       this.service.showError("Redeemed points not less than " + this.points_to_min);
       return false;
     }
@@ -78,12 +77,51 @@ export class WithdrawRequestComponent implements OnInit {
     }
 
     if (!this.userPointsminForm.valid) {
+
       return false;
     }
-    this.userPointsminForm.value._id = this.userData._id;
 
-    console.log(this.userPointsminForm.value);
-    this.service.insertWithdrawRequest(this.userPointsminForm.value).subscribe((resp) => {
+
+    this.service.getUserAccountDetails({ _id: this.userData._id }).subscribe((resp) => {
+      if (resp.status) {
+
+        if (this.userPointsminForm.value.transfertype == "Bank Transfer") {
+          if ((resp.data[0].hasOwnProperty("accountName") && resp.data[0].accountName != "") &&
+            (resp.data[0].hasOwnProperty("accountNumber") && resp.data[0].accountNumber != "") &&
+            (resp.data[0].hasOwnProperty("bankName") && resp.data[0].bankName != "") &&
+            (resp.data[0].hasOwnProperty("ifscCode") && resp.data[0].ifscCode != "")) {
+
+          } else {
+            this.service.showError("Please update your Bank Details");
+            return false;
+          }
+        }
+        if (this.userPointsminForm.value.transfertype == "Mobile Money") {
+          if ((resp.data[0].hasOwnProperty("mobilemoneyphone") && resp.data[0].mobilemoneyphone != "") &&
+            (resp.data[0].hasOwnProperty("orangemoney") && resp.data[0].orangemoney != "")) {
+
+          } else {
+            this.service.showError("Please update Mobile Money Details");
+            return false;
+          }
+        }
+        if (this.userPointsminForm.value.transfertype == "Cryptocurrency") {
+          if ((resp.data[0].hasOwnProperty("wallet_address") && resp.data[0].wallet_address != "")) {
+
+          } else {
+            this.service.showError("Please update Cryptocurrency Details");
+            return false;
+          }
+
+        }
+      } else {
+        this.service.showError(resp.msg);
+      }
+    })
+
+    this.userPointsminForm.value._id = this.userData._id;
+    this.service.withdrawreqAdd(this.userPointsminForm.value).subscribe((resp) => {
+
       if (resp.status) {
 
         this.dialogRef.close();

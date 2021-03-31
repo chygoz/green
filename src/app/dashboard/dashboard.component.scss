@@ -17,7 +17,7 @@
 }
 .default-padding {
     padding-top: 49px;
-    padding-bottom: 166px;
+    padding-bottom: 31px;
 }
 .header1 {
     color: #fff;
@@ -624,20 +624,22 @@
 
 @media only screen and (min-device-width: 1201px) and (max-device-width: 1599px) {
     .card-overlay-thumb {
-        position: absolute;
+        position: relative;
         right: 0;
         left: 0;
-        bottom: 224px;
+        bottom: 0;
+        top: 84px;
         border-radius: calc(0.25rem - 1px);
     }
 }
 
 @media only screen and (min-device-width: 1600px) and (max-device-width: 1700px) {
     .card-overlay-thumb {
-        position: absolute;
+        position: relative;
         right: 0;
         left: 0;
-        bottom: 305px;
+        bottom: 0;
+        top: 84px;
         border-radius: calc(0.25rem - 1px);
     }
 }

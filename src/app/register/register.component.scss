@@ -1,3 +1,7 @@
+body {
+    font-family: Poppins !important;
+    background-color: #fff !important;
+}
 #sticky-sidebar {
     position: fixed;
     max-width: 20%;
@@ -132,6 +136,15 @@ input::placeholder {
 }
 
 @media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+    .col-12 {
+        padding: 0;
+    }
+    .margin-bottom {
+        padding-bottom: 27px !important;
+    }
+    .loginscreen {
+        display: none;
+    }
     .padding-default {
         padding-left: 10px;
         padding-right: 10px;
@@ -162,6 +175,15 @@ input::placeholder {
     }
 }
 @media only screen and (min-device-width: 481px) and (max-device-width: 768px) {
+    .col-12 {
+        padding: 0;
+    }
+    .margin-bottom {
+        padding-bottom: 27px !important;
+    }
+    .loginscreen {
+        display: none;
+    }
     .padding-default {
         padding-left: 10px;
         padding-right: 10px;
@@ -192,6 +214,19 @@ input::placeholder {
     }
 }
 @media only screen and (min-device-width: 769px) and (max-device-width: 1024px) {
+    .col-md-6 {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+    .col-12 {
+        padding: 0;
+    }
+    .margin-bottom {
+        padding-bottom: 27px !important;
+    }
+    .loginscreen {
+        display: none;
+    }
     .padding-default {
         padding-left: 10px;
         padding-right: 10px;

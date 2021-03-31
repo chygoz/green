@@ -31,3 +31,46 @@
     font-size: 13px;
     background-color: #3ca063;
 }
+
+.cancelbutton {
+    float: right;
+    position: relative;
+    right: -33px;
+    top: -35px;
+}
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+    .col-3,
+    .col-6 {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+    .padding-all {
+        padding: 5px;
+    }
+    .mat-dialog-container {
+        padding: 5px !important;
+    }
+
+    .cancelbutton {
+        float: right;
+        position: relative;
+        right: -16px;
+        top: -19px;
+    }
+}
+
+@media only screen and (min-device-width: 481px) and (max-device-width: 768px) {
+    .col-3 {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+}
+@media only screen and (min-device-width: 769px) and (max-device-width: 1024px) {
+    .col-3 {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+}
+@media only screen and (min-device-width: 1025px) and (max-device-width: 1200px) {
+}
