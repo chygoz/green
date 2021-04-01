@@ -3,6 +3,8 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router, ActivatedRoute } from '@angular/router';
 import { apiService } from '../api.service';
+import { MatDialog, MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
+import { PaymentPopupComponent } from '../payment-popup/payment-popup.component';
 
 @Component({
   selector: 'app-register',
@@ -16,9 +18,11 @@ export class RegisterComponent implements OnInit {
   plans = [];
   selectedPlanId;
   token;
-  constructor(public fb: FormBuilder, private service: apiService, private router: Router, private route: ActivatedRoute) {
+  showLoader: boolean = false;
+  constructor(public fb: FormBuilder, private service: apiService, private router: Router,
+    private route: ActivatedRoute, public dialog: MatDialog,) {
     this.token = localStorage.getItem('token');
-}
+  }
   code: number;
   ngOnInit(): void {
     this.getPlans();
@@ -62,17 +66,54 @@ export class RegisterComponent implements OnInit {
 
   submitPayment() {
     if (this.selectedPlanId) {
-      let params = {
-        planId: this.selectedPlanId
-      }
-      this.service.paymentRequest(params).subscribe((resp) => {
-        if(resp.status){
-          this.service.showSuccess(resp.msg);
-        }else {
-          this.service.showError(resp.msg);
+      let dialogRef = this.dialog.open(PaymentPopupComponent,
+        {
+          panelClass: 'my-full-screen-dialog', width: '800px',
+          position: { top: '100px' },
+          data: { selectedPlanId: this.selectedPlanId }
+        });
+
+      dialogRef.afterClosed().subscribe((resp) => {
+        console.log(resp);
+        if (resp.status) {
+          this.showLoader = true;
+          setTimeout(() => {
+            this.service.userPaymentStatus({}).subscribe((resp) => {
+              console.log(resp);
+              if (resp.status) {
+                this.service.showSuccess(resp.msg);
+                this.showLoader = false;
+                let userData = JSON.parse(localStorage.getItem('currentUser'));
+                userData.paymentStatus = true,
+                userData.paymentId = resp.data.paymentId
+                localStorage.setItem('currentUser', userData);
+                this.router.navigate(['network']);
+              } else {
+                this.service.showError(resp.msg);
+                this.showLoader = false;
+              }
+            });
+          }, 30000)
         }
       })
     }
+    // if (this.selectedPlanId) {
+    //   let params = {
+    //     planId: this.selectedPlanId
+    //   }
+    //   this.service.paymentRequest(params).subscribe((resp) => {
+    //     if(resp.status){
+    //       this.service.showSuccess(resp.msg);
+    //     }else {
+    //       this.service.showError(resp.msg);
+    //     }
+    //   })
+    // }
+
+
+
+    // this.service.showSuccess('Payment request sent');
+
   }
 
 }
