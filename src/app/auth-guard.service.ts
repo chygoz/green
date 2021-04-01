@@ -12,7 +12,7 @@ export class AuthGuardService implements CanActivate {
     }
     else {
       let userData = JSON.parse(localStorage.getItem('currentUser'));
-      if(userData && userData.planId) {
+      if(userData && userData.paymentStatus && userData.paymentId) {
         return true;
       }else {
         this.router.navigate(['register']);

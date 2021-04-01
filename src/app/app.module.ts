@@ -42,6 +42,8 @@ import { NgxPaginationModule } from 'ngx-pagination';
 
 import { ClipboardModule } from 'ngx-clipboard';
 import { ChangePasswordComponent } from './change-password/change-password.component';
+import { LoaderComponent } from './loader/loader.component';
+import { PaymentPopupComponent } from './payment-popup/payment-popup.component';
 
 
 @NgModule({
@@ -65,7 +67,9 @@ import { ChangePasswordComponent } from './change-password/change-password.compo
     ShareReferralComponent,
     ForgotPasswordComponent,
     LegsidePipe,
-    ChangePasswordComponent
+    ChangePasswordComponent,
+    LoaderComponent,
+    PaymentPopupComponent
   ],
   imports: [
     BrowserModule,
@@ -93,6 +97,7 @@ import { ChangePasswordComponent } from './change-password/change-password.compo
     // ShareIconsModule
 
   ],
+  entryComponents: [PaymentPopupComponent],
   exports: [MatButtonModule],
   providers: [AuthGuardService
   ],
