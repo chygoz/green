@@ -392,12 +392,12 @@
     }
 
     .card-4-footer {
-        position: absolute;
-        top: 135px;
+        position: relative;
+        top: 56px;
         bottom: 0;
         border-radius: calc(0.25rem - 1px);
         text-align: center;
-        left: 38px;
+        left: 0;
     }
     .header2 {
         color: #fff;

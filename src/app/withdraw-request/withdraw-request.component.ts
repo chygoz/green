@@ -39,7 +39,7 @@ export class WithdrawRequestComponent implements OnInit {
     this.getSettingsData();
     this.getWithdrawAmount(this.params);
     this.userPointsminForm = this.fb.group({
-      redeemedpoints: ['', Validators.required],
+      redeemedpoints: ['', [Validators.required, Validators.pattern("^[0-9]*$")]],
       transfertype: ['Bank Transfer', Validators.required]
     })
   }
@@ -86,10 +86,8 @@ export class WithdrawRequestComponent implements OnInit {
       if (resp.status) {
 
         if (this.userPointsminForm.value.transfertype == "Bank Transfer") {
-          if ((resp.data[0].hasOwnProperty("accountName") && resp.data[0].accountName != "") &&
-            (resp.data[0].hasOwnProperty("accountNumber") && resp.data[0].accountNumber != "") &&
-            (resp.data[0].hasOwnProperty("bankName") && resp.data[0].bankName != "") &&
-            (resp.data[0].hasOwnProperty("ifscCode") && resp.data[0].ifscCode != "")) {
+          if ((resp.data[0].hasOwnProperty("accountNumber") && resp.data[0].accountNumber != "") &&
+            (resp.data[0].hasOwnProperty("bankName") && resp.data[0].bankName != "")) {
 
           } else {
             this.service.showError("Please update your Bank Details");
