@@ -86,7 +86,7 @@ export class RegisterComponent implements OnInit {
                 let userData = JSON.parse(localStorage.getItem('currentUser'));
                 userData.paymentStatus = true,
                 userData.paymentId = resp.data.paymentId
-                localStorage.setItem('currentUser', userData);
+                localStorage.setItem('currentUser', JSON.stringify(userData));
                 this.router.navigate(['network']);
               } else {
                 this.service.showError(resp.msg);
