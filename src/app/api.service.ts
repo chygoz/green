@@ -37,7 +37,7 @@ export class apiService {
     let headers = new HttpHeaders();
     headers = headers.append('token', token);
     headers = headers.append('Content-Type', 'application/json');
-    return this.http.post(config.api_url + 'user/userPaymentStatus', params, {headers});
+    return this.http.post(config.api_url + 'user/userPaymentStatus', params, { headers });
   }
 
   updateProfile(params): Observable<any> {
@@ -46,6 +46,7 @@ export class apiService {
   updateProfilePic(params): Observable<any> {
     return this.http.post(config.api_url + 'user/updateprofilepic', params);
   }
+
   updatePersonalDetails(params): Observable<any> {
     return this.http.post(config.api_url + 'user/updatepersonaldetails', params);
   }
