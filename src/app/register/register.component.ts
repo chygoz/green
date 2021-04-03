@@ -18,12 +18,19 @@ export class RegisterComponent implements OnInit {
   plans = [];
   selectedPlanId;
   token;
+  code: number;
   showLoader: boolean = false;
   constructor(public fb: FormBuilder, private service: apiService, private router: Router,
     private route: ActivatedRoute, public dialog: MatDialog,) {
     this.token = localStorage.getItem('token');
+    this.route.params.subscribe(params => {
+      if (params["id"] != undefined) {
+        this.token = false;
+      }
+    });
+
   }
-  code: number;
+
   ngOnInit(): void {
     this.getPlans();
     this.route.params.subscribe(params => {
@@ -35,7 +42,7 @@ export class RegisterComponent implements OnInit {
       mobile: ['', Validators.required],
       email: ['', [Validators.required, Validators.pattern(this.emailregex)]],
       password: ['', Validators.required],
-      referralId: [this.code, Validators.required],
+      referralId: [this.code],
     });
 
   }
@@ -74,20 +81,21 @@ export class RegisterComponent implements OnInit {
         });
 
       dialogRef.afterClosed().subscribe((resp) => {
-        console.log(resp);
+
         if (resp.status) {
           this.showLoader = true;
           setTimeout(() => {
             this.service.userPaymentStatus({}).subscribe((resp) => {
-              console.log(resp);
+
               if (resp.status) {
+
                 this.service.showSuccess(resp.msg);
                 this.showLoader = false;
                 let userData = JSON.parse(localStorage.getItem('currentUser'));
                 userData.paymentStatus = true,
-                userData.paymentId = resp.data.paymentId
+                  userData.paymentId = resp.data.paymentId
                 localStorage.setItem('currentUser', JSON.stringify(userData));
-                this.router.navigate(['network']);
+                this.router.navigate(['dashboard']);
               } else {
                 this.service.showError(resp.msg);
                 this.showLoader = false;

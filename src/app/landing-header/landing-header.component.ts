@@ -14,8 +14,9 @@ export class LandingHeaderComponent implements OnInit {
   constructor(private router: Router,
     private cookieService: CookieService, private service: apiService) {
     this.userData = localStorage.getItem('currentUser');
-    this.userData = JSON.parse(this.userData);
-
+    if (this.userData) {
+      this.userData = JSON.parse(this.userData);
+    }
   }
 
   ngOnInit(): void {
