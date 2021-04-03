@@ -30,6 +30,12 @@
 .form-control {
     font-size: 12px;
 }
+select {
+    outline: none;
+    outline: none !important;
+    box-shadow: none !important;
+    background-color: transparent !important;
+}
 @media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
     .paddingdefault {
         padding: 2px 5px;
