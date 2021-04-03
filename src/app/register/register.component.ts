@@ -75,7 +75,7 @@ export class RegisterComponent implements OnInit {
     if (this.selectedPlanId) {
       let dialogRef = this.dialog.open(PaymentPopupComponent,
         {
-          panelClass: 'my-full-screen-dialog', width: '800px',
+          panelClass: 'my-full-screen-dialog', width: '600px',
           position: { top: '100px' },
           data: { selectedPlanId: this.selectedPlanId }
         });

@@ -1,0 +1,102 @@
+.btn-primary {
+    color: #fff;
+    background-color: #07555c;
+    border-color: #07555c;
+}
+
+.header1 {
+    font-size: 24px;
+    font-weight: 600;
+    text-align: center;
+}
+.para {
+    color: #929292;
+    font-size: 14px;
+    line-height: 3px;
+    text-align: center;
+}
+
+.paddingdefault {
+    padding: 10px 59px;
+}
+
+.monsize {
+    width: 200px;
+}
+.imagethumb {
+    width: 80px;
+}
+
+.form-control {
+    font-size: 12px;
+}
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+    .paddingdefault {
+        padding: 2px 5px;
+    }
+    .monsize {
+        width: 100px;
+    }
+    .imagethumb {
+        width: 50px;
+    }
+    .header1 {
+        font-size: 19px;
+        font-weight: 600;
+        text-align: center;
+    }
+    .para {
+        color: #929292;
+        font-size: 14px;
+        line-height: 17px;
+        text-align: center;
+    }
+}
+
+@media only screen and (min-device-width: 481px) and (max-device-width: 768px) {
+    .paddingdefault {
+        padding: 2px 5px;
+    }
+    .monsize {
+        width: 100px;
+    }
+    .imagethumb {
+        width: 50px;
+    }
+    .header1 {
+        font-size: 19px;
+        font-weight: 600;
+        text-align: center;
+    }
+    .para {
+        color: #929292;
+        font-size: 14px;
+        line-height: 17px;
+        text-align: center;
+    }
+}
+@media only screen and (min-device-width: 769px) and (max-device-width: 1024px) {
+    .paddingdefault {
+        padding: 2px 5px;
+    }
+    .monsize {
+        width: 100px;
+    }
+    .imagethumb {
+        width: 50px;
+    }
+    .header1 {
+        font-size: 19px;
+        font-weight: 600;
+        text-align: center;
+    }
+    .para {
+        color: #929292;
+        font-size: 14px;
+        line-height: 17px;
+        text-align: center;
+    }
+}
+
+@media only screen and (min-device-width: 1025px) and (max-device-width: 1200px) {
+}

@@ -1,12 +1,16 @@
-<section>
+<section class="paddingdefault">
     <form [formGroup]="myForm" (ngSubmit)="onSubmit()">
         <div class="row">
-            <div class="form-group col-md-6">
-                <label for="inputEmail4">Phone Number</label>
-                <input type="text" class="form-control" formControlName="mobile" id="inputEmail4" placeholder="">
-
-            </div>
-            <div class="form-group col-md-6">
+             <div class="col-md-12 text-center">
+                 <img src="assets/images/montebil.png" class="img-fluid monsize" width="200" alt="" />
+             </div>
+             <div class="col-md-12">
+                <h1 class="header1">Complete Payment</h1>
+                <p class="para">Pay with your preferred mobile money</p>
+             </div>
+        </div>
+        <div class="row">
+            <div class="form-group col-md-12 pt-1">
                 <label for="inputEmail4">Operator</label>
                 <select class="form-control" id="inputEmail4" formControlName="operator">
                     <option value="">Select</option>
@@ -14,12 +18,27 @@
                 </select>
             </div>
         </div>
+        <div class="row">
+               <div class="form-group col-md-12">
+                <label for="inputEmail4">Phone Number</label>
+                <input type="text" class="form-control" formControlName="mobile" id="inputEmail4" placeholder="">
 
-        <div class="default-padding">
-            <div class="container text-right">
-                <button type="submit" name="submit" class="btn btn-primary card-1-button mr-5" [disabled]="myForm.invalid" >Proceed</button>
-                <button mat-button mat-dialog-close class="btn btn-default">Cancel</button>
             </div>
+        </div>
+          <div class="row">
+               <div class="form-group col-md-12">
+                      <img src="assets/images/orange.png" class="img-fluid  imagethumb" alt="" />
+                      <img src="assets/images/mtn.png" class="img-fluid imagethumb"  alt="" />
+                      <img src="assets/images/eu.png" class="img-fluid imagethumb"  alt="" />
+            </div>
+        </div>
+    <div class="row">
+        <div class="col-md-12">
+                <button type="submit" name="submit" 
+                class="btn btn-primary mr-1"
+                 [disabled]="myForm.invalid" >Proceed</button>
+                <button mat-button mat-dialog-close class="btn btn-default">Cancel</button>
+        </div>
         </div>
     </form>
 </section>
