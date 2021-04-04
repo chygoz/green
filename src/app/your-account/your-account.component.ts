@@ -65,6 +65,7 @@ export class YourAccountComponent implements OnInit {
       {
         panelClass: 'my-full-screen-dialog', width: '800px',
         position: { top: '100px' },
+        data: {referral: this.userData?.referral}
       });
 
     dialogRef.afterClosed().subscribe(() => {
@@ -128,7 +129,8 @@ export class YourAccountComponent implements OnInit {
 
 
   copyDynamicText() {
-    this._clipboardService.copyFromContent("http://localhost:4200/register/" + this.referral);
+    console.log(window.location.href)
+    this._clipboardService.copyFromContent("https://greendiscountcard.com/register/" + this.referral);
     this.copystatus = "Copied!"
   }
 
