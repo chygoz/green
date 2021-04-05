@@ -48,13 +48,15 @@ export class RegisterComponent implements OnInit {
   }
 
   onSubmit() {
-    console.log(this.registerForm.value);
     this.service.register(this.registerForm.value).subscribe((data) => {
       if (!data.status) {
         this.errorMsg = data.msg;
       } else {
+        localStorage.setItem('currentUser', JSON.stringify(data.data))
+        localStorage.setItem('token', data.token);
+        this.token = localStorage.getItem('token');
         this.service.showSuccess("Registered Successfully!");
-        this.router.navigate(['/login']);
+        //this.router.navigate(['/network']);
       }
     })
   }
