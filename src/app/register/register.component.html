@@ -190,4 +190,4 @@
     </div>
 
 </div>
-<app-loader [ngClass]="{'show' : showLoader,'hide' : !showLoader }"></app-loader>
+<app-loader *ngIf="showLoader" [ngClass]="{'show' : showLoader,'hide' : !showLoader }"></app-loader>
