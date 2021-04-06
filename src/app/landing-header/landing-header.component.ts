@@ -17,6 +17,7 @@ export class LandingHeaderComponent implements OnInit {
     if (this.userData) {
       this.userData = JSON.parse(this.userData);
     }
+    console.log(this.userData);
   }
 
   ngOnInit(): void {
@@ -32,6 +33,7 @@ export class LandingHeaderComponent implements OnInit {
   }
 
   logout() {
+    localStorage.setItem('currentUser', "");
     this.cookieService.deleteCookie('currentUser');
     this.cookieService.deleteCookie('token');
     this.router.navigate(['/login']);

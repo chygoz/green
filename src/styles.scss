@@ -147,3 +147,29 @@ a:active {
 .hide {
     display: none;
 }
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+    .my-full-screen-dialog {
+        width: 95vw !important;
+        max-width: none !important;
+    }
+    .mat-dialog-container {
+        display: block;
+        padding: 15px !important;
+    }
+}
+
+@media only screen and (min-device-width: 481px) and (max-device-width: 768px) {
+    .my-full-screen-dialog {
+        width: 95vw !important;
+        max-width: none !important;
+    }
+    .mat-dialog-container {
+        display: block;
+        padding: 15px !important;
+    }
+}
+@media only screen and (min-device-width: 769px) and (max-device-width: 1024px) {
+}
+@media only screen and (min-device-width: 1025px) and (max-device-width: 1200px) {
+}

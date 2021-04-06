@@ -23,6 +23,8 @@ export class DashboardComponent implements OnInit {
   rightVolumePoints;
   rightVolumeamount;
   withdrawpoints: 0;
+  current_card;
+
   q: number = 1;
   constructor(location: Location,
     public dialog: MatDialog,
@@ -34,16 +36,23 @@ export class DashboardComponent implements OnInit {
   }
 
   ngOnInit(): void {
+
     let ud = localStorage.getItem('currentUser');
     this.userData = JSON.parse(ud);
-    console.log(this.userData);
+    if (this.userData.card_type == "local_card") {
+      this.current_card = "LOCAL CARD";
+    } else if (this.userData.card_type == "business_card") {
+      this.current_card = "BUSINESS CARD";
+    } else if (this.userData.card_type == "international_card") {
+      this.current_card = "INTERNATIONAL CARD";
+    }
     this.params = { userId: this.userData._id };
     this.getSettingsData();
     this.getWithdrawAmountAll(this.params);
     this.getWithdrawAmount(this.params);
     this.getVolumePoints(this.params);
 
-    console.log(this.pointsprice);
+
   }
 
   upgradecardDialog() {
@@ -134,5 +143,6 @@ export class DashboardComponent implements OnInit {
       }
     })
   }
+
 
 }

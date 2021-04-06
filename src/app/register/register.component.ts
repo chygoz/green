@@ -18,7 +18,8 @@ export class RegisterComponent implements OnInit {
   plans = [];
   selectedPlanId;
   token;
-  code: number;
+  userDataForcard;
+  code = "SA1279";
   showLoader: boolean = false;
   constructor(public fb: FormBuilder, private service: apiService, private router: Router,
     private route: ActivatedRoute, public dialog: MatDialog,) {
@@ -32,9 +33,18 @@ export class RegisterComponent implements OnInit {
   }
 
   ngOnInit(): void {
+
+    let ud = localStorage.getItem('currentUser');
+    if (ud) {
+      this.userDataForcard = JSON.parse(ud);
+    }
     this.getPlans();
     this.route.params.subscribe(params => {
-      this.code = params["id"];
+      if (params["id"] != undefined) {
+        this.code = params["id"];
+      } else {
+        this.code = "SA1279";
+      }
     });
     this.registerForm = this.fb.group({
       firstName: ['', Validators.required],
@@ -42,7 +52,7 @@ export class RegisterComponent implements OnInit {
       mobile: ['', Validators.required],
       email: ['', [Validators.required, Validators.pattern(this.emailregex)]],
       password: ['', Validators.required],
-      referralId: [this.code],
+      referralId: [''],
     });
 
   }

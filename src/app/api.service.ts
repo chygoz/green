@@ -125,8 +125,6 @@ export class apiService {
     return this.http.post(config.api_url + 'user/withdrawreqAdd', params);
   }
   getUserAccountDetails(params): Observable<any> {
-
-
     return this.http.post(config.api_url + 'user/getUserAccountDetails', params);
   }
   showSuccess(msg) {
