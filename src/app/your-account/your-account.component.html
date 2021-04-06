@@ -14,10 +14,10 @@
         <div class="row">
             <div class="col-2 profileimage" >
                 <div *ngIf="cardImageBase64; else elseTemplate" >
-                <img [src]="cardImageBase64" alt="" width="150" class="profilepic" style="border-radius: 50%">
+                <img [src]="cardImageBase64" alt="" width="150" height="150" class="profilepic" style="border-radius: 50%">
                 </div>
                <ng-template #elseTemplate>
-                 <img src="assets/images/user.svg" alt="" width="150" class="profilepic">
+                 <img src="assets/images/user.svg" alt="" width="150" height="150" class="profilepic">
                </ng-template>
             </div>
            
