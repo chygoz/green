@@ -21,8 +21,8 @@
                     <td>{{(leftVolumePoints+rightVolumePoints) - withdrawpoints}}</td>
                     <td>{{points_to_min}}</td>
                     <td>
-                        <input type="text" class="form-control col-6"
-                        formControlName="redeemedpoints"
+                        <input type="text" class="form-control col-8"
+                        formControlName="redeemedpoints" placeholder="Enter Points"
                         value="" />
                          <div class="inputError" *ngIf="h.redeemedpoints.errors?.required && formSubmit">
                                         Required!
@@ -55,7 +55,7 @@
             
             <div class="custom-control custom-radio custom-control-inline">
                 <input type="radio" id="customRadioInline3" name="transfertype" 
-                value="Cryptocurrency"
+                value="Cryptocurrency" 
                  formControlName="transfertype" class="custom-control-input">
                 <label class="custom-control-label" for="customRadioInline3">Cryptocurrency</label>
             </div>
@@ -67,21 +67,20 @@
 </div>
 
 
-    <div class="container">
-<div class="row">
-        <div class="col-12">
-            <h1 class="header2">Note: 1 Point = {{points_value}} XAF</h1>
-         </div>
-    </div>
-     </div>
+  
     
 
 <div class="default-padding">
-    <div class="container text-right">
+    <div class="row">
+        <div class="col-6">
+            <h1 class="header2">Note: 1 Point = {{points_value}} XAF</h1>
+         </div>
+         <div class="col-6">
                 <button type="submit" name="submit" class="btn btn-primary
                                 card-1-button mr-5">Request</button>
                 <button mat-button mat-dialog-close class="btn btn-default
                                 ">Cancel</button>
+         </div>
     </div>
 </div>
 </form>
