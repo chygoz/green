@@ -112,24 +112,28 @@ export class WithdrawRequestComponent implements OnInit {
           }
 
         }
+
+        this.userPointsminForm.value._id = this.userData._id;
+        this.service.withdrawreqAdd(this.userPointsminForm.value).subscribe((resp) => {
+
+          if (resp.status) {
+
+            this.dialogRef.close();
+            this.service.showSuccess(resp.msg);
+            this.router.navigate(['/dashboard']);
+            window.location.reload();
+          } else {
+            this.service.showError(resp.msg);
+          }
+        });
+
+
       } else {
         this.service.showError(resp.msg);
       }
     })
 
-    this.userPointsminForm.value._id = this.userData._id;
-    this.service.withdrawreqAdd(this.userPointsminForm.value).subscribe((resp) => {
 
-      if (resp.status) {
-
-        this.dialogRef.close();
-        this.service.showSuccess(resp.msg);
-        this.router.navigate(['/dashboard']);
-        window.location.reload();
-      } else {
-        this.service.showError(resp.msg);
-      }
-    })
   }
   getVolumePoints(params) {
 
