@@ -84,7 +84,7 @@
             </thead>
             <tbody>
                 <tr *ngFor="let transaction of userwithdrawlist | paginate: { itemsPerPage: 10,currentPage: q }">
-                    <td scope="row">MNF32388423239929330</td>
+                    <td scope="row">{{transaction?.transaction_id}}</td>
                     <td>{{transaction?.description}}</td>
                     <td>{{transaction?.created_at}}</td>
                      <td>{{transaction?.redeemedpoints}}</td>
