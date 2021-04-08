@@ -24,11 +24,6 @@ export class RegisterComponent implements OnInit {
   constructor(public fb: FormBuilder, private service: apiService, private router: Router,
     private route: ActivatedRoute, public dialog: MatDialog,) {
     this.token = localStorage.getItem('token');
-    this.route.params.subscribe(params => {
-      if (params["id"] != undefined) {
-        this.token = false;
-      }
-    });
 
   }
 
@@ -39,13 +34,6 @@ export class RegisterComponent implements OnInit {
       this.userDataForcard = JSON.parse(ud);
     }
     this.getPlans();
-    this.route.params.subscribe(params => {
-      if (params["id"] != undefined) {
-        this.code = params["id"];
-      } else {
-        this.code = "SA1279";
-      }
-    });
     this.registerForm = this.fb.group({
       firstName: ['', Validators.required],
       lastName: ['', Validators.required],
@@ -53,6 +41,12 @@ export class RegisterComponent implements OnInit {
       email: ['', [Validators.required, Validators.pattern(this.emailregex)]],
       password: ['', Validators.required],
       referralId: [''],
+    });
+
+    this.route.params.subscribe(params => {
+      if (params.id) {
+        this.registerForm.controls['referralId'].setValue(params.id);
+      }
     });
 
   }

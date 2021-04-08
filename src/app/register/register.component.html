@@ -108,10 +108,10 @@
                                             <div class="upgrade1">
                                                 <label class="radio-inline m-0">
                                                     <input type="radio" class="optradio" 
-                                                    name="optradio" size="15" *ngIf="userDataForcard.card_type !== plan?.sku"
+                                                    name="optradio" size="15" *ngIf="userDataForcard?.card_type !== plan?.sku"
                                                     [value]="plan?._id" (change)="onPlanSelected($event.target.value)">
                                                     <span class="u-title-sm">{{plan?.cardtype}}</span><br />
-                                                  <span *ngIf="userDataForcard.card_type === plan?.sku" style="font-size: 12px;color:green;">Current card</span>
+                                                  <span *ngIf="userDataForcard?.card_type === plan?.sku" style="font-size: 12px;color:green;">Current card</span>
                                                 </label>
                                             </div>
                                         </div>
