@@ -43,6 +43,9 @@ export class SupportComponent implements OnInit {
     this.service.sendEmail(this.supportForm.value).subscribe((resp) => {
       if (resp.status) {
         this.service.showSuccess(resp.msg);
+        this.supportForm.controls['subject'].setValue('');
+        this.supportForm.controls['query'].setValue('');
+        this.formSubmit = false;
       } else {
         this.service.showError(resp.msg);
       }
