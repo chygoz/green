@@ -12,13 +12,22 @@ export class SupportComponent implements OnInit {
   userData;
   supportForm: FormGroup;
   formSubmit: boolean = false;
-  constructor(private service: apiService, private cookieService: CookieService) {
+  public emailregex = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+  constructor(private service: apiService, private cookieService: CookieService, public fb: FormBuilder) {
     let ud = localStorage.getItem('currentUser');
     this.userData = JSON.parse(ud);
+    console.log(this.userData);
   }
 
   ngOnInit(): void {
-
+    this.supportForm = this.fb.group({
+      fullName: [`${this.userData.firstName} ${this.userData.lastName}`, [Validators.required]],
+      email: [`${this.userData.email}`, [Validators.required, Validators.pattern(this.emailregex)]],
+      phone: [`${this.userData.mobile}`, [Validators.required]],
+      subject: ['', [Validators.required]],
+      query: ['', [Validators.required]],
+      _id: [`${this.userData._id}`]
+    });
   }
 
   get f() {
@@ -30,11 +39,9 @@ export class SupportComponent implements OnInit {
     if (!this.supportForm.valid) {
       return false;
     }
-    this.supportForm.value._id = this.userData._id;
 
     this.service.sendEmail(this.supportForm.value).subscribe((resp) => {
       if (resp.status) {
-
         this.service.showSuccess(resp.msg);
       } else {
         this.service.showError(resp.msg);

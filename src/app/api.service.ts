@@ -128,7 +128,7 @@ export class apiService {
     return this.http.post(config.api_url + 'user/getUserAccountDetails', params);
   }
   sendEmail(params): Observable<any> {
-    return this.http.post(config.api_url + 'user/getUserAccountDetails', params);
+    return this.http.post(config.api_url + 'user/sendQuery', params);
   }
   showSuccess(msg) {
     this.toastr.success(msg, '', {
