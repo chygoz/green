@@ -44,6 +44,7 @@ import { ClipboardModule } from 'ngx-clipboard';
 import { ChangePasswordComponent } from './change-password/change-password.component';
 import { LoaderComponent } from './loader/loader.component';
 import { PaymentPopupComponent } from './payment-popup/payment-popup.component';
+import { SupportComponent } from './support/support.component';
 
 
 @NgModule({
@@ -69,7 +70,8 @@ import { PaymentPopupComponent } from './payment-popup/payment-popup.component';
     LegsidePipe,
     ChangePasswordComponent,
     LoaderComponent,
-    PaymentPopupComponent
+    PaymentPopupComponent,
+    SupportComponent
   ],
   imports: [
     BrowserModule,

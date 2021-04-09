@@ -4,6 +4,11 @@
         <a href="/" class="navbar-brand">
           <img src="assets/images/logo-lite.png" alt="" width="130">
         </a>
+         <div class="nav-item loginmargin loginmobile" *ngIf="loginStatus">
+                <a class="btn btn-primary" routerLink="/dashboard"  href="javascript:void(0)">Dashboard</a>
+                <a class="btn btn-link" (click)="logout()"  href="javascript:void(0)">
+                     <img src="assets/images/turn-off.svg" alt="" width="25"></a>
+                </div>
         
     </div>
    
@@ -19,7 +24,7 @@
                 <a class="btn btn-primary" routerLink="/login"  href="javascript:void(0)">Login</a>
             </li>
 
-             <li class="nav-item loginmargin" *ngIf="loginStatus">
+             <li class="nav-item loginmargin loginhide" *ngIf="loginStatus">
                 <a class="btn btn-primary" routerLink="/dashboard"  href="javascript:void(0)">Dashboard</a>
                 <a class="btn btn-link" (click)="logout()"  href="javascript:void(0)">
                      <img src="assets/images/turn-off.svg" alt="" width="25"></a>

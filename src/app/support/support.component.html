@@ -1,0 +1,102 @@
+<div class="container-fluid" style="background-color: #07555c;">
+    <div class="default-padding">
+     <div class="container">
+        <div class="col-12 px-0">
+        <h1 class="header1">Support</h1>
+       
+        </div>
+    </div> 
+    </div> 
+    </div> 
+    <div class="container-fluid" style="background-color: #f2f5f9;">
+       
+        <div class="container">
+            <div class="row">
+            <div class="col-2 px-0">
+                   
+
+            </div>
+            <div class="col-10 px-0">
+                <div class="row desktopview">
+                     <div class="col-2 px-0"></div>
+                    <div class="col-8 px-0">
+                         <div class="card-overlay-thumb">
+                   <div class="card">
+                        <div class="card-body ">
+                            <div class="default-padding">
+                <form [formGroup]="supportForm" (ngSubmit)="onSubmit()">
+                    <div class="form-row m-0">
+                        <div class="form-group col-md-6">
+                            <label for="inputEmail4">Full Name</label>
+                            <input type="email" class="form-control" id="inputEmail4" 
+                            formControlName="fullName"
+                            placeholder="First Name" [value]="userData?.fullName">
+                             <div class="inputError" *ngIf="f.fullName.errors?.required && formSubmit">
+                                        Full Name Required!
+                                    </div>
+                        </div>
+                       <div class="form-group col-md-6">
+                            <label for="inputEmail4">Email</label>
+                            <input type="email" class="form-control" id="inputEmail4" 
+                            placeholder="Email" [value]="userData?.email">
+                             <div class="inputError" *ngIf="f.email.errors?.required && formSubmit">
+                                        Email Required!
+                                    </div>
+                        </div>
+                    </div>
+                     <div class="form-row m-0">
+                        <div class="form-group col-md-6">
+                            <label for="inputEmail4">Phone</label>
+                            <input type="text" class="form-control" id="inputEmail4" 
+                              formControlName="mobile"
+                            placeholder="Phone" [value]="userData?.mobile">
+                             <div class="inputError" *ngIf="f.mobile.errors?.required && formSubmit">
+                                        Mobile Required!
+                                    </div>
+                        </div>
+                        
+                    </div>
+
+                     <div class="form-row m-0">
+                        <div class="form-group col-md-12">
+                            <label for="inputEmail4">What's the issue?</label>
+                            <input type="email" class="form-control" id="inputEmail4" 
+                            formControlName="issue"
+                            placeholder="First Name" [value]="userData?.issue">
+                             <div class="inputError" *ngIf="f.issue.errors?.required && formSubmit">
+                                        Issue Required!
+                                    </div>
+                        </div>
+                        </div>
+                        <div class="form-row m-0">
+                        <div class="form-group col-md-12">
+                            <label for="inputEmail4">Additional Details</label>
+                            <textarea class="form-control" id="inputEmail4" 
+                            formControlName="additional"
+                            placeholder="First Name" [value]="userData?.additional"></textarea>
+                             <div class="inputError" *ngIf="f.additional.errors?.required && formSubmit">
+                                        Additional Details Required!
+                                    </div>
+                        </div>
+                        </div>
+                        <div class=" mt-5 mb-5">
+                            <button type="submit" class="btn btn-primary mr-2">Submit</button>
+                            </div>
+                
+                
+                </form>
+           </div>
+
+
+                    </div>
+                    </div>
+                    </div>
+                    </div>
+                     <div class="col-2 px-0"></div>
+            </div>
+
+            </div>
+            </div>
+           
+        </div>
+    </div>

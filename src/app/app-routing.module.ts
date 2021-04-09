@@ -7,6 +7,7 @@ import { NetworkComponent } from './network/network.component';
 import { NetworktestingComponent } from './networktesting/networktesting.component';
 import { YourAccountComponent } from './your-account/your-account.component';
 import { HomeComponent } from './home/home.component';
+import { SupportComponent } from './support/support.component';
 import { ForgotPasswordComponent } from './forgot-password/forgot-password.component';
 import { LayoutComponent } from './layout/layout.component';
 import { LayouthomeComponent } from './layouthome/layouthome.component';
@@ -40,6 +41,13 @@ const routes: Routes = [
     canActivate: [AuthGuard],
     children: [
       { path: '', component: NetworkComponent }
+    ]
+  },
+  {
+    path: 'support', component: LayoutComponent,
+    canActivate: [AuthGuard],
+    children: [
+      { path: '', component: SupportComponent }
     ]
   },
   {

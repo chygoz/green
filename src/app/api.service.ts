@@ -127,6 +127,9 @@ export class apiService {
   getUserAccountDetails(params): Observable<any> {
     return this.http.post(config.api_url + 'user/getUserAccountDetails', params);
   }
+  sendEmail(params): Observable<any> {
+    return this.http.post(config.api_url + 'user/getUserAccountDetails', params);
+  }
   showSuccess(msg) {
     this.toastr.success(msg, '', {
       timeOut: 3000

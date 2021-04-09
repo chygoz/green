@@ -25,6 +25,13 @@
     margin-left: 10px;
 }
 
+.loginmobile {
+    display: none;
+}
+.loginhide {
+    display: block;
+}
+
 @media (min-width: 768px) {
     .navbar-expand-md .navbar-nav .nav-link {
         padding-right: 0.5rem;
@@ -36,9 +43,26 @@
 }
 
 @media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
-    .navbar {
-        padding: 1.5rem 2rem !important;
+    .navbar-brand img {
+        width: 100px;
     }
+    .loginmobile {
+        display: block;
+        padding: 0 !important;
+        float: right;
+        margin: 0 auto;
+    }
+    .loginmobile .btn {
+        font-size: 12px;
+    }
+    .loginhide {
+        display: none;
+    }
+
+    .navbar {
+        padding: 1.5rem 1rem !important;
+    }
+
     .collapse:not(.show) {
         display: block;
     }
