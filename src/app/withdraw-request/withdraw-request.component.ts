@@ -86,8 +86,8 @@ export class WithdrawRequestComponent implements OnInit {
       if (resp.status) {
 
         if (this.userPointsminForm.value.transfertype == "Bank Transfer") {
-          if ((resp.data[0].hasOwnProperty("accountNumber") && resp.data[0].accountNumber != "") &&
-            (resp.data[0].hasOwnProperty("bankName") && resp.data[0].bankName != "")) {
+          if ((resp.data[0].hasOwnProperty("accountNumber") && resp.data[0].accountNumber != "" && resp.data[0].accountNumber != null) &&
+            (resp.data[0].hasOwnProperty("bankName") && resp.data[0].bankName != "" && resp.data[0].bankName != null)) {
 
           } else {
             this.service.showError("Please update your Bank Details");
@@ -95,8 +95,8 @@ export class WithdrawRequestComponent implements OnInit {
           }
         }
         if (this.userPointsminForm.value.transfertype == "Mobile Money") {
-          if ((resp.data[0].hasOwnProperty("mobilemoneyphone") && resp.data[0].mobilemoneyphone != "") &&
-            (resp.data[0].hasOwnProperty("orangemoney") && resp.data[0].orangemoney != "")) {
+          if ((resp.data[0].hasOwnProperty("mobilemoneyphone") && resp.data[0].mobilemoneyphone != "" && resp.data[0].mobilemoneyphone != null) &&
+            (resp.data[0].hasOwnProperty("orangemoney") && resp.data[0].orangemoney != "" && resp.data[0].orangemoney != null)) {
 
           } else {
             this.service.showError("Please update Mobile Money Details");
@@ -104,7 +104,7 @@ export class WithdrawRequestComponent implements OnInit {
           }
         }
         if (this.userPointsminForm.value.transfertype == "Cryptocurrency") {
-          if ((resp.data[0].hasOwnProperty("wallet_address") && resp.data[0].wallet_address != "")) {
+          if ((resp.data[0].hasOwnProperty("wallet_address") && resp.data[0].wallet_address != "" && resp.data[0].wallet_address != null)) {
 
           } else {
             this.service.showError("Please update Cryptocurrency Details");
