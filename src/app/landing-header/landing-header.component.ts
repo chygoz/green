@@ -33,9 +33,7 @@ export class LandingHeaderComponent implements OnInit {
   }
 
   logout() {
-    localStorage.setItem('currentUser', "");
-    this.cookieService.deleteCookie('currentUser');
-    this.cookieService.deleteCookie('token');
+    localStorage.clear();
     this.router.navigate(['/login']);
   }
 
