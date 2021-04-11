@@ -59,8 +59,6 @@ export class NetworkComponent implements OnInit {
   getVolumePoints(params) {
 
     this.service.getVolumePoints(params).subscribe((resp) => {
-      console.log(resp.left);
-      console.log(resp.right);
       if (resp.status) {
 
         this.leftVolumePoints = resp.left[0].referred_user_points;
@@ -88,7 +86,6 @@ export class NetworkComponent implements OnInit {
   }
 
   addLeg(network, pn, leg) {
-    console.log(network);
     let params = {
       cnId: network._id,
       pnId: pn._id,

@@ -16,7 +16,6 @@ export class SupportComponent implements OnInit {
   constructor(private service: apiService, private cookieService: CookieService, public fb: FormBuilder) {
     let ud = localStorage.getItem('currentUser');
     this.userData = JSON.parse(ud);
-    console.log(this.userData);
   }
 
   ngOnInit(): void {

@@ -17,7 +17,6 @@ export class LandingHeaderComponent implements OnInit {
     if (this.userData) {
       this.userData = JSON.parse(this.userData);
     }
-    console.log(this.userData);
   }
 
   ngOnInit(): void {

@@ -26,6 +26,7 @@ export class DashboardComponent implements OnInit {
   current_card;
 
   q: number = 1;
+  showLoader: boolean = false;
   constructor(location: Location,
     public dialog: MatDialog,
     private service: apiService, private cookieService: CookieService,
@@ -56,15 +57,41 @@ export class DashboardComponent implements OnInit {
   }
 
   upgradecardDialog() {
-
-
     let dialogRef = this.dialog.open(UpgradeCardComponent,
       {
         panelClass: 'my-full-screen-dialog', width: '800px',
         position: { top: '100px' },
       });
 
-    dialogRef.afterClosed().subscribe(() => {
+    dialogRef.afterClosed().subscribe((resp1) => {
+      if (resp1.status) {
+        this.showLoader = true;
+        setTimeout(() => {
+          this.service.userPaymentStatus({}).subscribe((resp) => {
+            if (resp.status) {
+              this.showLoader = false;
+              let userData = JSON.parse(localStorage.getItem('currentUser'));
+              //compare user plan 
+              if(resp.data.planId == userData.planId){
+                // payment failed
+                this.service.showError('Payment Failed');
+                this.showLoader = false;
+              }else {
+                // payment success
+                userData.paymentStatus = true;
+                userData.planId = resp.data.planId;
+                userData.paymentId = resp.data.paymentId
+                localStorage.setItem('currentUser', JSON.stringify(userData));
+                this.service.showSuccess(resp.msg);
+              }
+              
+            } else {
+              this.service.showError(resp.msg);
+              this.showLoader = false;
+            }
+          });
+        }, 30000)
+      }
     })
 
   }

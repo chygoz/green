@@ -148,6 +148,10 @@ a:active {
     display: none;
 }
 
+.pointer {
+    cursor: pointer;
+}
+
 @media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
     .my-full-screen-dialog {
         width: 95vw !important;

@@ -14,7 +14,6 @@ export class LoaderComponent implements OnInit, AfterViewInit {
   }
 
   ngAfterViewInit() {
-    console.log("called")
     this.countDown();
   }
   

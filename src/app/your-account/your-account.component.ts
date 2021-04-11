@@ -42,7 +42,6 @@ export class YourAccountComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    console.log(this.userData);
     this.profileForm = this.fb.group({
       firstName: [this.userData.firstName, Validators.required],
       lastName: [this.userData.lastName, Validators.required],
@@ -129,7 +128,6 @@ export class YourAccountComponent implements OnInit {
 
 
   copyDynamicText() {
-    console.log(window.location.href)
     this._clipboardService.copyFromContent("https://greendiscountcard.com/register/" + this.referral);
     this.copystatus = "Copied!"
   }
@@ -161,9 +159,6 @@ export class YourAccountComponent implements OnInit {
         image.onload = rs => {
           const img_height = rs.currentTarget['height'];
           const img_width = rs.currentTarget['width'];
-
-          console.log(img_height, img_width);
-
 
           if (img_height > max_height && img_width > max_width) {
             this.imageError =

@@ -25,12 +25,9 @@ export class PaymentPopupComponent implements OnInit {
       mobile: ['', Validators.required],
       operator: ['', Validators.required]
     })
-
-    console.log(this.data);
   }
 
   onSubmit(){
-    console.log(this.myForm.value);
       let params = {
         planId: this.data.selectedPlanId,
         ...this.myForm.value

@@ -31,6 +31,13 @@ export class apiService {
     headers = headers.append('Content-Type', 'application/json');
     return this.http.post(config.api_url + 'user/paymentRequest', params, { headers });
   }
+  upgradePlanRequest(params): Observable<any> {
+    let token = localStorage.getItem('token');
+    let headers = new HttpHeaders();
+    headers = headers.append('token', token);
+    headers = headers.append('Content-Type', 'application/json');
+    return this.http.post(config.api_url + 'user/upgradePlanRequest', params, { headers });
+  }
 
   userPaymentStatus(params): Observable<any> {
     let token = localStorage.getItem('token');
