@@ -9,6 +9,7 @@ import { YourAccountComponent } from './your-account/your-account.component';
 import { HomeComponent } from './home/home.component';
 import { SupportComponent } from './support/support.component';
 import { ForgotPasswordComponent } from './forgot-password/forgot-password.component';
+import { ResetpasswordComponent } from './resetpassword/resetpassword.component';
 import { LayoutComponent } from './layout/layout.component';
 import { LayouthomeComponent } from './layouthome/layouthome.component';
 import { AuthGuardService as AuthGuard } from './auth-guard.service';
@@ -17,6 +18,7 @@ const routes: Routes = [
   { path: 'register/:id', component: RegisterComponent },
   { path: 'login', component: LoginComponent },
   { path: 'forgot-password', component: ForgotPasswordComponent },
+  { path: 'resetpassword/:id', component: ResetpasswordComponent },
   {
     path: '', component: LayouthomeComponent,
     children: [

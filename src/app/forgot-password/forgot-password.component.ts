@@ -30,10 +30,7 @@ export class ForgotPasswordComponent implements OnInit {
         this.successMsg = "";
       } else {
         this.errorMsg = "";
-        this.successMsg = "Login details sent to registered email id";
-
-
-
+        this.successMsg = "Password reset link sent to registered email id";
       }
     })
 

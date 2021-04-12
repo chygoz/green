@@ -45,6 +45,7 @@ import { ChangePasswordComponent } from './change-password/change-password.compo
 import { LoaderComponent } from './loader/loader.component';
 import { PaymentPopupComponent } from './payment-popup/payment-popup.component';
 import { SupportComponent } from './support/support.component';
+import { ResetpasswordComponent } from './resetpassword/resetpassword.component';
 
 
 @NgModule({
@@ -71,7 +72,8 @@ import { SupportComponent } from './support/support.component';
     ChangePasswordComponent,
     LoaderComponent,
     PaymentPopupComponent,
-    SupportComponent
+    SupportComponent,
+    ResetpasswordComponent
   ],
   imports: [
     BrowserModule,

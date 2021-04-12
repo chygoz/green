@@ -15,6 +15,9 @@ export class apiService {
   login(params): Observable<any> {
     return this.http.post(config.api_url + 'user/login', params);
   }
+  resetPassword(params): Observable<any> {
+    return this.http.post(config.api_url + 'user/resetPassword', params);
+  }
 
   register(params): Observable<any> {
     return this.http.post(config.api_url + 'user/register', params);
