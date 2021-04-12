@@ -49,10 +49,10 @@ export class YourAccountComponent implements OnInit {
     });
 
     this.personalDetailsForm = this.fb.group({
-      accountName: [this.userData.accountName, Validators.required],
-      accountNumber: [this.userData.accountNumber, Validators.required],
-      bankName: [this.userData.bankName, Validators.required],
-      ifscCode: [this.userData.ifscCode, Validators.required],
+      accountName: [this.userData.accountName],
+      accountNumber: [this.userData.accountNumber],
+      bankName: [this.userData.bankName],
+      ifscCode: [this.userData.ifscCode],
       mobilemoneyphone: [this.userData.mobilemoneyphone],
       orangemoney: [this.userData.orangemoney],
       wallet_address: [this.userData.wallet_address],
@@ -64,7 +64,7 @@ export class YourAccountComponent implements OnInit {
       {
         panelClass: 'my-full-screen-dialog', width: '800px',
         position: { top: '100px' },
-        data: {referral: this.userData?.referral}
+        data: { referral: this.userData?.referral }
       });
 
     dialogRef.afterClosed().subscribe(() => {

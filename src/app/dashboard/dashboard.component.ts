@@ -23,7 +23,7 @@ export class DashboardComponent implements OnInit {
   rightVolumePoints;
   rightVolumeamount;
   withdrawpoints: 0;
-  current_card;
+  current_card = "NO CARD";
 
   q: number = 1;
   showLoader: boolean = false;
@@ -40,11 +40,11 @@ export class DashboardComponent implements OnInit {
 
     let ud = localStorage.getItem('currentUser');
     this.userData = JSON.parse(ud);
-    if (this.userData.card_type == "local_card") {
+    if (this.userData.planId == "606872ca92006a39e0b0b54e") {
       this.current_card = "LOCAL CARD";
-    } else if (this.userData.card_type == "business_card") {
+    } else if (this.userData.planId == "606872bb92006a39e0b0b54d") {
       this.current_card = "BUSINESS CARD";
-    } else if (this.userData.card_type == "international_card") {
+    } else if (this.userData.planId == "6068724292006a39e0b0b54c") {
       this.current_card = "INTERNATIONAL CARD";
     }
     this.params = { userId: this.userData._id };
@@ -72,11 +72,11 @@ export class DashboardComponent implements OnInit {
               this.showLoader = false;
               let userData = JSON.parse(localStorage.getItem('currentUser'));
               //compare user plan 
-              if(resp.data.planId == userData.planId){
+              if (resp.data.planId == userData.planId) {
                 // payment failed
                 this.service.showError('Payment Failed');
                 this.showLoader = false;
-              }else {
+              } else {
                 // payment success
                 userData.paymentStatus = true;
                 userData.planId = resp.data.planId;
@@ -84,7 +84,7 @@ export class DashboardComponent implements OnInit {
                 localStorage.setItem('currentUser', JSON.stringify(userData));
                 this.service.showSuccess(resp.msg);
               }
-              
+
             } else {
               this.service.showError(resp.msg);
               this.showLoader = false;
