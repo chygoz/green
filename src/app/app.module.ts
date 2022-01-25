@@ -46,6 +46,9 @@ import { LoaderComponent } from './loader/loader.component';
 import { PaymentPopupComponent } from './payment-popup/payment-popup.component';
 import { SupportComponent } from './support/support.component';
 import { ResetpasswordComponent } from './resetpassword/resetpassword.component';
+import { ResourcesComponent } from './resources/resources.component';
+import { AboutComponent } from './about/about.component';
+import { PartnersComponent } from './partners/partners.component';
 
 
 @NgModule({
@@ -73,7 +76,10 @@ import { ResetpasswordComponent } from './resetpassword/resetpassword.component'
     LoaderComponent,
     PaymentPopupComponent,
     SupportComponent,
-    ResetpasswordComponent
+    ResetpasswordComponent,
+    ResourcesComponent,
+    AboutComponent,
+    PartnersComponent
   ],
   imports: [
     BrowserModule,

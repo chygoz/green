@@ -35,12 +35,9 @@ export class RegisterComponent implements OnInit {
     }
     this.getPlans();
     this.registerForm = this.fb.group({
-      firstName: ['', Validators.required],
-      lastName: ['', Validators.required],
-      mobile: ['', Validators.required],
       email: ['', [Validators.required, Validators.pattern(this.emailregex)]],
       password: ['', Validators.required],
-      referralId: [''],
+      country: ['', Validators.required],
     });
 
     this.route.params.subscribe(params => {

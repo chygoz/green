@@ -13,7 +13,8 @@ export class LoginComponent implements OnInit {
   loginForm: FormGroup;
   public emailregex = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
   errorMsg = '';
-  constructor(public fb: FormBuilder, private service: apiService, private router: Router, private cookieService: CookieService) { }
+  constructor(public fb: FormBuilder, private service: apiService, private router: Router,
+    private cookieService: CookieService) { }
 
   ngOnInit(): void {
     this.loginForm = this.fb.group({
