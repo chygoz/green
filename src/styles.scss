@@ -1,6 +1,8 @@
 /* You can add global styles to this file, and also import other style files */
 
+
 /* Importing Bootstrap SCSS file. */
+
 @import "~bootstrap/scss/bootstrap";
 @import "~ngx-sharebuttons/themes/default/default-theme";
 @import "~ngx-toastr/toastr.css";
@@ -8,26 +10,34 @@
     font-family: Helvetica;
     src: url(assets/fonts/Helvetica.otf) format("opentype");
 }
+
 @font-face {
     font-family: HelveticaBold;
     src: url(assets/fonts/Helvetica-Bold.otf) format("opentype");
 }
+
 @font-face {
     font-family: HelveticaBQLight;
     src: url(assets/fonts/HelveticaBQ-Light.otf) format("opentype");
 }
+
 @font-face {
     font-family: GillSansStd;
     src: url(assets/fonts3/GillSansStd.otf) format("opentype");
 }
 
+@font-face {
+    font-family: FontAwesome5Free;
+    src: url(assets/fonts/FontAwesome5Free-Regular-400.otf) format("opentype");
+}
+
 @import "~ngx-owl-carousel-o/lib/styles/scss/owl.carousel";
 @import "~ngx-owl-carousel-o/lib/styles/scss/owl.theme.default";
-
 body {
     font-family: Poppins !important;
     background-color: #f2f5f9 !important;
 }
+
 h1,
 h2,
 h3,
@@ -36,13 +46,16 @@ p,
 .mat-typography h2 {
     font-family: Poppins !important;
 }
+
 .mat-typography h1,
 .mat-typography h2 {
     font: Poppins !important;
 }
+
 .navbar-expand-md {
     outline: none;
 }
+
 .mat-menu-item:hover {
     background-color: #fff !important;
 }
@@ -51,25 +64,34 @@ p,
     .container {
         max-width: 1162px !important;
     }
+    .container-slide {
+        max-width: 1354px !important;
+        padding-right: 15px;
+        padding-left: 15px;
+        margin-right: auto;
+        margin-left: auto;
+    }
 }
 
 html,
 body {
     height: 100%;
 }
+
 .page-link {
     margin-right: 10px;
     background-color: #eaeaea !important;
     color: #fff !important;
-
     padding: 6px 20px !important;
     border-radius: 10px !important;
     font-size: 17px !important;
 }
+
 .page-link.active {
     background-color: #3ca063 !important;
     color: #fff !important;
 }
+
 .padding-all {
     padding: 25px;
 }
@@ -100,6 +122,7 @@ input.form-control:focus {
     -moz-box-shadow: none;
     -webkit-box-shadow: none;
 }
+
 a,
 a:hover,
 a:focus,
@@ -127,6 +150,7 @@ a:active {
     border-radius: 5px !important;
     margin-right: 8px !important;
 }
+
 .ngx-pagination .current {
     padding: 9px 18px !important;
     background: #3ca063 !important;
@@ -135,6 +159,7 @@ a:active {
     font-size: 16px !important;
     border-radius: 5px !important;
 }
+
 .pagination-next,
 .pagination-previous {
     display: none !important;
@@ -173,7 +198,7 @@ a:active {
         padding: 15px !important;
     }
 }
-@media only screen and (min-device-width: 769px) and (max-device-width: 1024px) {
-}
-@media only screen and (min-device-width: 1025px) and (max-device-width: 1200px) {
-}
+
+@media only screen and (min-device-width: 769px) and (max-device-width: 1024px) {}
+
+@media only screen and (min-device-width: 1025px) and (max-device-width: 1200px) {}

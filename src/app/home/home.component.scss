@@ -1,29 +1,32 @@
 .header1 {
-    font-family: Poppins !important;
-    font-size: 48px;
-    font-weight: 700;
-    line-height: 65px;
-    color: #000;
+    font-family: FontAwesome5Free !important;
+    font-size: 53px;
+    line-height: 53px;
+    color: #fff;
+}
+
+.header1 span {
+    color: #3ca063;
 }
 
 .header2 {
     font-family: Poppins !important;
     font-size: 31px;
     font-weight: 700;
-    color: #000;
+    color: #3ca063;
     line-height: 52px;
 }
 
 .header3-dart {
     font-family: Poppins !important;
-    color: #07555c;
+    color: #3ca063;
     font-size: 24px;
     font-weight: 600;
 }
 
 .header2-dart {
     font-family: Poppins !important;
-    color: #07555c;
+    color: #3ca063;
     font-size: 32px;
     font-weight: 600;
     text-align: center;
@@ -31,7 +34,7 @@
 }
 
 .header2-white {
-    color: #07555c;
+    color: #3ca063;
     font-size: 30px;
     text-align: center;
     font-weight: 600;
@@ -51,8 +54,13 @@
 }
 
 .default-padding {
-    padding-top: 80px;
-    padding-bottom: 123px;
+    padding-top: 126px;
+    padding-bottom: 218px;
+}
+
+.default-padding1 {
+    padding-top: 126px;
+    padding-bottom: 7px;
 }
 
 .para2 {
@@ -72,9 +80,11 @@
 
 .card-1-button,
 .card-1-button:hover {
-    padding: 13px 34px;
+    padding: 11px 27px;
     background-color: #fff;
     color: #1dbf5d;
+    font-weight: 500;
+    border-radius: 7px;
 }
 
 .padding-20 {
@@ -171,7 +181,7 @@
 }
 
 .listtop1 {
-    padding-top: 18px;
+    padding-top: 87px;
 }
 
 .buttontop {
@@ -206,6 +216,72 @@
 
 .btn-primary:focus {
     outline: none;
+}
+
+.positionpara {
+    position: absolute;
+    bottom: 3px;
+    right: 0;
+    color: #fff;
+}
+
+.header2-partners {
+    font-family: Poppins;
+    font-size: 24px;
+    font-weight: bold;
+    color: #3ca063;
+    text-align: center;
+}
+
+.para-use {
+    font-size: 15px;
+    font-weight: 200;
+    color: rgb(110, 110, 110);
+    text-align: center;
+}
+
+.parterslist {
+    border: none !important;
+}
+
+.parterslistbody {
+    background-color: #3ca063;
+    padding: 39px 35px;
+    border-radius: 0px 0 9px 9px;
+}
+
+.parterslistbody .card-text {
+    color: #fff;
+    font-size: 21px;
+    font-weight: 300;
+    line-height: 25px;
+}
+
+.parterslistbody .subpara {
+    color: #fff;
+    font-size: 14px;
+    margin-bottom: 0;
+    font-weight: 300;
+}
+
+.partnertop {
+    padding-top: 60px;
+}
+
+.partnertop .col-md-4 {
+    padding-right: 30px;
+    padding-left: 30px;
+}
+
+.viewpartners {
+    text-align: center;
+    padding-top: 24px;
+}
+
+.viewpartners a {
+    color: #3ca063;
+    font-size: 16px;
+    text-decoration: underline;
 }
 
 @media (min-width: 1200px) {

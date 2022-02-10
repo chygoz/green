@@ -2,7 +2,7 @@
     <div class="d-flex flex-grow-1">
 
         <a href="/" class="navbar-brand">
-            <img src="assets/images/logo-lite.png" alt="" width="130">
+            <img src="assets/images/logo-lite.png" alt="" width="220">
         </a>
         <div class="nav-item loginmargin loginmobile" *ngIf="loginStatus">
             <a class="btn btn-primary" routerLink="/dashboard" href="javascript:void(0)">Dashboard</a>
@@ -32,8 +32,13 @@
            
         </ul-->
         <ul class="navbar-nav">
-            <li class="nav-item">
+            <li class="nav-item dropdown">
                 <a class="nav-link" href="./resources/">Resources</a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                    <a class="dropdown-item" href="./resources#GreenCardPay">GreenCard Pay</a>
+                    <a class="dropdown-item" href="./resources#GreenCardNetworkMarketing">GreenCard Network</a>
+                    <a class="dropdown-item" href="./resources#GreenCardStore">GreenCard Store</a>
+                </div>
             </li>
             <li class="nav-item pr-4">
                 <a class="nav-link" href="./about/">About Us</a>
@@ -42,7 +47,7 @@
                 <a class="nav-link" href="./partners/">Partners</a>
             </li>
             <li class="nav-item loginmargin" *ngIf="!loginStatus">
-                <a class="btn btn-primary" routerLink="/login" href="javascript:void(0)">Login</a>
+                <a class="btn btn-primary btn-signin" routerLink="/login" href="javascript:void(0)">Sign In</a>
             </li>
 
             <li class="nav-item loginmargin loginhide" *ngIf="loginStatus">
@@ -50,7 +55,17 @@
                 <a class="btn btn-link" (click)="logout()" href="javascript:void(0)">
                     <img src="assets/images/turn-off.svg" alt="" width="25"></a>
             </li>
-
+            <li class="nav-item pr-4 verticleLine">
+                <div class="vline">
+                </div>
+            </li>
+            <li class="nav-item pr-4">
+                <div class="line1">GreenDiscountCard®</div>
+                <div class="line1"> Buy Reward Instant Card</div>
+                <div class="line2">
+                    <a href="">APPLY NOW</a>
+                </div>
+            </li>
         </ul>
     </div>
 </nav>

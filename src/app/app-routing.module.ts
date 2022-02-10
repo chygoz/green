@@ -7,6 +7,9 @@ import { NetworkComponent } from './network/network.component';
 import { NetworktestingComponent } from './networktesting/networktesting.component';
 import { YourAccountComponent } from './your-account/your-account.component';
 import { HomeComponent } from './home/home.component';
+import { AboutComponent } from './about/about.component';
+import { PartnersComponent } from './partners/partners.component';
+import { ResourcesComponent } from './resources/resources.component';
 import { SupportComponent } from './support/support.component';
 import { ForgotPasswordComponent } from './forgot-password/forgot-password.component';
 import { ResetpasswordComponent } from './resetpassword/resetpassword.component';
@@ -23,6 +26,24 @@ const routes: Routes = [
     path: '', component: LayouthomeComponent,
     children: [
       { path: '', component: HomeComponent }
+    ]
+  },
+  {
+    path: 'about', component: LayouthomeComponent,
+    children: [
+      { path: '', component: AboutComponent }
+    ]
+  },
+  {
+    path: 'partners', component: LayouthomeComponent,
+    children: [
+      { path: '', component: PartnersComponent }
+    ]
+  },
+  {
+    path: 'resources', component: LayouthomeComponent,
+    children: [
+      { path: '', component: ResourcesComponent }
     ]
   },
   {
