@@ -164,3 +164,10 @@
     @media only screen and (min-device-width: 769px) and (max-device-width: 1024px) {}
     
     @media only screen and (min-device-width: 1025px) and (max-device-width: 1200px) {}
+    
+    @media only screen and (min-device-width: 1200px) and (max-device-width: 1400px) {
+        .navbar {
+            background: #006843;
+            padding: 1rem 2rem;
+        }
+    }

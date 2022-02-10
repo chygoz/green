@@ -284,6 +284,10 @@
     text-decoration: underline;
 }
 
+.default-padding-why {
+    padding-top: 30px;
+}
+
 @media (min-width: 1200px) {
     .container-md {
         max-width: 1077px !important;
@@ -334,6 +338,43 @@
     }
     .p-5 {
         padding: 1rem !important;
+    }
+    .headerbg {
+        background-image: url("../../assets/images/Header_Image.jpg");
+        background-position: center top;
+        background-size: 100% auto;
+        background-repeat: no-repeat;
+    }
+    .default-padding {
+        padding-top: 14px;
+        padding-bottom: 42px;
+        padding-left: 66px;
+    }
+    .header1 {
+        font-family: FontAwesome5Free !important;
+        font-size: 15px;
+        line-height: 9px;
+        color: #fff
+    }
+    .positionpara {
+        position: absolute;
+        bottom: -8px;
+        right: 34px;
+        color: #fff;
+        line-height: 16px;
+        font-size: 10px;
+    }
+    .default-padding-why {
+        padding-top: 30px;
+    }
+    .card-1-button,
+    .card-1-button:hover {
+        padding: 5px 14px;
+        background-color: #fff;
+        color: #1dbf5d;
+        font-weight: 500;
+        border-radius: 7px;
+        font-size: 12px;
     }
 }
 
@@ -428,6 +469,35 @@
 }
 
 @media only screen and (min-device-width: 1025px) and (max-device-width: 1200px) {}
+
+@media only screen and (min-device-width: 1200px) and (max-device-width: 1400px) {
+    .headerbg {
+        background-image: url("../../assets/images/Header_Image.jpg");
+        background-position: center top;
+        background-size: 100% auto;
+        background-repeat: no-repeat;
+    }
+    .default-padding {
+        padding-top: 132px;
+        padding-bottom: 145px;
+        padding-left: 66px;
+    }
+    .header1 {
+        font-family: FontAwesome5Free !important;
+        font-size: 44px;
+        line-height: 53px;
+        color: #fff;
+    }
+    .positionpara {
+        position: absolute;
+        bottom: 3px;
+        right: 34px;
+        color: #fff;
+    }
+    .default-padding-why {
+        padding-top: 30px;
+    }
+}
 
 
 /*

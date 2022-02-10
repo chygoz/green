@@ -1,53 +1,87 @@
-.header1 {
-    font-family: FontAwesome5Free !important;
-    font-size: 48px;
-    line-height: 60px;
-    color: #414141;
-    padding-top: 93px;
-}
-
-.default-padding {
-    padding-top: 85px;
-}
-
-.default-padding1 {
-    padding-top: 85px;
-    padding-bottom: 185px;
-}
-
-.parterslistbody {
-    padding: 45px 0;
-}
-
-.parterslistbody .card-text {
-    color: #3ca063;
-    font-size: 25px;
-    font-weight: 500;
-}
-
-.parterslist {
-    border: none;
-}
-
-.partnertop .leftcard {
-    padding-left: 0px;
-    padding-right: 40px;
-}
-
-.partnertop .rightcard {
-    padding-left: 40px;
-    padding-right: 0px;
-}
-
-.greenteam {
-    color: #3ca063;
-    font-family: Poppins;
-    text-align: center;
-    font-size: 29px;
-    font-weight: bold;
-}
-
-.subpara1 {
-    text-align: center;
-    padding-top: 31px;
-}
+    .header1 {
+        font-family: FontAwesome5Free !important;
+        font-size: 48px;
+        line-height: 60px;
+        color: #414141;
+        padding-top: 93px;
+    }
+    
+    .default-padding {
+        padding-top: 85px;
+    }
+    
+    .default-padding1 {
+        padding-top: 85px;
+        padding-bottom: 185px;
+    }
+    
+    .parterslistbody {
+        padding: 45px 0;
+    }
+    
+    .parterslistbody .card-text {
+        color: #3ca063;
+        font-size: 25px;
+        font-weight: 500;
+    }
+    
+    .parterslist {
+        border: none;
+    }
+    
+    .partnertop .leftcard {
+        padding-left: 0px;
+        padding-right: 40px;
+    }
+    
+    .partnertop .rightcard {
+        padding-left: 40px;
+        padding-right: 0px;
+    }
+    
+    .greenteam {
+        color: #3ca063;
+        font-family: Poppins;
+        text-align: center;
+        font-size: 29px;
+        font-weight: bold;
+    }
+    
+    .subpara1 {
+        text-align: center;
+        padding-top: 31px;
+    }
+    
+    @media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+        .col-5 {
+            max-width: 100%;
+        }
+        .header1 {
+            font-family: FontAwesome5Free !important;
+            font-size: 48px;
+            line-height: 60px;
+            color: #414141;
+            padding-top: 31px;
+        }
+        .container-fluid {
+            padding-right: 62px;
+            padding-left: 76px;
+        }
+        .partnertop .rightcard {
+            padding-left: 0;
+            padding-right: 41px;
+        }
+    }
+    
+    @media only screen and (min-device-width: 1200px) and (max-device-width: 1400px) {
+        .container-md {
+            max-width: 1047px !important;
+        }
+        .header1 {
+            font-family: FontAwesome5Free !important;
+            font-size: 37px;
+            line-height: 60px;
+            color: #414141;
+            padding-top: 65px;
+        }
+    }
