@@ -51,20 +51,25 @@ restaurants, <br /> hotels ,pharmacies, supermarket etc</p>
             <h2 class="header2-partners pb-1">Partners From Various Sectors</h2>
             <p class="para-use">Use your cards at any of their available outlets.</p>
             <div class="row partnertop">
-                <div class="col-md-4">
+                <div class="col-md-4" *ngFor="let partner of partners">
                     <div class="card mb-4 parterslist">
-                        <img class="card-img-top" src="assets/images/b1.jpg">
+                        <img class="card-img-top" src="{{partner?.photo}}">
+                        <div class="percentlable">
+                            <div class="percenttext">
+                                {{partner?.percentage}} %
+                            </div>
+                        </div>
                         <div class="card-body parterslistbody">
-                            <p class="card-text">Health & Wellness Products
+                            <p class="card-text">{{partner?.name}}
                             </p>
                             <div class="">
-                                <p class="subpara">+255 34234 2323</p>
-                                <p class="subpara">42 Bam Street, Douala, CMR</p>
+                                <p class="subpara">{{partner?.phoneNumber}}</p>
+                                <p class="subpara">{{partner?.address}}</p>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-4">
+                <!--div class="col-md-4">
                     <div class="card mb-4 parterslist">
                         <img class="card-img-top" src="assets/images/b2.jpg">
                         <div class="card-body parterslistbody">
@@ -89,7 +94,7 @@ restaurants, <br /> hotels ,pharmacies, supermarket etc</p>
                             </div>
                         </div>
                     </div>
-                </div>
+                </div-->
 
 
             </div>
@@ -97,7 +102,7 @@ restaurants, <br /> hotels ,pharmacies, supermarket etc</p>
 
             <div class="row">
                 <div class="col-md-12">
-                    <div class="viewpartners"><a href="#">View Partner List</a></div>
+                    <div class="viewpartners"><a href="/partners">View Partner List</a></div>
                 </div>
             </div>
 

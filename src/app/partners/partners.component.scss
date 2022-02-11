@@ -72,6 +72,20 @@
         font-size: 14px;
     }
     
+    .percentlable {
+        position: absolute;
+        bottom: 159px;
+        right: 0;
+    }
+    
+    .percenttext {
+        background-color: #006843;
+        color: #fff;
+        padding: 16px 29px;
+        font-size: 35px;
+        font-weight: bold;
+    }
+    
     @media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
         .form-control {
             font-size: 14px;

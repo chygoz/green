@@ -27,6 +27,13 @@ export class apiService {
     return this.http.post(config.api_url + 'user/getPlans', params);
   }
 
+  getPartners(): Observable<any> {
+    return this.http.post(config.api_url + 'user/getPartners', {});
+  }
+  searchPartner(params): Observable<any> {
+    return this.http.post(config.api_url + 'user/searchPartner', params);
+  }
+
   paymentRequest(params): Observable<any> {
     let token = localStorage.getItem('token');
     let headers = new HttpHeaders();

@@ -16,13 +16,14 @@
 <div class="container-fluid" id="pricing" style="background-color: #ffffff;">
     <div class="default-padding1">
         <div class="container-md">
-            <form>
+            <form [formGroup]="searchForm" (ngSubmit)="onSubmit()">
                 <div class="row">
                     <div class="col-md-1"></div>
-                    <div class="col-md-3"><input type="text" name="partner" placeholder="Search partner" class="form-control" /></div>
+                    <div class="col-md-3">
+                        <input type="text" name="partner" placeholder="Search partner" formControlName="partner" class="form-control" /></div>
                     <div class="col-md-3">
 
-                        <select name="partner" placeholder="Search partner" class="form-control">
+                        <select name="category" formControlName="category" class="form-control">
                             <option value="">Choose Category</option>
                             <option value="Hospitals">Hospitals</option>
                             <option value="Restaurants">Restaurants</option>
@@ -40,7 +41,7 @@
                         </select>
                     </div>
                     <div class="col-md-3">
-                        <select name="partner" placeholder="Search partner" class="form-control">
+                        <select name="type" class="form-control" formControlName="type">
                             <option value="">Type</option>
                             <option value="Discount partners">Discount Partners</option>
                             <option value="Distributor Partners">Distributor
@@ -65,55 +66,40 @@
     <div class="default-padding2">
         <div class="container-md">
             <div class="row partnertop">
-                <div class="col-md-4">
+
+                <div class="col-md-4" *ngFor="let partner of partners">
                     <div class="card mb-4 parterslist">
-                        <img class="card-img-top" src="assets/images/b1.jpg">
+                        <img class="card-img-top" src="{{partner?.photo}}">
+                        <div class="percentlable">
+                            <div class="percenttext">
+                                {{partner?.percentage}} %
+                            </div>
+                        </div>
                         <div class="card-body parterslistbody">
-                            <p class="card-text">Health & Wellness Products
+                            <p class="card-text">{{partner?.name}}
                             </p>
                             <div class="">
-                                <p class="subpara">+255 34234 2323</p>
-                                <p class="subpara">42 Bam Street, Douala, CMR</p>
+                                <p class="subpara">{{partner?.phoneNumber}}</p>
+                                <p class="subpara">{{partner?.address}}</p>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-4">
-                    <div class="card mb-4 parterslist">
-                        <img class="card-img-top" src="assets/images/b2.jpg">
-                        <div class="card-body parterslistbody">
-                            <p class="card-text">Fashion Accessories & Clothing
-                            </p>
-                            <div class="">
-                                <p class="subpara">+255 34234 2323</p>
-                                <p class="subpara">42 Bam Street, Douala, CMR</p>
-                            </div>
-                        </div>
-                    </div>
+
+                <div class="col-md-4" *ngIf="errorMsg != ''">
+                    <div class="card mb-4">{{errorMsg}}</div>
                 </div>
-                <div class="col-md-4">
-                    <div class="card mb-4 parterslist">
-                        <img class="card-img-top" src="assets/images/b3.jpg">
-                        <div class="card-body parterslistbody">
-                            <p class="card-text">Living Essentials Commodities
-                            </p>
-                            <div class="">
-                                <p class="subpara">+255 34234 2323</p>
-                                <p class="subpara">42 Bam Street, Douala, CMR</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+
 
 
             </div>
 
 
-            <div class="row">
+            <!--div class="row">
                 <div class="col-md-12">
                     <div class="viewpartners"><a href="#">Load More</a></div>
                 </div>
-            </div>
+            </div-->
 
         </div>
     </div>
