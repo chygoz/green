@@ -12,7 +12,7 @@
     
     .default-padding1 {
         padding-top: 85px;
-        padding-bottom: 185px;
+        padding-bottom: 1px;
     }
     
     .parterslistbody {
@@ -50,6 +50,24 @@
     .subpara1 {
         text-align: center;
         padding-top: 31px;
+    }
+    
+    .leaderimg {
+        border-radius: 221px;
+        width: 200px;
+    }
+    
+    .leadername {
+        margin-top: 14px;
+        margin-bottom: 4px;
+        font-weight: 500;
+    }
+    
+    .leaderdesi {
+        font-size: 16px;
+        line-height: 11px;
+        font-weight: 400;
+        text-align: center;
     }
     
     @media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
