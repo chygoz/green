@@ -1,204 +1,206 @@
-/* You can add global styles to this file, and also import other style files */
-
-
-/* Importing Bootstrap SCSS file. */
-
-@import "~bootstrap/scss/bootstrap";
-@import "~ngx-sharebuttons/themes/default/default-theme";
-@import "~ngx-toastr/toastr.css";
-@font-face {
-    font-family: Helvetica;
-    src: url(assets/fonts/Helvetica.otf) format("opentype");
-}
-
-@font-face {
-    font-family: HelveticaBold;
-    src: url(assets/fonts/Helvetica-Bold.otf) format("opentype");
-}
-
-@font-face {
-    font-family: HelveticaBQLight;
-    src: url(assets/fonts/HelveticaBQ-Light.otf) format("opentype");
-}
-
-@font-face {
-    font-family: GillSansStd;
-    src: url(assets/fonts3/GillSansStd.otf) format("opentype");
-}
-
-@font-face {
-    font-family: FontAwesome5Free;
-    src: url(assets/fonts/FontAwesome5Free-Regular-400.otf) format("opentype");
-}
-
-@import "~ngx-owl-carousel-o/lib/styles/scss/owl.carousel";
-@import "~ngx-owl-carousel-o/lib/styles/scss/owl.theme.default";
-body {
-    font-family: Poppins !important;
-    background-color: #f2f5f9 !important;
-}
-
-h1,
-h2,
-h3,
-p,
-.mat-typography h1,
-.mat-typography h2 {
-    font-family: Poppins !important;
-}
-
-.mat-typography h1,
-.mat-typography h2 {
-    font: Poppins !important;
-}
-
-.navbar-expand-md {
-    outline: none;
-}
-
-.mat-menu-item:hover {
-    background-color: #fff !important;
-}
-
-@media (min-width: 1200px) {
-    .container {
-        max-width: 1162px !important;
+    /* You can add global styles to this file, and also import other style files */
+    /* Importing Bootstrap SCSS file. */
+    
+    @import "~bootstrap/scss/bootstrap";
+    @import "~ngx-sharebuttons/themes/default/default-theme";
+    @import "~ngx-toastr/toastr.css";
+    @font-face {
+        font-family: Helvetica;
+        src: url(assets/fonts/Helvetica.otf) format("opentype");
     }
-    .container-slide {
-        max-width: 1354px !important;
-        padding-right: 15px;
-        padding-left: 15px;
-        margin-right: auto;
-        margin-left: auto;
+    
+    @font-face {
+        font-family: HelveticaBold;
+        src: url(assets/fonts/Helvetica-Bold.otf) format("opentype");
     }
-}
-
-html,
-body {
-    height: 100%;
-}
-
-.page-link {
-    margin-right: 10px;
-    background-color: #eaeaea !important;
-    color: #fff !important;
-    padding: 6px 20px !important;
-    border-radius: 10px !important;
-    font-size: 17px !important;
-}
-
-.page-link.active {
-    background-color: #3ca063 !important;
-    color: #fff !important;
-}
-
-.padding-all {
-    padding: 25px;
-}
-
-.mat-tab-nav-bar,
-.mat-tab-header {
-    border-bottom: 1px solid #fff !important;
-}
-
-.btn-primary:hover,
-.btn-primary:active,
-.btn-primary:focus,
-.btn-primary:not([disabled]):not(.disabled):active {
-    background-color: #07555c !important;
-    color: #fff !important;
-}
-
-.btn-primary:focus {
-    outline: none !important;
-    box-shadow: none !important;
-}
-
-input:focus,
-input.form-control:focus {
-    outline: none !important;
-    outline-width: 0 !important;
-    box-shadow: none;
-    -moz-box-shadow: none;
-    -webkit-box-shadow: none;
-}
-
-a,
-a:hover,
-a:focus,
-a:active {
-    text-decoration: none;
-    color: inherit;
-}
-
-*,
-*:focus,
-*:hover {
-    outline: none;
-}
-
-.inputError {
-    color: red;
-}
-
-.ngx-pagination li {
-    padding: 7px 6px !important;
-    background: #dbdbdb !important;
-    color: #fefefe;
-    cursor: default;
-    font-size: 16px !important;
-    border-radius: 5px !important;
-    margin-right: 8px !important;
-}
-
-.ngx-pagination .current {
-    padding: 9px 18px !important;
-    background: #3ca063 !important;
-    color: #fefefe;
-    cursor: default;
-    font-size: 16px !important;
-    border-radius: 5px !important;
-}
-
-.pagination-next,
-.pagination-previous {
-    display: none !important;
-}
-
-.show {
-    display: block;
-}
-
-.hide {
-    display: none;
-}
-
-.pointer {
-    cursor: pointer;
-}
-
-@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
-    .my-full-screen-dialog {
-        width: 95vw !important;
-        max-width: none !important;
+    
+    @font-face {
+        font-family: HelveticaBQLight;
+        src: url(assets/fonts/HelveticaBQ-Light.otf) format("opentype");
     }
-    .mat-dialog-container {
+    
+    @font-face {
+        font-family: GillSansStd;
+        src: url(assets/fonts3/GillSansStd.otf) format("opentype");
+    }
+    
+    @font-face {
+        font-family: FontAwesome5Free;
+        src: url(assets/fonts/FontAwesome5Free-Regular-400.otf) format("opentype");
+    }
+    
+    @import "~ngx-owl-carousel-o/lib/styles/scss/owl.carousel";
+    @import "~ngx-owl-carousel-o/lib/styles/scss/owl.theme.default";
+    body {
+        font-family: Poppins !important;
+        background-color: #f2f5f9 !important;
+    }
+    
+    h1,
+    h2,
+    h3,
+    p,
+    .mat-typography h1,
+    .mat-typography h2 {
+        font-family: Poppins !important;
+    }
+    
+    .mat-typography h1,
+    .mat-typography h2 {
+        font: Poppins !important;
+    }
+    
+    .navbar-expand-md {
+        outline: none;
+    }
+    
+    .mat-menu-item:hover {
+        background-color: #fff !important;
+    }
+    
+    @media (min-width: 1200px) {
+        .container {
+            max-width: 1162px !important;
+        }
+        .container-slide {
+            max-width: 1354px !important;
+            padding-right: 15px;
+            padding-left: 15px;
+            margin-right: auto;
+            margin-left: auto;
+        }
+    }
+    
+    html,
+    body {
+        height: 100%;
+    }
+    
+    .page-link {
+        margin-right: 10px;
+        background-color: #eaeaea !important;
+        color: #fff !important;
+        padding: 6px 20px !important;
+        border-radius: 10px !important;
+        font-size: 17px !important;
+    }
+    
+    .page-link.active {
+        background-color: #3ca063 !important;
+        color: #fff !important;
+    }
+    
+    .padding-all {
+        padding: 25px;
+    }
+    
+    .mat-tab-nav-bar,
+    .mat-tab-header {
+        border-bottom: 1px solid #fff !important;
+    }
+    
+    .btn-primary:hover,
+    .btn-primary:active,
+    .btn-primary:focus,
+    .btn-primary:not([disabled]):not(.disabled):active {
+        background-color: #07555c !important;
+        color: #fff !important;
+    }
+    
+    .btn-primary:focus {
+        outline: none !important;
+        box-shadow: none !important;
+    }
+    
+    input:focus,
+    input.form-control:focus {
+        outline: none !important;
+        outline-width: 0 !important;
+        box-shadow: none;
+        -moz-box-shadow: none;
+        -webkit-box-shadow: none;
+    }
+    
+    a,
+    a:hover,
+    a:focus,
+    a:active {
+        text-decoration: none;
+        color: inherit;
+    }
+    
+    *,
+    *:focus,
+    *:hover {
+        outline: none;
+    }
+    
+    .inputError {
+        color: red;
+    }
+    
+    .ngx-pagination li {
+        padding: 7px 6px !important;
+        background: #dbdbdb !important;
+        color: #fefefe;
+        cursor: default;
+        font-size: 16px !important;
+        border-radius: 5px !important;
+        margin-right: 8px !important;
+    }
+    
+    .ngx-pagination .current {
+        padding: 9px 18px !important;
+        background: #3ca063 !important;
+        color: #fefefe;
+        cursor: default;
+        font-size: 16px !important;
+        border-radius: 5px !important;
+    }
+    
+    .pagination-next,
+    .pagination-previous {
+        display: none !important;
+    }
+    
+    .show {
         display: block;
-        padding: 15px !important;
     }
-}
-
-@media only screen and (min-device-width: 481px) and (max-device-width: 768px) {
-    .my-full-screen-dialog {
-        width: 95vw !important;
-        max-width: none !important;
+    
+    .hide {
+        display: none;
     }
-    .mat-dialog-container {
-        display: block;
-        padding: 15px !important;
+    
+    .pointer {
+        cursor: pointer;
     }
-}
-
-@media only screen and (min-device-width: 769px) and (max-device-width: 1024px) {}
-
-@media only screen and (min-device-width: 1025px) and (max-device-width: 1200px) {}
+    
+    a {
+        color: #ffffff !important;
+    }
+    
+    @media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+        .my-full-screen-dialog {
+            width: 95vw !important;
+            max-width: none !important;
+        }
+        .mat-dialog-container {
+            display: block;
+            padding: 15px !important;
+        }
+    }
+    
+    @media only screen and (min-device-width: 481px) and (max-device-width: 768px) {
+        .my-full-screen-dialog {
+            width: 95vw !important;
+            max-width: none !important;
+        }
+        .mat-dialog-container {
+            display: block;
+            padding: 15px !important;
+        }
+    }
+    
+    @media only screen and (min-device-width: 769px) and (max-device-width: 1024px) {}
+    
+    @media only screen and (min-device-width: 1025px) and (max-device-width: 1200px) {}
