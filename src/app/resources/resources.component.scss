@@ -1,18 +1,82 @@
-.default-padding {
-    padding-top: 85px;
-    padding-bottom: 85px;
-}
-
-.greenteam {
-    color: #3ca063;
-    font-family: Poppins;
-    text-align: left;
-    font-size: 29px;
-    font-weight: bold;
-    padding-bottom: 30px;
-    line-height: 37px;
-}
-
-.default-padding-top {
-    padding-top: 80px;
-}
+        .default-padding {
+            padding-top: 85px;
+            padding-bottom: 85px;
+        }
+        
+        .greenteam {
+            color: #3ca063;
+            font-family: Poppins;
+            text-align: left;
+            font-size: 29px;
+            font-weight: bold;
+            padding-bottom: 30px;
+            line-height: 37px;
+        }
+        
+        .default-padding-top {
+            padding-top: 80px;
+        }
+        
+        @media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+            .default-padding {
+                padding-top: 37px;
+                padding-bottom: 85px;
+            }
+            #GreenCardPay .col-5 {
+                flex: 0 0 100%;
+                max-width: 90%;
+            }
+            #GreenCardNetworkMarketing .col-4 {
+                flex: 0 0 100%;
+                max-width: 90%;
+            }
+            #GreenCardStore .col-4 {
+                flex: 0 0 100%;
+                max-width: 90%;
+            }
+            .default-padding-top {
+                padding-top: 32px;
+            }
+            .textcenter {
+                text-align: center;
+            }
+        }
+        
+        @media only screen and (min-device-width: 481px) and (max-device-width: 768px) {
+            .default-padding {
+                padding-top: 37px;
+                padding-bottom: 85px;
+            }
+            #GreenCardPay .col-5 {
+                flex: 0 0 100%;
+                max-width: 90%;
+            }
+            #GreenCardNetworkMarketing .col-4 {
+                flex: 0 0 100%;
+                max-width: 90%;
+            }
+            #GreenCardStore .col-4 {
+                flex: 0 0 100%;
+                max-width: 90%;
+            }
+            .default-padding-top {
+                padding-top: 32px;
+            }
+            .textcenter {
+                text-align: center;
+            }
+        }
+        
+        @media only screen and (min-device-width: 769px) and (max-device-width: 1024px) {
+            .textcenter img {
+                width: 100% !important;
+            }
+            #GreenCardStore .col-4 {
+                flex: 0 0 100%;
+                max-width: 90%;
+            }
+        }
+        
+        @media only screen and (min-device-width: 1025px) and (max-device-width: 1200px) {}
+        
+        @media only screen and (min-device-width: 1200px) and (max-device-width: 1400px) {}

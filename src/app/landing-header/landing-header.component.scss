@@ -109,6 +109,9 @@
     @media only screen and (max-device-width: 767px) {}
     
     @media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+        .loginhide {
+            display: none !important;
+        }
         .navbar-brand img {
             width: 100px;
         }
@@ -161,9 +164,47 @@
         }
     }
     
-    @media only screen and (min-device-width: 769px) and (max-device-width: 1024px) {}
+    @media only screen and (min-device-width: 769px) and (max-device-width: 1024px) {
+        .navbar {
+            padding: 1.5rem 2rem !important;
+        }
+        .collapse:not(.show) {
+            display: block;
+        }
+        .navbar-nav {
+            display: block;
+        }
+        .nav-item {
+            float: left;
+            padding-right: 25px;
+            padding-top: 10px;
+        }
+        .navbar-expand-md .navbar-collapse {
+            display: flex !important;
+            flex-basis: auto;
+        }
+    }
     
-    @media only screen and (min-device-width: 1025px) and (max-device-width: 1200px) {}
+    @media only screen and (min-device-width: 1025px) and (max-device-width: 1200px) {
+        .navbar {
+            padding: 1.5rem 2rem !important;
+        }
+        .collapse:not(.show) {
+            display: block;
+        }
+        .navbar-nav {
+            display: block;
+        }
+        .nav-item {
+            float: left;
+            padding-right: 25px;
+            padding-top: 10px;
+        }
+        .navbar-expand-md .navbar-collapse {
+            display: flex !important;
+            flex-basis: auto;
+        }
+    }
     
     @media only screen and (min-device-width: 1200px) and (max-device-width: 1400px) {
         .navbar {

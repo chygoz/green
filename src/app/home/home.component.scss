@@ -361,8 +361,8 @@
     }
     .default-padding {
         padding-top: 14px;
-        padding-bottom: 42px;
-        padding-left: 66px;
+        padding-bottom: 0px;
+        padding-left: 34px;
     }
     .header1 {
         font-family: FontAwesome5Free !important;
@@ -390,6 +390,20 @@
         border-radius: 7px;
         font-size: 12px;
     }
+    .button-default-padding {
+        padding-top: 11px;
+        padding-bottom: 17px;
+    }
+    .container-md {
+        width: 100%;
+        padding-right: 1px !important;
+        padding-left: 4px !important;
+        margin-right: auto;
+        margin-left: auto;
+    }
+    .header2 {
+        text-align: center;
+    }
 }
 
 @media only screen and (min-device-width: 481px) and (max-device-width: 768px) {
@@ -403,7 +417,7 @@
     }
     .default-padding {
         padding-top: 30px;
-        padding-left: 20px;
+        padding-left: 49px;
         padding-right: 20px;
         padding-bottom: 30px;
     }
@@ -434,6 +448,26 @@
     }
     .p-5 {
         padding: 1rem !important;
+    }
+    .headerbg {
+        background-image: url("../../assets/images/Header_Image.jpg");
+        background-position: center top;
+        background-size: 100% auto;
+        background-repeat: no-repeat;
+    }
+    .header1 {
+        font-family: FontAwesome5Free !important;
+        font-size: 15px;
+        line-height: 9px;
+        color: #fff
+    }
+    .positionpara {
+        position: absolute;
+        bottom: -8px;
+        right: 34px;
+        color: #fff;
+        line-height: 16px;
+        font-size: 10px;
     }
 }
 
@@ -480,9 +514,62 @@
     .p-5 {
         padding: 1rem !important;
     }
+    .header1 {
+        font-family: FontAwesome5Free !important;
+        font-size: 32px !important;
+        line-height: 33px;
+        color: #fff;
+    }
+    .default-padding {
+        padding-top: 30px;
+        padding-left: 56px;
+        padding-right: 20px;
+        padding-bottom: 30px;
+    }
+    .partnertop .col-md-4 {
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+    .cardalign {
+        width: 104%;
+        margin: 0 auto;
+    }
 }
 
-@media only screen and (min-device-width: 1025px) and (max-device-width: 1200px) {}
+@media only screen and (min-device-width: 1025px) and (max-device-width: 1200px) {
+    .header1 {
+        font-family: FontAwesome5Free !important;
+        font-size: 32px !important;
+        line-height: 33px;
+        color: #fff;
+    }
+    .default-padding {
+        padding-top: 30px;
+        padding-left: 56px;
+        padding-right: 20px;
+        padding-bottom: 30px;
+    }
+    .partnertop .col-md-4 {
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+    .cardalign {
+        width: 104%;
+        margin: 0 auto;
+    }
+    .default-padding {
+        padding-top: 125px;
+        padding-left: 56px;
+        padding-right: 20px;
+        padding-bottom: 30px;
+    }
+    .positionpara {
+        position: absolute;
+        bottom: 3px;
+        right: 47px;
+        color: #fff;
+    }
+}
 
 @media only screen and (min-device-width: 1200px) and (max-device-width: 1400px) {
     .headerbg {
