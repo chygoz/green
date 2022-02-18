@@ -313,6 +313,10 @@
     min-height: 40px;
 }
 
+.extrapadding {
+    padding-bottom: 0px !important;
+}
+
 @media (min-width: 1200px) {
     .container-md {
         max-width: 1077px !important;
@@ -414,6 +418,19 @@
     }
     .header2 {
         text-align: center;
+    }
+    .positionpara {
+        display: none;
+    }
+    .headerbg .header1 {
+        display: none;
+    }
+    .headerbg .card-1-button {
+        display: none;
+    }
+    .button-default-padding {
+        padding-top: 11px;
+        padding-bottom: 158px;
     }
 }
 
