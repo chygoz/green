@@ -53,18 +53,20 @@ restaurants, <br /> hotels ,pharmacies, supermarket etc</p>
             <div class="row partnertop">
                 <div class="col-md-4" *ngFor="let partner of partners">
                     <div class="card mb-4 parterslist">
-                        <img class="card-img-top" src="{{partner?.photo}}">
+                        <img class="card-img-top" src="{{partner?.photo}}" style="border: 1px solid #eaeaea;">
                         <div class="percentlable">
                             <div class="percenttext">
                                 {{partner?.percentage}} %
                             </div>
                         </div>
                         <div class="card-body parterslistbody">
-                            <p class="card-text">{{partner?.name}}
+                            <p class="card-text">
+                                {{ (partner?.name.length>6)? (partner?.name | slice:0:40)+'..':(partner?.name) }}
                             </p>
                             <div class="">
                                 <p class="subpara">{{partner?.phoneNumber}}</p>
-                                <p class="subpara">{{partner?.address}}</p>
+                                <p class="subpara paraheight">{{ (partner?.address.length>6)? (partner?.address | slice:0:45)+'..':(partner?.address) }}
+                                </p>
                             </div>
                         </div>
                     </div>
